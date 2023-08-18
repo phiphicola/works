@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Pretendard, system-ui, sans-serif;
+    }
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: swap;
+    src: local(※), url("/pub/font/Pretendard-SemiBold.eot");
+    src: local(※), url("/pub/font/Pretendard-SemiBold.eot?#iefix") format("embedded-opentype"), url("/pub/font/Pretendard-SemiBold.woff2") format("woff2"), url("/pub/font/Pretendard-SemiBold.woff") format("woff");
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-display: swap;
+    src: local(※), url("/pub/font/Pretendard-Medium.eot");
+    src: local(※), url("/pub/font/Pretendard-Medium.eot?#iefix") format("embedded-opentype"), url("/pub/font/Pretendard-Medium.woff2") format("woff2"), url("/pub/font/Pretendard-Medium.woff") format("woff");
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: swap;
+    src: local(※), url("/pub/font/Pretendard-Regular.eot");
+    src: local(※), url("/pub/font/Pretendard-Regular.eot?#iefix") format("embedded-opentype"), url("/pub/font/Pretendard-Regular.woff2") format("woff2"), url("/pub/font/Pretendard-Regular.woff") format("woff");
+}
+
+
+  
