@@ -5,100 +5,190 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/pub/output.css" rel="stylesheet">
+        <style>
+            body{margin:20px}
+            .tab{display: flex;align-items: center;gap:10px;}
+            .tab li a{border-radius: 30px; background-color: #3A8DFD; display: block; color: #fff; padding:10px 16px}
+            h2{background-color: #eee;font-size: 24px; font-weight: 600;margin: 20px 0 16px; padding:10px 20px}
+            h3{font-size: 18px;font-weight: 600;margin: 24px 0 10px;}            
+            h4{margin: 20px 0 16px;;}
+            h4::before{content: '-';display: inline-block;margin-right: 4px;}
+            h4:first-child{margin-top: 0;}
+            .box{border:1px solid #bbb;padding: 20px;}
+            .box .cont{display: flex; gap: 40px}
+        </style>
+    
     </head>
-    <body class="m-2">
-        <ul>
-            <li><a href="">Form</a></li>
+    <body>
+        <ul class="tab">
+            <li><a href="#group01">Form</a></li>
             <li><a href="">Pagenation</a></li>
             <li><a href="">Button</a></li>
             <li><a href="">Tab </a></li>
             <li><a href="">Form</a></li>
         </ul>
-        <h2 class="text-2xl border border-b-gray-600">Form</h2>
+        <h2 id="group01">Form</h2>
         <h3>체크박스</h3>
-        <div class="border-2 p-5">
+        <div class="box">
+            <h4>세로형</h4>
             <div class="flex items-center gap-2">
-                <input type="checkbox" id="chk" class="relative h-5 w-5 appearance-none rounded border border-solid border-gray-line outline-none before:pointer-events-none checked:border-gray-900 checked:bg-checkbox-on checked:bg-center hover:cursor-pointer" checked>
-                <label for="chk" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">체크박스 기본</label>
+                <input type="checkbox" id="chk" class="checkbox" checked>
+                <label for="chk">체크박스 기본</label>
             </div>
             <div class="flex items-center gap-2">
-                <input type="checkbox" id="chk2" class="relative h-5 w-5 border-none appearance-none rounded bg-disabled outline-none before:pointer-events-none" disabled>
-                <label for="chk2" class="flex gap-2 items-center text-base text-gray-400 cursor-pointer">체크박스 disabled</label>
+                <input type="checkbox" id="chk2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
+                <label for="chk2" class="text-gray-400">체크박스 disabled</label>
             </div>
             <div class="flex items-center gap-2">
                 <input type="checkbox" id="chk3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
-                <label for="chk3" class="flex gap-2 items-center text-base text-gray-600 cursor-pointer">체크박스 disabled check</label>
+                <label for="chk3" class="text-gray-600">체크박스 disabled check</label>
+            </div>
+
+            <h4>가로형</h4>
+            <div class="flex gap-4">
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="check" class="checkbox" checked>
+                    <label for="check">체크박스 기본</label>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="check2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
+                    <label for="check2" class="text-gray-400">체크박스 disabled</label>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="check3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
+                    <label for="check3" class="text-gray-600">체크박스 disabled check</label>
+                </div>
             </div>
         </div>
         
         <h3>라디오</h3>
-        <div class="border-2 p-5 mt-5">
+        <div class="box">
+            <h4>세로형</h4>
             <div class="flex items-center gap-2">
-                <input type="radio" id="radio" name="radiogroup" class="relative h-5 w-5 appearance-none rounded-full border border-solid border-gray-line outline-none before:pointer-events-none checked:border-gray-900 checked:bg-gray-900 checked:before:absolute checked:before:left-1/2 checked:before:top-1/2 checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:w-[0.469rem] checked:before:h-[0.469rem] checked:before:bg-white checked:before:rounded-full hover:cursor-pointer" checked>
-                <label for="radio" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">라디오 기본</label>
+                <input type="radio" id="radio" name="radiogroup" class="radio" checked>
+                <label for="radio">라디오 기본</label>
             </div>
             <div class="flex items-center gap-2">
-                <input type="radio" id="radio2" name="radiogroup" class="relative h-5 w-5 appearance-none rounded-full border border-solid border-gray-line outline-none before:pointer-events-none checked:border-gray-900 checked:bg-gray-900 checked:before:absolute checked:before:left-1/2 checked:before:top-1/2 checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:w-[0.469rem] checked:before:h-[0.469rem] checked:before:bg-white checked:before:rounded-full hover:cursor-pointer">
-                <label for="radio2" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">라디오 기본</label>
+                <input type="radio" id="radio2" name="radiogroup" class="radio">
+                <label for="radio2">라디오 기본</label>
             </div>
             <div class="flex items-center gap-2">
-                <input type="checkbox" id="radio3" name="radiogroup" class="relative h-5 w-5 border-none appearance-none rounded-full bg-disabled outline-none before:pointer-events-none" disabled>
-                <label for="radio3" class="flex gap-2 items-center text-base text-gray-400 cursor-pointer">체크박스 disabled</label>
+                <input type="checkbox" id="radio3" name="radiogroup" class="radio bg-disabled before:pointer-events-none" disabled>
+                <label for="radio3" class="text-gray-400">체크박스 disabled</label>
             </div>
             <div class="flex items-center gap-2">
-                <input type="checkbox" id="radio4" name="radiogroup"  class="relative h-5 w-5 appearance-none rounded-full outline-none before:pointer-events-none checked:border-disabled checked:bg-disabled checked:before:absolute checked:before:left-1/2 checked:before:top-1/2 checked:before:translate-x-[-50%] checked:before:translate-y-[-50%] checked:before:w-[0.469rem] checked:before:h-[0.469rem] checked:before:bg-white checked:before:rounded-full hover:cursor-pointer" disabled checked>
-                <label for="radio4" class="flex gap-2 items-center text-base text-gray-600 cursor-pointer">체크박스 disabled check</label>
+                <input type="checkbox" id="radio4" name="radiogroup"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
+                <label for="radio4" class="text-gray-600">체크박스 disabled check</label>
             </div>
-        </div>
 
-        <h3>라디오 - 동의</h3>
-        <div class="border-2 p-5 mt-5">
-            <div class="flex items-center gap-2">
-                <input type="radio" id="radioAgree" name="agree" class="relative h-5 w-5 border-none appearance-none rounded-full outline-none before:pointer-events-none bg-radio-check checked:bg-radio-check-on checked:bg-center hover:cursor-pointer" checked>
-                <label for="radioAgree" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">동의</label>
+            <h4>가로형</h4>
+            <div class="flex gap-4">
+                <div class="flex items-center gap-2">
+                    <input type="radio" id="rdo" name="radiogroup2" class="radio" checked>
+                    <label for="rdo" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">라디오 기본</label>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="radio" id="rdo2" name="radiogroup2" class="radio">
+                    <label for="rdo2" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">라디오 기본</label>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="rdo3" name="radiogroup2" class="radio bg-disabled before:pointer-events-none" disabled>
+                    <label for="rdo3" class="flex gap-2 items-center text-base text-gray-400 cursor-pointer">체크박스 disabled</label>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="rdo4" name="radiogroup2"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
+                    <label for="rdo4" class="flex gap-2 items-center text-base text-gray-600 cursor-pointer">체크박스 disabled check</label>
+                </div>
             </div>
-            <div class="flex items-center gap-2">
-                <input type="radio" id="radioAgree2" name="agree" class="relative h-5 w-5 border-none appearance-none rounded-full outline-none before:pointer-events-none bg-radio-check checked:bg-radio-check-on checked:bg-center hover:cursor-pointer">
-                <label for="radioAgree2" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">미동의</label>
+
+            <h4>동의형</h4>
+            <div class="flex gap-4">
+                <div class="flex items-center gap-2">
+                    <input type="radio" id="radioAgree" name="agree" class="relative h-5 w-5 border-none appearance-none rounded-full outline-none before:pointer-events-none bg-radio-check checked:bg-radio-check-on checked:bg-center hover:cursor-pointer" checked>
+                    <label for="radioAgree" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">동의</label>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="radio" id="radioAgree2" name="agree" class="relative h-5 w-5 border-none appearance-none rounded-full outline-none before:pointer-events-none bg-radio-check checked:bg-radio-check-on checked:bg-center hover:cursor-pointer">
+                    <label for="radioAgree2" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">미동의</label>
+                </div>
             </div>
         </div>
 
         <h3>인풋</h3>
-        <h4>small</h4>
-        <div class="border-2 p-5 mt-5">
-            <div class="flex flex-col">
-                <input type="text" class="h-8 text-sm text-primary-dark py-2 px-3 border rounded-lg border-solid border-gray-line placeholder:text-gray-300" placeholder="입력하세요.">
-            </div>
-        </div>
-        <h4>medium</h4>
-        <div class="border-2 p-5 mt-5">
-            <div class="flex flex-col">
-                <input type="text" class="h-10 text-sm text-primary-dark py-2 px-3 border rounded-lg border-solid border-gray-line placeholder:text-gray-300" placeholder="입력하세요.">
-            </div>
-        </div>
-        <h4>large</h4>
-        <div class="border-2 p-5 mt-5">
-            <div class="flex flex-col">
-                <input type="text" class="h-[3.125rem] text-sm text-primary-dark py-2 px-3 border rounded-lg border-solid border-gray-line placeholder:text-gray-300" placeholder="입력하세요.">
-            </div>
-        </div>
-        <h4>error</h4>
-        <div class="border-2 p-5 mt-5">
-            <div class="flex flex-col">
-                <input type="text" class="h-8 text-sm text-primary-dark py-2 px-3 border rounded-lg border-solid border-primary-err placeholder:text-gray-300" placeholder="입력하세요.">
-                <p class="mt-2 text-primary-err text-xs">에러 메세지입니다.</p>
+        <div class="box">
+            <div class="cont">
+                <div>
+                    <h4>small</h4>
+                    <div class="flex flex-col">
+                        <input type="text" class="input h-8 py-2 px-3 text-sm" placeholder="입력하세요.">
+                    </div>
+                </div>
+                <div>
+                    <h4>medium</h4>
+                    <div class="flex flex-col">
+                        <input type="text" class="input h-10 py-3 px-4 text-md" placeholder="입력하세요.">
+                    </div>
+                </div>
+                <div>
+                    <h4>large</h4>
+                    <div class="flex flex-col">
+                        <input type="text" class="input h-[3.125rem] py-4 px-5" placeholder="입력하세요.">
+                    </div>
+                </div>
+                <div>
+                    <h4>error</h4>
+                    <div class="flex flex-col">
+                        <input type="text" class="input h-8 text-sm text-primary-dark py-2 px-3 border border-solid border-primary-err focus:border-primary-err" placeholder="입력하세요.">
+                        <p class="mt-2 text-primary-err text-xs">에러 메세지입니다.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <h3>select</h3>
-        <div class="border-2 p-5 mt-5">
-            <div class="flex flex-col">
-                <select name="" id="" class="h-10 border border-gray-line rounded-lg text-primary-dark text-sm px-4 pr-10 block w-full bg-select bg-right-[1rem]-bottom bg-no-repeat">
-                    <option value="">텍스트1</option>
-                    <option value="">텍스트2</option>
-                    <option value="">텍스트3</option>
-                </select>
+        <div class="box">
+            <div class="cont">
+                <div>
+                    <h4>small</h4>
+                    <div class="relative flex flex-col">
+                        <select class="h-8 border border-gray-line rounded-lg text-primary-dark text-sm px-2 pr-7 block w-full appearance-none cursor-pointer">
+                            <option value="1">텍스트1</option>
+                            <option value="2">텍스트2</option>
+                            <option value="3">dd</option>
+                        </select>
+                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-4 top-1/2 translate-y-[-50%]">
+                            <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <h4>medium</h4>
+                    <div class="relative flex flex-col">
+                        <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-md px-3 pr-8 block w-full appearance-none cursor-pointer">
+                            <option value="1">텍스트1</option>
+                            <option value="2">텍스트2</option>
+                            <option value="3">dd</option>
+                        </select>
+                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-4 top-1/2 translate-y-[-50%]">
+                            <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <h4>large</h4>
+                    <div class="relative flex flex-col">
+                        <select class="h-[3.125rem] border border-gray-line rounded-lg text-primary-dark px-5 pr-9 block w-full appearance-none cursor-pointer">
+                            <option value="1">텍스트1</option>
+                            <option value="2">텍스트2</option>
+                            <option value="3">dd</option>
+                        </select>
+                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-4 top-1/2 translate-y-[-50%]">
+                            <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
+            
         </div>
 
         <h3>button</h3>
@@ -110,5 +200,8 @@
                 <button class="h-10 leading-10 flex rounded-md px-6 text-sm  text-white font-medium bg-primary-blue">button small</button>
             </div>
         </div>
-    </body>
+
+        <!-- <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script> -->
+        
+    </body>    
 </html>

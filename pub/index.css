@@ -6,6 +6,34 @@
     html {
         font-family: Pretendard, system-ui, sans-serif;
     }
+    input + label { font-size:1rem;line-height:1rem; color:#5B6168; cursor:pointer}
+    select:hover:focus + svg{transform:rotate(180deg) translateY(50%); transition:all 0.3s}
+    select + svg{transition:all 0.3s}
+}
+@layer components {
+    .radio {
+        position: relative; width:1.25rem;height:1.25rem; appearance: none;border-radius: 100%; border:1px solid #E9EAEB; outline:none;        
+    }
+    .radio:hover{
+        cursor:pointer
+    }
+    .radio:checked {
+        border:1px solid #2C3036; background-color:#2C3036;
+    }
+    .radio:checked::before{
+        content:''; position: absolute; background-color:#fff; left:50%; top:50%; transform: translate(-50%, -50%); width:0.469rem;height:0.469rem; border-radius:100%
+    }
+    .checkbox {
+        position: relative; width:1.25rem;height:1.25rem; appearance: none;border-radius: 0.25rem; border:1px solid #E9EAEB; outline:none;        
+    }
+    .checkbox:hover{
+        cursor:pointer
+    }
+    .checkbox:checked {
+        border:1px solid #2C3036; background:url("/pub/img/checkbox-on.svg") no-repeat center;
+    }
+    .input{border:1px solid #E9EAEB; color: #090909;border-radius:0.5rem}
+    .input:placeholder{color:#BCC1C5}
 }
 @font-face {
     font-family: "Pretendard";

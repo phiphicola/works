@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+// import { Select, initTE } from "tw-elements";
+// initTE({ Select });
 module.exports = {
-  content:  ["./pub/**/*.{html,js}"],
+  content:  [
+    "./pub/**/*.{html,js}",
+    // "./node_modules/tw-elements/dist/js/**/*.js"
+  ],  
   theme: {
     extend: {
       backgroundImage: {
@@ -30,9 +35,19 @@ module.exports = {
       'dark': '#F0F2F4',
       'disabled': '#EEF0F2',
       'white': '#FFFFFF',
-
     },
+    backgroundPosition: {
+      'right-1-center':'right 1rem center'
+    },
+    fontSize:{
+      'md': '0.938rem',
+    }
   },
-  plugins: [],
+  plugins: [
+    // require('@tailwindcss/forms'),
+    // require("tw-elements/dist/plugin.cjs")
+  ],
+  
 }
+
 
