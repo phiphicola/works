@@ -4,9 +4,10 @@
 
 @layer base {
     html {
-        font-family: NotoSansKR, system-ui, sans-serif;
+        font-family: NotoSansKR, RobotoMono, system-ui, sans-serif;
     }
     input + label { font-size:1rem;line-height:1rem; color:#5B6168; cursor:pointer}
+    select:focus + svg,
     select:hover:focus + svg,
     select:hover:focus + svg:hover:focus{transform:rotate(180deg) translateY(50%); transition:all 0.3s}
     select + svg{position:absolute; top:50%; transform:translateY(-50%); transition:all 0.3s; z-index:-1}
@@ -36,6 +37,9 @@
     }
     .input{border:1px solid #E9EAEB; color: #090909;border-radius:0.5rem}
     .input:placeholder{color:#BCC1C5}
+
+    .selectbox{position:relative; display:flex}
+    .selectbox::after{content:'';width:1rem;height:1rem;background:url('/pub/img/icon-onoff.svg') no-repeat center; position:absolute; right:0.75rem; top:50%; transform:translateY(-50%)}
 }
 @font-face {
     font-family: "NotoSansKR";
@@ -79,4 +83,22 @@
     unicode-range:U+0020-007E;
 }
 
+@font-face {
+    font-family: "RobotoMono";
+    font-weight: 600;
+    font-display: swap;
+    src: url("/pub/font/RobotoMono-Bold.woff") format('woff');
+}
+@font-face {
+    font-family: "RobotoMono";
+    font-weight: 500;
+    font-display: swap;
+    src: url("/pub/font/RobotoMono-Medium.woff") format('woff');
+}
+@font-face {
+    font-family: "RobotoMono";
+    font-weight: 400;
+    font-display: swap;
+    src: url("/pub/font/RobotoMono-Regular.woff") format('woff');
+}
   
