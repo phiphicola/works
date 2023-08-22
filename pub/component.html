@@ -22,10 +22,9 @@
     <body>
         <ul class="tab">
             <li><a href="#group01">Form</a></li>
-            <li><a href="">Pagenation</a></li>
-            <li><a href="">Button</a></li>
-            <li><a href="">Tab </a></li>
-            <li><a href="">Form</a></li>
+            <li><a href="#group02">Button</a></li>
+            <li><a href="#group03">Tab </a></li>
+            <li><a href="#group05">Pagenation</a></li>
         </ul>
         <h2 id="group01">Form</h2>
         <h3>체크박스</h3>
@@ -104,11 +103,11 @@
             <h4>동의형</h4>
             <div class="flex gap-4">
                 <div class="flex items-center gap-2">
-                    <input type="radio" id="radioAgree" name="agree" class="relative h-5 w-5 border-none appearance-none rounded-full outline-none before:pointer-events-none bg-radio-check checked:bg-radio-check-on checked:bg-center hover:cursor-pointer" checked>
+                    <input type="radio" id="radioAgree" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none" checked>
                     <label for="radioAgree" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">동의</label>
                 </div>
                 <div class="flex items-center gap-2">
-                    <input type="radio" id="radioAgree2" name="agree" class="relative h-5 w-5 border-none appearance-none rounded-full outline-none before:pointer-events-none bg-radio-check checked:bg-radio-check-on checked:bg-center hover:cursor-pointer">
+                    <input type="radio" id="radioAgree2" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none">
                     <label for="radioAgree2" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">미동의</label>
                 </div>
             </div>
@@ -147,42 +146,68 @@
 
         <h3>select</h3>
         <div class="box">
-            <div class="cont">
-                <div>
+            <div class="cont flex-wrap">
+                <div class="flex-1">
                     <h4>small</h4>
                     <div class="relative flex flex-col">
-                        <select class="h-8 border border-gray-line rounded-lg text-primary-dark text-sm px-2 pr-7 block w-full appearance-none cursor-pointer">
+                        <select class="h-8 border border-gray-line rounded-lg text-primary-dark text-sm px-2 pr-7 block w-full appearance-none cursor-pointer bg-transparent">
                             <option value="1">텍스트1</option>
                             <option value="2">텍스트2</option>
                             <option value="3">dd</option>
                         </select>
-                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-4 top-1/2 translate-y-[-50%]">
+                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="right-3">
                             <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
-                <div>
+                <div class="flex-1">
                     <h4>medium</h4>
                     <div class="relative flex flex-col">
-                        <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-md px-3 pr-8 block w-full appearance-none cursor-pointer">
+                        <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-md px-3 pr-8 block w-full appearance-none cursor-pointer bg-transparent">
                             <option value="1">텍스트1</option>
                             <option value="2">텍스트2</option>
                             <option value="3">dd</option>
                         </select>
-                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-4 top-1/2 translate-y-[-50%]">
+                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="right-4">
                             <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
-                <div>
+                <div class="flex-1">
                     <h4>large</h4>
                     <div class="relative flex flex-col">
-                        <select class="h-[3.125rem] border border-gray-line rounded-lg text-primary-dark px-5 pr-9 block w-full appearance-none cursor-pointer">
+                        <select class="h-[3.125rem] border border-gray-line rounded-lg text-primary-dark px-5 pr-9 block w-full appearance-none cursor-pointer bg-transparent">
                             <option value="1">텍스트1</option>
                             <option value="2">텍스트2</option>
                             <option value="3">dd</option>
                         </select>
-                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-4 top-1/2 translate-y-[-50%]">
+                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="right-5">
+                            <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h4>disabled</h4>
+                    <div class="relative flex flex-col">
+                        <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-md px-3 pr-8 block w-full appearance-none cursor-pointer bg-disabled gray-800" disabled>
+                            <option value="1">텍스트1</option>
+                            <option value="2">텍스트2</option>
+                            <option value="3">dd</option>
+                        </select>
+                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="right-4">
+                            <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#D9D9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h4>line style</h4>
+                    <div class="relative flex flex-col">
+                        <select class="h-10 border-b border-gray-line text-primary-dark text-md px-1 pr-5 block w-full appearance-none cursor-pointer bg-transparent">
+                            <option value="1">텍스트1</option>
+                            <option value="2">텍스트2</option>
+                            <option value="3">dd</option>
+                        </select>
+                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="right-1">
                             <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
@@ -191,13 +216,49 @@
             
         </div>
 
-        <h3>button</h3>
-        <div class="border-2 p-5 mt-5">
-            <div class="flex">
-                <button class="h-[3.125rem] leading-[3.125rem] flex rounded-md px-6 text-white font-semibold bg-primary-blue">button large</button>
-                <button class="h-10 leading-10 flex rounded-md px-6 text-sm  text-white font-medium bg-primary-blue">button medium</button>
-                <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-primary-blue font-medium border border-primary-blue">button medium line</button>
-                <button class="h-10 leading-10 flex rounded-md px-6 text-sm  text-white font-medium bg-primary-blue">button small</button>
+        <h2 id="group02">Button</h2>
+        <h3>button fill</h3>
+        <div class="box">
+            <div class="flex flex-wrap gap-1">
+                <button class="h-8 leading-8 flex rounded-md px-6 text-sm  text-white font-medium bg-primary-blue">blue small</button>
+                <button class="h-10 leading-10 flex rounded-md px-6 text-sm  text-white font-medium bg-primary-blue">blue medium</button>
+                <button class="h-13 leading-13 flex rounded-md px-6 text-white font-semibold bg-primary-blue">blue large</button>  
+                <button class="h-8 leading-8 flex rounded-md px-6 text-sm  text-white font-medium bg-primary-dark">dark small</button>
+                <button class="h-10 leading-10 flex rounded-md px-6 text-sm  text-white font-medium bg-primary-dark">dark medium</button>
+                <button class="h-13 leading-13 flex rounded-md px-6 text-white font-semibold bg-primary-dark">dark large</button>                
+            </div>
+        </div>
+        <h3>button line</h3>
+        <div class="box">
+            <div class="flex flex-wrap gap-1">
+                <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-primary-blue font-medium border border-primary-blue">blue small line</button>
+                <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-primary-blue font-medium border border-primary-blue">blue medium line</button>
+                <button class="h-13 leading-13 flex rounded-md px-6 text-primary-blue font-semibold border border-primary-blue">blue large line</button>                
+                <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-primary-dark font-medium border border-primary-dark">dark small line</button>
+                <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-primary-dark font-medium border border-primary-dark">dark medium line</button>
+                <button class="h-13 leading-13 flex rounded-md px-6 text-primary-dark font-semibold border border-primary-dark">dark large line</button>
+            </div>
+        </div>
+        <h3>button round</h3>
+        <div class="box">
+            <div class="flex flex-wrap gap-1">
+                <button class="h-9 leading-9 flex rounded-2xlm px-5 text-white bg-primary-dark">dark medium round</button>                
+                <button class="h-9 leading-9 flex rounded-2xlm px-5 text-primary-dark border border-primary-dark">dark medium round line</button>
+                
+            </div>
+        </div>
+        <h3>button icon</h3>
+        <div class="box">
+            <div class="flex flex-wrap gap-1">
+                <button class="h-10 leading-10 flex items-center gap-1.5 rounded-md px-6 text-sm text-white font-medium bg-primary-dark">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.7173 5.01503L11.0138 2.3054C10.8318 2.11873 10.5848 2.00944 10.3242 2.00026C10.1919 1.99721 10.0605 2.02107 9.93773 2.07037C9.81499 2.11968 9.70355 2.19341 9.61016 2.28709L7.99903 3.89212L2.28683 9.61042C2.19584 9.70072 2.12364 9.80816 2.07441 9.92653C2.02518 10.0449 1.99989 10.1718 2 10.3V13.028C2 13.2869 2.10288 13.5353 2.28599 13.7184C2.46911 13.9015 2.71748 14.0044 2.97644 14.0044H5.70439C5.96305 14.0033 6.21085 13.9002 6.394 13.7176L13.7173 6.39426C13.8985 6.21043 14 5.96272 14 5.70464C14 5.44657 13.8985 5.19886 13.7173 5.01503ZM11.7644 6.96792L9.0365 4.23998L10.2998 2.9767L13.0277 5.70464L11.7644 6.96792Z" fill="white"/>
+                    </svg>    
+                    <span>dark small</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.66666 2.66668L11 8.00001L5.66666 13.3333" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
 

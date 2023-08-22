@@ -4,15 +4,17 @@
 
 @layer base {
     html {
-        font-family: Pretendard, system-ui, sans-serif;
+        font-family: NotoSansKR, system-ui, sans-serif;
     }
     input + label { font-size:1rem;line-height:1rem; color:#5B6168; cursor:pointer}
-    select:hover:focus + svg{transform:rotate(180deg) translateY(50%); transition:all 0.3s}
-    select + svg{transition:all 0.3s}
+    select:hover:focus + svg,
+    select:hover:focus + svg:hover:focus{transform:rotate(180deg) translateY(50%); transition:all 0.3s}
+    select + svg{position:absolute; top:50%; transform:translateY(-50%); transition:all 0.3s; z-index:-1}
+    
 }
 @layer components {
     .radio {
-        position: relative; width:1.25rem;height:1.25rem; appearance: none;border-radius: 100%; border:1px solid #E9EAEB; outline:none;        
+        position: relative; width:1.25rem;height:1.25rem; appearance: none;border-radius: 100%; border:1px solid #E9EAEB; outline:none; flex:none
     }
     .radio:hover{
         cursor:pointer
@@ -36,26 +38,45 @@
     .input:placeholder{color:#BCC1C5}
 }
 @font-face {
-    font-family: "Pretendard";
+    font-family: "NotoSansKR";
     font-weight: 600;
     font-display: swap;
-    src: local(※), url("/pub/font/Pretendard-SemiBold.eot");
-    src: local(※), url("/pub/font/Pretendard-SemiBold.eot?#iefix") format("embedded-opentype"), url("/pub/font/Pretendard-SemiBold.woff2") format("woff2"), url("/pub/font/Pretendard-SemiBold.woff") format("woff");
+    src: url("/pub/font/NotoSansKR-Bold.woff2") format('woff2'), url("/pub/font/NotoSansKR-Bold.woff") format('woff'), url("/pub/font/NotoSansKR-Bold.otf") format('opentype');
 }
 @font-face {
-    font-family: "Pretendard";
+    font-family: "NotoSansKR";
     font-weight: 500;
     font-display: swap;
-    src: local(※), url("/pub/font/Pretendard-Medium.eot");
-    src: local(※), url("/pub/font/Pretendard-Medium.eot?#iefix") format("embedded-opentype"), url("/pub/font/Pretendard-Medium.woff2") format("woff2"), url("/pub/font/Pretendard-Medium.woff") format("woff");
+    src: url("/pub/font/NotoSansKR-Medium.woff2") format('woff2'), url("/pub/font/NotoSansKR-Medium.woff") format('woff'), url("/pub/font/NotoSansKR-Medium.otf") format('opentype');
 }
 @font-face {
-    font-family: "Pretendard";
+    font-family: "NotoSansKR";
     font-weight: 400;
     font-display: swap;
-    src: local(※), url("/pub/font/Pretendard-Regular.eot");
-    src: local(※), url("/pub/font/Pretendard-Regular.eot?#iefix") format("embedded-opentype"), url("/pub/font/Pretendard-Regular.woff2") format("woff2"), url("/pub/font/Pretendard-Regular.woff") format("woff");
+    src: url("/pub/font/NotoSansKR-Regular.woff2") format('woff2'), url("/pub/font/NotoSansKR-Regular.woff") format('woff'), url("/pub/font/NotoSansKR-Regular.otf") format('opentype');
 }
 
+/* 숫자,영문 */
+@font-face {
+    font-family: "NotoSansKR";
+    font-weight: 600;
+    font-display: swap;
+    src: url("/pub/font/RobotoMono-Bold.woff") format('woff');
+    unicode-range:U+0020-007E;
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-weight: 500;
+    font-display: swap;
+    src: url("/pub/font/RobotoMono-Medium.woff") format('woff');
+    unicode-range:U+0020-007E;
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-weight: 400;
+    font-display: swap;
+    src: url("/pub/font/RobotoMono-Regular.woff") format('woff');
+    unicode-range:U+0020-007E;
+}
 
   
