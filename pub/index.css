@@ -4,13 +4,15 @@
 
 @layer base {
     html {
-        font-family: NotoSansKR, RobotoMono, system-ui, sans-serif;
+        font-family: NotoSansKR, RobotoMono, system-ui, sans-serif;color:#2C3036
     }
     input + label { font-size:1rem;line-height:1rem; color:#5B6168; cursor:pointer}
-    select:focus + svg,
-    select:hover:focus + svg,
-    select:hover:focus + svg:hover:focus{transform:rotate(180deg) translateY(50%); transition:all 0.3s}
-    select + svg{position:absolute; top:50%; transform:translateY(-50%); transition:all 0.3s; z-index:-1}
+   
+    [selectbox]{position:relative; display:flex}
+    [selectbox]::after{content:'';width:1rem;height:1rem;background:url('/pub/img/icon-onoff.svg') no-repeat center; position:absolute; right:0.75rem; top:50%; transform:translateY(-50%);z-index:-1}
+    [selectbox].focus::after{transform:rotate(180deg) translateY(50%);}
+
+    [disabled]{background-color:#F5F7F8}
     
 }
 @layer components {
@@ -38,8 +40,12 @@
     .input{border:1px solid #E9EAEB; color: #090909;border-radius:0.5rem}
     .input:placeholder{color:#BCC1C5}
 
-    .selectbox{position:relative; display:flex}
-    .selectbox::after{content:'';width:1rem;height:1rem;background:url('/pub/img/icon-onoff.svg') no-repeat center; position:absolute; right:0.75rem; top:50%; transform:translateY(-50%)}
+    
+    
+    [acc-tit] + .accordionContent{display:none}
+    [acc-tit].is-open + .accordionContent{display:block}
+
+    .bg-main{background:linear-gradient(47deg, #EAF6FF 16.38%, #FCF3EA 100%);}
 }
 @font-face {
     font-family: "NotoSansKR";
@@ -60,45 +66,47 @@
     src: url("/pub/font/NotoSansKR-Regular.woff2") format('woff2'), url("/pub/font/NotoSansKR-Regular.woff") format('woff'), url("/pub/font/NotoSansKR-Regular.otf") format('opentype');
 }
 
+
 /* 숫자,영문 */
 @font-face {
-    font-family: "NotoSansKR";
+    font-family: "RobotoMono";
     font-weight: 600;
     font-display: swap;
     src: url("/pub/font/RobotoMono-Bold.woff") format('woff');
-    unicode-range:U+0020-007E;
 }
 @font-face {
-    font-family: "NotoSansKR";
+    font-family: "RobotoMono";
     font-weight: 500;
     font-display: swap;
     src: url("/pub/font/RobotoMono-Medium.woff") format('woff');
-    unicode-range:U+0020-007E;
 }
 @font-face {
-    font-family: "NotoSansKR";
+    font-family: "RobotoMono";
     font-weight: 400;
     font-display: swap;
     src: url("/pub/font/RobotoMono-Regular.woff") format('woff');
-    unicode-range:U+0020-007E;
 }
 
-@font-face {
-    font-family: "RobotoMono";
+
+/* 숫자,영문 자동반영 */
+/* @font-face {
+    font-family: "NotoSansKR";
     font-weight: 600;
     font-display: swap;
     src: url("/pub/font/RobotoMono-Bold.woff") format('woff');
+    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
 }
 @font-face {
-    font-family: "RobotoMono";
+    font-family: "NotoSansKR";
     font-weight: 500;
     font-display: swap;
     src: url("/pub/font/RobotoMono-Medium.woff") format('woff');
+    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
 }
 @font-face {
-    font-family: "RobotoMono";
+    font-family: "NotoSansKR";
     font-weight: 400;
     font-display: swap;
     src: url("/pub/font/RobotoMono-Regular.woff") format('woff');
-}
-  
+    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
+} */

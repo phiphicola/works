@@ -15,6 +15,12 @@
       .publist table td a{text-decoration: underline; color: #3A8DFD; font-weight: 600;}
       .head{display: flex; justify-content: space-between; align-items:center; margin-bottom: 20px;}
       .guide{font-size: 18px; display: block; border:1px solid #3A8DFD; color: #3A8DFD; font-weight: 600; border-radius: 8px; padding:10px 20px}
+      table{counter-reset: item 0;}
+      table tbody tr{counter-increment: item;}
+      table tbody tr td.num::before {
+        content: counter(item);
+      }
+      table tbody tr td.num{text-align: center;}
     </style>
 </head>
 <body>
@@ -27,16 +33,18 @@
   <div class="publist">
     <table>
       <colgroup>
-        <col style="width: 12%;" />
-        <col style="width: 12%;" />
-        <col style="width: 12%;" />
+        <col style="width: 4%;" />
+        <col style="width: 14%;" />
+        <col style="width: 14%;" />
+        <col style="width: 14%;" />
         <col style="width: 10%;" />
-        <col style="width: 10%;" />
-        <col style="width: 10%;" />
-        <col style="width: 34%" />
-    </colgroup>
-    <thead>
-        <tr>
+        <col style="width: 8%;" />
+        <col style="width: 8%;" />
+        <col style="width: 31%" />
+      </colgroup>
+      <thead>
+          <tr>
+            <th>No</th>  
             <th>1depth</th>
             <th>2depth</th>
             <th>3depth</th>
@@ -44,19 +52,240 @@
             <th>작업구분</th>
             <th>완료</th>
             <th>경로</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="num"></td>
+          <td>대시보드-업무PC</td>
+          <td></td>
+          <td></td>
+          <td>SFC001-001</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC001-001.html" target="_blank">/pub/page/SFC001-001.html</a></td>
         </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>페이지</td>
-        <td>페이지</td>
-        <td>페이지</td>
-        <td>w1234563</td>
-        <td>페이지</td>
-        <td>완료</td>
-        <td><a href="http://127.0.0.1:5500/pub/index.html">http://127.0.0.1:5500/pub/index.html</a></td>
-      </tr>
-    </tbody>
+        <tr>
+          <td class="num"></td>
+          <td>대시보드-업무PC</td>
+          <td>이용 권한 신청</td>
+          <td></td>
+          <td>SFC001-001-1P</td>
+          <td>팝업</td>
+          <td></td>
+          <td><a href="/pub/page/SFC001-001-1P.html" target="_blank">/pub/page/SFC001-001-1P.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>대시보드-운영PC</td>
+          <td>이용 권한 신청</td>
+          <td></td>
+          <td>SFC002-001</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC002-001.html" target="_blank">/pub/page/SFC002-001.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-업무PC</td>
+          <td></td>
+          <td></td>
+          <td>SFC003-001</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC003-001.html" target="_blank">/pub/page/SFC003-001.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-업무PC</td>
+          <td>내 데이터 업로드 요청</td>
+          <td></td>
+          <td>SFC003-001-1P</td>
+          <td>팝업</td>
+          <td></td>
+          <td><a href="/pub/page/SFC003-001-1P.html" target="_blank">/pub/page/SFC003-001-1P.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-업무PC</td>
+          <td>조회 가능한 데이터만 보기</td>
+          <td></td>
+          <td>SFC003-002</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC003-002.html" target="_blank">/pub/page/SFC003-002.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-업무PC</td>
+          <td>검색 결과</td>
+          <td>상세 검색 결과</td>
+          <td>SFC003-003</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC003-003.html" target="_blank">/pub/page/SFC003-003.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-업무PC</td>
+          <td>검색 결과</td>
+          <td>상세 검색</td>
+          <td>SFC003-003-1P</td>
+          <td>팝업</td>
+          <td></td>
+          <td><a href="/pub/page/SFC003-003-1P.html" target="_blank">/pub/page/SFC003-003-1P.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-업무PC</td>
+          <td>검색 결과</td>
+          <td>키워드 검색 결과</td>
+          <td>SFC003-004</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC003-004.html" target="_blank">/pub/page/SFC003-004.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-업무PC</td>
+          <td>데이터 상세</td>
+          <td>운영 데이터</td>
+          <td>SFC003-005</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC003-005.html" target="_blank">/pub/page/SFC003-005.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-업무PC</td>
+          <td>데이터 상세</td>
+          <td>학습 데이터</td>
+          <td>SFC003-006</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC003-006.html" target="_blank">/pub/page/SFC003-006.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td></td>
+          <td></td>
+          <td>SFC004-001</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-001.html" target="_blank">/pub/page/SFC004-001.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>내 데이터 업로드 요청</td>
+          <td></td>
+          <td>SFC004-001-1P</td>
+          <td>팝업</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-001-1P.html" target="_blank">/pub/page/SFC004-001-1P.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>조회 가능한 데이터만 보기</td>
+          <td></td>
+          <td>SFC004-002</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-002.html" target="_blank">/pub/page/SFC004-002.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>검색결과</td>
+          <td>상세 검색 결과</td>
+          <td>SFC004-003</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-003.html" target="_blank">/pub/page/SFC004-003.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>검색결과</td>
+          <td>상세 검색</td>
+          <td>SFC004-003-1P</td>
+          <td>팝업</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-003-1P.html" target="_blank">/pub/page/SFC004-003-1P.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>검색결과</td>
+          <td>키워드 검색 결과</td>
+          <td>SFC004-004</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-004.html" target="_blank">/pub/page/SFC004-004.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>데이터 상세</td>
+          <td>조회 권한 없음</td>
+          <td>SFC004-005</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-005.html" target="_blank">/pub/page/SFC004-005.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>데이터 상세</td>
+          <td>조회 권한 있음</td>
+          <td>SFC004-006</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-006.html" target="_blank">/pub/page/SFC004-006.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>데이터 상세</td>
+          <td>데이터 분석</td>
+          <td>SFC004-006-1P</td>
+          <td>팝업</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-006-1P.html" target="_blank">/pub/page/SFC004-006-1P.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>데이터 상세</td>
+          <td>허가 필요 데이터</td>
+          <td>SFC004-007</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-007.html" target="_blank">/pub/page/SFC004-007.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>데이터 카달로그-운영PC</td>
+          <td>데이터 상세</td>
+          <td>허가 필요 데이터</td>
+          <td>SFC004-007-1P</td>
+          <td>팝업</td>
+          <td></td>
+          <td><a href="/pub/page/SFC004-007-1P.html" target="_blank">/pub/page/SFC004-007-1P.html</a></td>
+        </tr>
+        <tr>
+          <td class="num"></td>
+          <td>커뮤니티</td>
+          <td>공지사항</td>
+          <td>목록</td>
+          <td>SFC005-001</td>
+          <td>페이지</td>
+          <td></td>
+          <td><a href="/pub/page/SFC005-001.html" target="_blank">/pub/page/SFC005-001.html</a></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </body>

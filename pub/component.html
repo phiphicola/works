@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
+        <title>우리은행</title>
         <meta charset="utf-8">
-        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/pub/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
         <script type="text/javascript" src="/pub/js/ui.js"></script> 
+        <script src="/pub/js/swiper-bundle.min.js"></script>
         <style>
-            body{margin:20px}
-            .tab{display: flex;align-items: center;gap:10px;}
-            .tab li a{border-radius: 30px; background-color: #3A8DFD; display: block; color: #fff; padding:10px 16px}
-            h2{background-color: #eee;font-size: 24px; font-weight: 600;margin: 40px 0 16px; padding:10px 20px}
+            body{}
+            html {scroll-behavior: smooth;}
+            .tab{display: flex;align-items: center;gap:10px;position: sticky; padding:15px 20px; top:0; left:0; width:100%;background: #E3F4FD; z-index: 10;}
+            .tab li a{border-radius: 30px; background-color: #0067AC; display: block; color: #fff; padding:10px 16px}
+            .inner{margin:20px;}
+            h2{background-color: #EEF0F2;font-size: 30px; font-weight: 600;padding:85px 20px 20px}
             h3{font-size: 18px;font-weight: 600;margin: 24px 0 10px;}            
             h4{margin: 20px 0 16px;;}
             h4::before{content: '-';display: inline-block;margin-right: 4px;}
             h4:first-child{margin-top: 0;}
-            .box{border:1px solid #bbb;padding: 20px;}
-            .box .cont{display: flex; gap: 40px}
+            .box{border:1px solid #E9EAEB;padding: 20px;}
+            .box .cont{display: flex; gap: 40px; flex-wrap: wrap;}
         </style>
     
     </head>
@@ -25,392 +29,478 @@
             <li><a href="#group01">Form</a></li>
             <li><a href="#group02">Button</a></li>
             <li><a href="#group03">Tab </a></li>
-            <li><a href="#group05">Pagination</a></li>
+            <li><a href="#group04">Pagination</a></li>
+            <li><a href="#group05">Component</a></li>
         </ul>
-        <h2 id="group01">Form</h2>
-        <h3>checkbox</h3>
-        <div class="box">
-            <h4>세로형</h4>
-            <div class="flex items-center gap-2">
-                <input type="checkbox" id="chk" class="checkbox" checked>
-                <label for="chk">체크박스 기본</label>
-            </div>
-            <div class="flex items-center gap-2">
-                <input type="checkbox" id="chk2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
-                <label for="chk2" class="text-gray-400">체크박스 disabled</label>
-            </div>
-            <div class="flex items-center gap-2">
-                <input type="checkbox" id="chk3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
-                <label for="chk3" class="text-gray-600">체크박스 disabled check</label>
-            </div>
-
-            <h4>가로형</h4>
-            <div class="flex gap-4">
-                <div class="flex items-center gap-2">
-                    <input type="checkbox" id="check" class="checkbox" checked>
-                    <label for="check">체크박스 기본</label>
-                </div>
-                <div class="flex items-center gap-2">
-                    <input type="checkbox" id="check2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
-                    <label for="check2" class="text-gray-400">체크박스 disabled</label>
-                </div>
-                <div class="flex items-center gap-2">
-                    <input type="checkbox" id="check3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
-                    <label for="check3" class="text-gray-600">체크박스 disabled check</label>
-                </div>
-            </div>
-        </div>
-        
-        <h3>radio</h3>
-        <div class="box">
-            <h4>세로형</h4>
-            <div class="flex items-center gap-2">
-                <input type="radio" id="radio" name="radiogroup" class="radio" checked>
-                <label for="radio">라디오 기본</label>
-            </div>
-            <div class="flex items-center gap-2">
-                <input type="radio" id="radio2" name="radiogroup" class="radio">
-                <label for="radio2">라디오 기본</label>
-            </div>
-            <div class="flex items-center gap-2">
-                <input type="checkbox" id="radio3" name="radiogroup" class="radio bg-disabled before:pointer-events-none" disabled>
-                <label for="radio3" class="text-gray-400">체크박스 disabled</label>
-            </div>
-            <div class="flex items-center gap-2">
-                <input type="checkbox" id="radio4" name="radiogroup"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
-                <label for="radio4" class="text-gray-600">체크박스 disabled check</label>
-            </div>
-
-            <h4>가로형</h4>
-            <div class="flex gap-4">
-                <div class="flex items-center gap-2">
-                    <input type="radio" id="rdo" name="radiogroup2" class="radio" checked>
-                    <label for="rdo" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">라디오 기본</label>
-                </div>
-                <div class="flex items-center gap-2">
-                    <input type="radio" id="rdo2" name="radiogroup2" class="radio">
-                    <label for="rdo2" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">라디오 기본</label>
-                </div>
-                <div class="flex items-center gap-2">
-                    <input type="checkbox" id="rdo3" name="radiogroup2" class="radio bg-disabled before:pointer-events-none" disabled>
-                    <label for="rdo3" class="flex gap-2 items-center text-base text-gray-400 cursor-pointer">체크박스 disabled</label>
-                </div>
-                <div class="flex items-center gap-2">
-                    <input type="checkbox" id="rdo4" name="radiogroup2"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
-                    <label for="rdo4" class="flex gap-2 items-center text-base text-gray-600 cursor-pointer">체크박스 disabled check</label>
-                </div>
-            </div>
-
-            <h4>동의형</h4>
-            <div class="flex gap-4">
-                <div class="flex items-center gap-2">
-                    <input type="radio" id="radioAgree" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none" checked>
-                    <label for="radioAgree" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">동의</label>
-                </div>
-                <div class="flex items-center gap-2">
-                    <input type="radio" id="radioAgree2" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none">
-                    <label for="radioAgree2" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">미동의</label>
-                </div>
-            </div>
-        </div>
-
-        <h3>input</h3>
-        <div class="box">
-            <div class="cont">
-                <div>
-                    <h4>small</h4>
-                    <div class="flex flex-col">
-                        <input type="text" class="input h-8 py-2 px-3 text-sm" placeholder="입력하세요.">
-                    </div>
-                </div>
-                <div>
-                    <h4>medium</h4>
-                    <div class="flex flex-col">
-                        <input type="text" class="input h-10 py-3 px-4 text-md" placeholder="입력하세요.">
-                    </div>
-                </div>
-                <div>
-                    <h4>large</h4>
-                    <div class="flex flex-col">
-                        <input type="text" class="input h-[3.125rem] py-4 px-5" placeholder="입력하세요.">
-                    </div>
-                </div>
-                <div>
-                    <h4>error</h4>
-                    <div class="flex flex-col">
-                        <input type="text" class="input h-8 text-sm text-primary-dark py-2 px-3 border border-solid border-primary-err focus:border-primary-err" placeholder="입력하세요.">
-                        <p class="mt-2 text-primary-err text-xs">에러 메세지입니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h3>select</h3>
-        <div class="box">
-            <div class="cont flex-wrap">
-                <div class="flex-1">
-                    <h4>small</h4>
-                    <div class="selectbox relative flex flex-col">
-                        <select class="h-8 border border-gray-line rounded-lg text-primary-dark text-sm px-2 pr-7 block w-full appearance-none cursor-pointer bg-transparent">
-                            <option value="1">텍스트1</option>
-                            <option value="2">텍스트2</option>
-                            <option value="3">dd</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="flex-1">
-                    <h4>medium</h4>
-                    <div class="relative flex flex-col">
-                        <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-md px-3 pr-8 block w-full appearance-none cursor-pointer bg-transparent">
-                            <option value="1">텍스트1</option>
-                            <option value="2">텍스트2</option>
-                            <option value="3">dd</option>
-                        </select>
-                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="right-4">
-                            <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="flex-1">
-                    <h4>large</h4>
-                    <div class="relative flex flex-col">
-                        <select class="h-[3.125rem] border border-gray-line rounded-lg text-primary-dark px-5 pr-9 block w-full appearance-none cursor-pointer bg-transparent">
-                            <option value="1">텍스트1</option>
-                            <option value="2">텍스트2</option>
-                            <option value="3">dd</option>
-                        </select>
-                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="right-5">
-                            <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="flex-1">
-                    <h4>disabled</h4>
-                    <div class="relative flex flex-col">
-                        <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-md px-3 pr-8 block w-full appearance-none cursor-pointer bg-disabled gray-800" disabled>
-                            <option value="1">텍스트1</option>
-                            <option value="2">텍스트2</option>
-                            <option value="3">dd</option>
-                        </select>
-                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="right-4 z-10">
-                            <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#D9D9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="flex-1">
-                    <h4>line style</h4>
-                    <div class="relative flex flex-col">
-                        <select class="h-10 border-b border-gray-line text-primary-dark text-md px-1 pr-5 block w-full appearance-none cursor-pointer bg-transparent">
-                            <option value="1">텍스트1</option>
-                            <option value="2">텍스트2</option>
-                            <option value="3">dd</option>
-                        </select>
-                        <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="right-1">
-                            <path d="M13.1333 5.60001L8.33333 10.4L3.53333 5.60001" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-
-        <h2 id="group02">Button</h2>
-        <h3>button fill</h3>
-        <div class="box">
-            <div class="flex flex-wrap gap-1">
-                <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-white font-medium bg-primary-blue">blue small</button>
-                <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-white font-medium bg-primary-blue">blue medium</button>
-                <button class="h-13 leading-13 flex rounded-md px-6 text-white font-semibold bg-primary-blue">blue large</button>  
-                <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-white font-medium bg-primary-dark">dark small</button>
-                <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-white font-medium bg-primary-dark">dark medium</button>
-                <button class="h-13 leading-13 flex rounded-md px-6 text-white font-semibold bg-primary-dark">dark large</button>                
-            </div>
-        </div>
-        <h3>button line</h3>
-        <div class="box">
-            <div class="flex flex-wrap gap-1">
-                <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-primary-blue font-medium border border-primary-blue">blue small line</button>
-                <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-primary-blue font-medium border border-primary-blue">blue medium line</button>
-                <button class="h-13 leading-13 flex rounded-md px-6 text-primary-blue font-semibold border border-primary-blue">blue large line</button>                
-                <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-primary-dark font-medium border border-primary-dark">dark small line</button>
-                <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-primary-dark font-medium border border-primary-dark">dark medium line</button>
-                <button class="h-13 leading-13 flex rounded-md px-6 text-primary-dark font-semibold border border-primary-dark">dark large line</button>
-            </div>
-        </div>
-        <h3>button round</h3>
-        <div class="box">
-            <div class="flex flex-wrap gap-1">
-                <button class="h-9 leading-9 flex rounded-2xlm px-5 text-white bg-primary-dark">dark medium round</button>                
-                <button class="h-9 leading-9 flex rounded-2xlm px-5 text-primary-dark border border-primary-dark">dark medium round line</button>                
-            </div>
-        </div>
-        <h3>button icon</h3>
-        <div class="box">
-            <div class="flex flex-wrap gap-1">
-                <button class="h-10 leading-10 flex items-center gap-1.5 rounded-md px-6 text-sm text-white font-medium bg-primary-dark">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.7173 5.01503L11.0138 2.3054C10.8318 2.11873 10.5848 2.00944 10.3242 2.00026C10.1919 1.99721 10.0605 2.02107 9.93773 2.07037C9.81499 2.11968 9.70355 2.19341 9.61016 2.28709L7.99903 3.89212L2.28683 9.61042C2.19584 9.70072 2.12364 9.80816 2.07441 9.92653C2.02518 10.0449 1.99989 10.1718 2 10.3V13.028C2 13.2869 2.10288 13.5353 2.28599 13.7184C2.46911 13.9015 2.71748 14.0044 2.97644 14.0044H5.70439C5.96305 14.0033 6.21085 13.9002 6.394 13.7176L13.7173 6.39426C13.8985 6.21043 14 5.96272 14 5.70464C14 5.44657 13.8985 5.19886 13.7173 5.01503ZM11.7644 6.96792L9.0365 4.23998L10.2998 2.9767L13.0277 5.70464L11.7644 6.96792Z" fill="white"/>
-                    </svg>    
-                    <span>dark small</span>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.66666 2.66668L11 8.00001L5.66666 13.3333" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <h2 id="group03">Tab</h2>
-        <div class="box">
-            <ul class="tabs flex items-center gap-5">
-                <li class="text-gray-500"><a href="#tab-1" id="default-tab" class="text-xl text-primary-dark font-bold block pb-3 border-b-2 border-b-primary-dark">Tab 1</a></li>
-                <li class="text-gray-500"><a href="#tab-2" class="text-xl font-bold block pb-3">Tab 2</a></li>
-                <li class="text-gray-500"><a href="#tab-3" class="text-xl font-bold block pb-3">Tab 3</a></li>
-            </ul>
-            <div class="tab-contents w-full">
-                <div id="tab-1" class=""> 
-                    <span class="col-md-10">
-                        <h3>Feature 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </span>
-                </div> 
-                <div id="tab-2" class="hidden">
-                    <span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
-                    <span class="col-md-10">
-                        <h3>Feature 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </span>
-                </div>
-                <div id="tab-3" class="hidden">
-                    <span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
-                    <span class="col-md-10">
-                        <h3>Feature 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <h2 id="group04">Pagination</h2>
-        <div class="box">
-            <ul class="pagination flex items-center gap-1">
-                <li>
-                    <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M19.5 18.5L13 12L19.5 5.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M10.5 18.5L4 12L10.5 5.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M15 18.5L8.5 12L15 5.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm font-bold text-white rounded-full bg-primary-dark ml-4">1</a></li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">2</a></li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">3</a></li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">4</a></li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">5</a></li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">6</a></li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">7</a></li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">8</a></li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">9</a></li>
-                <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">10</a></li>
-                <li>
-                    <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 5.5L15.5 12L9 18.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M4.5 5.5L11 12L4.5 18.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13.5 5.5L20 12L13.5 18.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <h2 id="group05">Component</h2>
-        <h3>popup</h3>
         <div class="container">
-            <a data-modal="modal-one">Open Modal</a>
-          </div>
-          
-          <div class="modal" id="modal-one">
-            <div class="modal-bg modal-exit"></div>
-            <div class="modal-container">
-              <h1> Modal</h1>
-              <h2>내용이 들어감</h2>
-              <button class="modal-close modal-exit">X</button>
+            <h2 id="group01">Form</h2>
+            <div class="inner">
+                <h3>checkbox</h3>
+                <div class="box">
+                    <h4>세로형</h4>
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="chk" class="checkbox" checked>
+                        <label for="chk">체크박스 기본</label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="chk2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
+                        <label for="chk2" class="text-gray-400">체크박스 disabled</label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="chk3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
+                        <label for="chk3" class="text-gray-600">체크박스 disabled check</label>
+                    </div>
+                    <h4>가로형</h4>
+                    <div class="flex gap-4">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="check" class="checkbox" checked>
+                            <label for="check">체크박스 기본</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="check2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
+                            <label for="check2" class="text-gray-400">체크박스 disabled</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="check3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
+                            <label for="check3" class="text-gray-600">체크박스 disabled check</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>radio</h3>
+                <div class="box">
+                    <h4>세로형</h4>
+                    <div class="flex items-center gap-2">
+                        <input type="radio" id="radio" name="radiogroup" class="radio" checked>
+                        <label for="radio">라디오 기본</label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="radio" id="radio2" name="radiogroup" class="radio">
+                        <label for="radio2">라디오 기본</label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="radio3" name="radiogroup" class="radio bg-disabled before:pointer-events-none" disabled>
+                        <label for="radio3" class="text-gray-400">체크박스 disabled</label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="radio4" name="radiogroup"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
+                        <label for="radio4" class="text-gray-600">체크박스 disabled check</label>
+                    </div>
+                    <h4>가로형</h4>
+                    <div class="flex gap-4">
+                        <div class="flex items-center gap-2">
+                            <input type="radio" id="rdo" name="radiogroup2" class="radio" checked>
+                            <label for="rdo" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">라디오 기본</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="radio" id="rdo2" name="radiogroup2" class="radio">
+                            <label for="rdo2" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">라디오 기본</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="rdo3" name="radiogroup2" class="radio bg-disabled before:pointer-events-none" disabled>
+                            <label for="rdo3" class="flex gap-2 items-center text-base text-gray-400 cursor-pointer">체크박스 disabled</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="rdo4" name="radiogroup2"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
+                            <label for="rdo4" class="flex gap-2 items-center text-base text-gray-600 cursor-pointer">체크박스 disabled check</label>
+                        </div>
+                    </div>
+                    <h4>동의형</h4>
+                    <div class="flex gap-4">
+                        <div class="flex items-center gap-2">
+                            <input type="radio" id="radioAgree" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none" checked>
+                            <label for="radioAgree" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">동의</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="radio" id="radioAgree2" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none">
+                            <label for="radioAgree2" class="flex gap-2 items-center text-base text-gray-700 cursor-pointer">미동의</label>
+                        </div>
+                    </div>
+                </div>
+                <h3>input</h3>
+                <div class="box">
+                    <div class="cont">
+                        <div>
+                            <h4>small</h4>
+                            <div class="flex flex-col">
+                                <input type="text" class="input h-8 py-2 px-3 text-sm" placeholder="입력하세요.">
+                            </div>
+                        </div>
+                        <div>
+                            <h4>medium</h4>
+                            <div class="flex flex-col">
+                                <input type="text" class="input h-10 py-3 px-4 text-md" placeholder="입력하세요.">
+                            </div>
+                        </div>
+                        <div>
+                            <h4>large</h4>
+                            <div class="flex flex-col">
+                                <input type="text" class="input h-[3.125rem] py-4 px-5" placeholder="입력하세요.">
+                            </div>
+                        </div>
+                        <div>
+                            <h4>disabled</h4>
+                            <div class="flex flex-col">
+                                <input type="text" class="input h-[3.125rem] py-4 px-5" placeholder="입력하세요." disabled>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>error</h4>
+                            <div class="flex flex-col">
+                                <input type="text" class="input h-8 text-sm text-primary-dark py-2 px-3 border border-solid border-primary-err focus:border-primary-err" placeholder="입력하세요.">
+                                <p class="mt-2 text-primary-err text-xs">에러 메세지입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>textarea</h3>
+                <div class="box">
+                    <h4>basic</h4>
+                    <textarea name="" id="" cols="30" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg" placeholder="내용을 입력하세요."></textarea>
+                    <h4>disabled</h4>
+                    <textarea name="" id="" cols="30" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg" placeholder="내용을 입력하세요." disabled></textarea>
+                </div>
+                <h3>select</h3>
+                <div class="box">
+                    <div class="cont flex-wrap">
+                        <div class="flex-1">
+                            <h4>small</h4>
+                            <div selectbox class="relative flex flex-col">
+                                <select class="h-8 border border-gray-line rounded-lg text-primary-dark text-sm px-2 pr-7 block w-full appearance-none cursor-pointer bg-transparent">
+                                    <option value="1">텍스트1</option>
+                                    <option value="2">텍스트2</option>
+                                    <option value="3">dd</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h4>medium</h4>
+                            <div selectbox class="relative flex flex-col">
+                                <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-md px-3 pr-8 block w-full appearance-none cursor-pointer bg-transparent">
+                                    <option value="1">텍스트1</option>
+                                    <option value="2">텍스트2</option>
+                                    <option value="3">dd</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h4>large</h4>
+                            <div selectbox class="relative flex flex-col">
+                                <select class="h-[3.125rem] border border-gray-line rounded-lg text-primary-dark px-5 pr-9 block w-full appearance-none cursor-pointer bg-transparent">
+                                    <option value="1">텍스트1</option>
+                                    <option value="2">텍스트2</option>
+                                    <option value="3">dd</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h4>disabled</h4>
+                            <div selectbox class="relative flex flex-col">
+                                <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-md px-3 pr-8 block w-full appearance-none cursor-pointer bg-disabled gray-800" disabled>
+                                    <option value="1">텍스트1</option>
+                                    <option value="2">텍스트2</option>
+                                    <option value="3">dd</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h4>line style</h4>
+                            <div selectbox class="relative flex flex-col">
+                                <select class="h-10 border-b border-gray-line text-primary-dark text-md px-1 pr-5 block w-full appearance-none cursor-pointer bg-transparent">
+                                    <option value="1">텍스트1</option>
+                                    <option value="2">텍스트2</option>
+                                    <option value="3">dd</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
             </div>
-          </div>
+            <h2 id="group02">Button</h2>
+            <div class="inner">
+                <h3>button fill</h3>
+                <div class="box">
+                    <div class="flex flex-wrap gap-1">
+                        <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-white font-medium bg-primary-blue">blue small</button>
+                        <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-white font-medium bg-primary-blue">blue medium</button>
+                        <button class="h-13 leading-13 flex rounded-md px-6 text-white font-semibold bg-primary-blue">blue large</button>
+                        <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-white font-medium bg-primary-dark">dark small</button>
+                        <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-white font-medium bg-primary-dark">dark medium</button>
+                        <button class="h-13 leading-13 flex rounded-md px-6 text-white font-semibold bg-primary-dark">dark large</button>
+                    </div>
+                </div>
+                <h3>button line</h3>
+                <div class="box">
+                    <div class="flex flex-wrap gap-1">
+                        <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-primary-blue font-medium border border-primary-blue">blue small line</button>
+                        <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-primary-blue font-medium border border-primary-blue">blue medium line</button>
+                        <button class="h-13 leading-13 flex rounded-md px-6 text-primary-blue font-semibold border border-primary-blue">blue large line</button>
+                        <button class="h-8 leading-8 flex rounded-md px-6 text-sm text-primary-dark font-medium border border-primary-dark">dark small line</button>
+                        <button class="h-10 leading-10 flex rounded-md px-6 text-sm text-primary-dark font-medium border border-primary-dark">dark medium line</button>
+                        <button class="h-13 leading-13 flex rounded-md px-6 text-primary-dark font-semibold border border-primary-dark">dark large line</button>
+                    </div>
+                </div>
+                <h3>button round</h3>
+                <div class="box">
+                    <div class="flex flex-wrap gap-1">
+                        <button class="h-9 leading-9 flex rounded-20 px-5 text-white bg-primary-dark">dark medium round</button>
+                        <button class="h-9 leading-9 flex rounded-20 px-5 text-primary-dark border border-primary-dark">dark medium round line</button>
+                    </div>
+                </div>
+                <h3>button icon</h3>
+                <div class="box">
+                    <div class="flex flex-wrap gap-1">
+                        <button class="h-10 leading-10 flex items-center gap-1.5 rounded-md px-6 text-sm text-white font-medium bg-primary-dark">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7173 5.01503L11.0138 2.3054C10.8318 2.11873 10.5848 2.00944 10.3242 2.00026C10.1919 1.99721 10.0605 2.02107 9.93773 2.07037C9.81499 2.11968 9.70355 2.19341 9.61016 2.28709L7.99903 3.89212L2.28683 9.61042C2.19584 9.70072 2.12364 9.80816 2.07441 9.92653C2.02518 10.0449 1.99989 10.1718 2 10.3V13.028C2 13.2869 2.10288 13.5353 2.28599 13.7184C2.46911 13.9015 2.71748 14.0044 2.97644 14.0044H5.70439C5.96305 14.0033 6.21085 13.9002 6.394 13.7176L13.7173 6.39426C13.8985 6.21043 14 5.96272 14 5.70464C14 5.44657 13.8985 5.19886 13.7173 5.01503ZM11.7644 6.96792L9.0365 4.23998L10.2998 2.9767L13.0277 5.70464L11.7644 6.96792Z" fill="white"/>
+                            </svg>
+                            <span>dark small</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.66666 2.66668L11 8.00001L5.66666 13.3333" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="w-8 h-8 flex items-center justify-center border border-gray-line rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M7.25 12.5C10.1495 12.5 12.5 10.1495 12.5 7.25C12.5 4.35051 10.1495 2 7.25 2C4.35051 2 2 4.35051 2 7.25C2 10.1495 4.35051 12.5 7.25 12.5Z" stroke="#2C3036" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10.9625 10.9625L14 14" stroke="#2C3036" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="group03">Tab</h2>
+            <div class="inner">
+                <div class="box">
+                    <ul tab-list class="flex items-center gap-5">
+                        <li class="text-gray-500"><a href="#tab-1" id="default-tab" class="text-xl text-primary-dark font-bold block pb-3 border-b-2 border-b-primary-dark">Tab 1</a></li>
+                        <li class="text-gray-500"><a href="#tab-2" class="text-xl font-bold block pb-3">Tab 2</a></li>
+                        <li class="text-gray-500"><a href="#tab-3" class="text-xl font-bold block pb-3">Tab 3</a></li>
+                    </ul>
+                    <div tab-contents class="w-full">
+                        <div id="tab-1" class="">
+                            <span class="col-md-10">
+                                <h3>Feature 1</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </span>
+                        </div>
+                        <div id="tab-2" class="hidden">
+                            <span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
+                            <span class="col-md-10">
+                                <h3>Feature 2</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </span>
+                        </div>
+                        <div id="tab-3" class="hidden">
+                            <span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
+                            <span class="col-md-10">
+                                <h3>Feature 3</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="group04">Pagination</h2>
+            <div class="inner">
+                <div class="box">
+                    <ul class="pagination flex items-center gap-1">
+                        <li>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M19.5 18.5L13 12L19.5 5.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.5 18.5L4 12L10.5 5.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M15 18.5L8.5 12L15 5.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm font-bold text-white rounded-full bg-primary-dark ml-4">1</a></li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">2</a></li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">3</a></li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">4</a></li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">5</a></li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">6</a></li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">7</a></li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">8</a></li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">9</a></li>
+                        <li><a href="" class="block w-9 h-9 leading-9 text-center text-sm text-gray-700 rounded-full hover:bg-dark hover:font-bold">10</a></li>
+                        <li>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 5.5L15.5 12L9 18.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4.5 5.5L11 12L4.5 18.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.5 5.5L20 12L13.5 18.5" stroke="#5B6168" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 id="group05">Component</h2>
+            <div class="inner">
+                <h3>popup</h3>
+                <div class="pop-cont">
+                    <a data-pop="pop-one">Open popup</a>
+                    <a data-pop="pop-two">Open popup2</a>
+                </div>
+                
+                <div class="pops" id="pop-one">
+                    <div class="pops-bg pops-exit"></div>
+                    <div class="pops-container">
+                        <h1> pops</h1>
+                        <h2>내용이 들어감</h2>
+                        <button class="pops-close pops-exit">X</button>
+                    </div>
+                </div>
+
+                <div class="pops" id="pop-two">
+                    <div class="pops-bg pops-exit"></div>
+                    <div class="pops-container">
+                        <h1> pops</h1>
+                        <h2>내용이 들어감222</h2>
+                        <button class="pops-close pops-exit">X</button>
+                    </div>
+                </div>
+
+                <h3>carousel</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <h3>accordion</h3>
+                <div class="box">
+
+                    <ul>
+                        <li class="w-full">
+                            <h3 acc-tit>Tab 1</h3>
+                            <div class="accordionContent">
+                                <p>Information here</p>
+                            </div>
+                        </li>
+                        <li class="w-full">
+                            <h3 acc-tit>Tab 2</h3>
+                            <div class="accordionContent">
+                                <p>Information here</p>
+                            </div>
+                        </li>
+                        <li class="w-full">
+                            <h3 acc-tit>Tab 3</h3>
+                            <div class="accordionContent">
+                                <p>Information here</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
 
         <style>
- .container {
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-}
- .container a {
-	 padding: 30px;
-	 background: teal;
-	 color: #fff;
-	 font-weight: bold;
-	 font-size: 24px;
-	 border-radius: 10px;
-	 cursor: pointer;
-}
- .modal {
-	 position: fixed;
-	 width: 100vw;
-	 height: 100vh;
-	 opacity: 0;
-	 visibility: hidden;
-	 transition: all 0.3s ease;
-	 top: 0;
-	 left: 0;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-}
- .modal.open {
-	 visibility: visible;
-	 opacity: 1;
-	 transition-delay: 0s;
-}
- .modal-bg {
-	 position: absolute;
-	 background: teal;
-	 width: 100%;
-	 height: 100%;
-}
- .modal-container {
-	 border-radius: 10px;
-	 background: #fff;
-	 position: relative;
-	 padding: 30px;
-}
- .modal-close {
-	 position: absolute;
-	 right: 15px;
-	 top: 15px;
-	 outline: none;
-	 appearance: none;
-	 color: red;
-	 background: none;
-	 border: 0px;
-	 font-weight: bold;
-	 cursor: pointer;
-}
- 
+            .pop-cont a {
+                padding: 10px;
+                background: teal;
+                color: #fff;
+                font-weight: bold;
+                font-size: 24px;
+                border-radius: 10px;
+                cursor: pointer;
+           }
+            .pops {
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+           }
+            .pops.open {
+                visibility: visible;
+                opacity: 1;
+                transition-delay: 0s;
+           }
+            .pops-bg {
+                position: absolute;
+                background: #111;
+                width: 100%;
+                height: 100%;
+                opacity: 0.6;
+           }
+            .pops-container {
+                border-radius: 10px;
+                background: #fff;
+                position: relative;
+                padding: 30px;
+           }
+            .pops-close {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                outline: none;
+                appearance: none;
+                color: red;
+                background: none;
+                border: 0px;
+                font-weight: bold;
+                cursor: pointer;
+           }
+            
+                   </style>
+        
+        <style>
+            .swiper-slide{height:100px;background-color: #ecd340;}
         </style>
 
-        <script></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: 3, 
+            spaceBetween: 40,
+ 
+            });
+        </script>
+        
+
+        <script>
+
+
+        </script>
+
         <!-- <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script> -->
         
     </body>    

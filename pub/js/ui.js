@@ -1,26 +1,38 @@
 window.onload = function() {
-    tabs();
-    modals();
     select();
+    tabs();
+    opnePop();  
+    accordion();  
 }
 
 const select = function () {
-    const selectBox = document.querySelectorAll('select');
     
-    selectBox.addEventListener('focus', function(e) {
-        this.parent().classList.add("focus");
+    const parent = document.querySelectorAll('[selectbox]');
+    
+
+    parent.forEach(function(select) {
+        const selectBox = select.querySelector('select');
+        selectBox.addEventListener('click', function(e) {
+            select.classList.add('focus');
+        });
+
+        selectBox.addEventListener('blur', function(e) {
+            select.classList.remove('focus');
+            
+        });
+        selectBox.addEventListener('change', function(e) {
+            select.classList.remove('focus');
+            
+        });        
+
     });
-    // selectBox.addEventListener('blur', (e) => {
-    //     this.parent().classList.remove("focus");
-    // });
-    // selectBox.addEventListener('change', (e) => {
-    //     this.parent().classList.remove("focus");
-    // });
+   
+    
 }
 
 const tabs = function () {
-	let tabsContainer = document.querySelector(".tabs");
-    let tabTogglers = tabsContainer.querySelectorAll(".tabs a");
+	const tabsContainer = document.querySelector("[tab-list]");
+    const tabTogglers = document.querySelectorAll("[tab-list] a");
     console.log(tabTogglers);
     tabTogglers.forEach(function(toggler) {
     toggler.addEventListener("click", function(e) {
@@ -28,7 +40,7 @@ const tabs = function () {
 
         let tabName = this.getAttribute("href");
 
-        let tabContents = document.querySelector(".tab-contents");
+        let tabContents = document.querySelector("[tab-contents]");
 
         for (let i = 0; i < tabContents.children.length; i++) {
         
@@ -45,21 +57,39 @@ const tabs = function () {
     });
 };
 
-const modals = function () {
-    const modals = document.querySelectorAll("[data-modal]");
+const opnePop = function () {
+    const opnePop = document.querySelectorAll("[data-pop]");
 
-    modals.forEach(function (trigger) {
+    opnePop.forEach(function (trigger) {
     trigger.addEventListener("click", function (event) {
         event.preventDefault();
-        const modal = document.getElementById(trigger.dataset.modal);
-        modal.classList.add("open");
-        const exits = modal.querySelectorAll(".modal-exit");
+        const pops = document.getElementById(trigger.dataset.pop);
+        pops.classList.add("open");
+        const exits = pops.querySelectorAll(".pops-exit");
         exits.forEach(function (exit) {
         exit.addEventListener("click", function (event) {
             event.preventDefault();
-            modal.classList.remove("open");
+            pops.classList.remove("open");
         });
         });
     });
     });
 };
+
+const accordion = function () {
+    const accTrigger = document.querySelectorAll("[acc-tit]");
+
+    accTrigger.forEach((accTit) => {
+        accTit.addEventListener("click", () => {
+            if (accTit.classList.contains("is-open")) {
+                accTit.classList.remove("is-open");
+            } else {
+                const accTriggerOpen = document.querySelectorAll(".is-open");
+                accTriggerOpen.forEach((accOpen) => {
+                    accOpen.classList.remove("is-open");
+                });
+                accTit.classList.add("is-open");
+            }
+        });
+    });
+}

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>우리은행</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/pub/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
+        <script type="text/javascript" src="/pub/js/ui.js"></script> 
+        <script src="/pub/js/swiper-bundle.min.js"></script>    
+    </head>
+    <body>
+        <div class="flex items-stretch gap-15 p-6 pr-15">
+            <nav class="w-24 flex flex-col gap-15 items-center rounded-20 bg-primary-woori py-7 px-6">
+                <div class="w-10 h-10">
+                    <img src="/pub/img/simbol.png" alt="우리은행 심볼">
+                </div>
+                <ul class="flex flex-col items-center gap-8">
+                    <li><a href=";"><img src="/pub/img/menu1.png" alt="대시보드"></a></li>
+                    <li><a href=";"><img src="/pub/img/menu2-tab.png" alt="데이터 분석"></a></li>
+                    <li><a href=";"><img src="/pub/img/menu3.png" alt="커뮤니티"></a></li>
+                    <li><a href=";"><img src="/pub/img/menu4.png" alt="마이페이지"></a></li>
+                </ul>
+            </nav>
+
+            <!-- contents -->
+            <div class="w-[calc(100%-156px)] min-w-[1670px]">
+                <header>
+                    <div class="h-12 flex items-center justify-between">
+                        <h1 class="w-[106px] h-[26px] flex items-center gap-5">
+                            <img src="/pub/img/logo.png" alt="우리은행 로고">
+                            <span class="font-RobotoMono text-28 font-bold">Dashboard</span>
+                        </h1>
+                        <div class="flex items-center gap-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                <path stroke="#090909" stroke-width="1.5" d="M3.864 15.455c-.858-3.432-1.287-5.148-.386-6.301C4.378 8 6.148 8 9.685 8h4.63c3.538 0 5.306 0 6.207 1.154.901 1.153.472 2.87-.386 6.301-.546 2.183-.818 3.274-1.632 3.91-.814.635-1.939.635-4.189.635h-4.63c-2.25 0-3.375 0-4.189-.635-.814-.636-1.087-1.727-1.632-3.91Z"/>
+                                <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7 8 2-5M17 8l-2-5M8 12v4M16 12v4M12 12v4"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#090909" stroke-width="1.5" d="M19 9.704V9A7 7 0 1 0 5 9v.704a4.28 4.28 0 0 1-.719 2.374l-1.148 1.723a2.771 2.771 0 0 0 1.576 4.21 27.71 27.71 0 0 0 14.582 0 2.771 2.771 0 0 0 1.576-4.21l-1.148-1.723A4.28 4.28 0 0 1 19 9.704Z"/><path stroke="#090909" stroke-linecap="round" stroke-width="1.5" d="M7.5 19c.655 1.748 2.422 3 4.5 3s3.845-1.252 4.5-3"/>
+                                <circle cx="19" cy="7" r="3.5" fill="#EA1917" stroke="#fff"/>
+                            </svg>
+                            <div class="flex items-center gap-1.5">
+                                <img src="/pub/img/icon-user.png" alt="사용자 이미지">
+                                <span class="font-semibold">홍길동<span class="text-gray-600 font-normal">님</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-4 bg-primary-dark opacity-85 py-4 px-6 rounded-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="flex-none">
+                            <path fill="#fff" fill-rule="evenodd" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-white ml-1">현재 서비스 이용 권한이 없어 업무 데이터를 사용할 수 없습니다. 업무 데이터를 분석하시려면 여기를 눌러 이용 권한을 신청해주세요.</span>
+                    </div>
+                </header>
+                <div class="block">
+                    <p class="text-5xl leading-68 mt-6">
+                        <span class="text-primary-blue font-semibold">김우리</span>님,<br>
+                        어떤 데이터가 필요하신가요?
+                    </p>
+                </div>
+                <!-- 검색 -->
+                <div class="mt-8">
+                    <div class="h-15 relative">
+                        <input type="text" class="w-full h-15 py-2.5 px-8 rounded-40 bg-[#F9FAFB]" placeholder="필요한 데이터를 검색해보세요. (ex. 외화)">                           
+                        <button type="button" class="absolute top-1/2 right-8 translate-y-[-50%]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.875 18.75a7.875 7.875 0 1 0 0-15.75 7.875 7.875 0 0 0 0 15.75ZM16.444 16.444 21 21"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- // 검색 -->
+
+                <div class="mt-20 flex items-start gap-15">
+                    <div class="flex flex-col gap-15 min-w-0">
+                        <!-- 데이터 트렌드 -->
+                        <div class="bg-main p-10 rounded-40">
+                            <h3 class="text-32 font-bold leading-full mb-8">데이터 트렌드</h3>
+                            <div class="grid grid-cols-2 gap-8">
+                                <div class="bg-white rounded-2xl p-10">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <h4 class="text-xl font-bold">실시간 트렌드</h4>
+                                            <p class="mt-2 text-md text-gray-date leading-full">2023/08/14 ~ 08/21</p>
+                                        </div>
+                                        <ul class="flex items-center gap-4">
+                                            <li><button type="button" class="text-primary-dark text-md font-bold block border-b-2 border-b-primary-dark">주별</button></li>
+                                            <li><button type="button" class="text-gray-500 text-md font-bold block">월별</button></li>
+                                            <li><button type="button" class="text-gray-500 text-md font-bold block">분기별</button></li>
+                                        </ul>
+                                    </div>
+                                    <!-- 개발 차트 영역 -->
+                                    <div class="w-[464px] h-[207px] mt-8">
+                                        <img src="/pub/img/bubble-chart.png" alt="">
+                                    </div>
+                                    <!-- //개발 차트 영역 -->
+                        
+                                </div>
+                                <div class="bg-white rounded-2xl p-10">
+                                    <h4 class="text-xl font-bold">등록 데이터 현황</h4>
+                                    <!-- 개발 차트 영역 -->
+                                    <div class="w-[464px] h-[207px] mt-8">
+                                        <img src="/pub/img/graph.png" alt="">
+                                    </div>
+                                    <!-- //개발 차트 영역 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //데이터 트렌드 -->
+
+                        <!-- 부서 별 많이 찾는 -->
+                        <div>
+                            <h3 class="text-32 font-bold leading-full mb-8"><span class="text-primary-woori">#디지털전략부</span>에서 찾는</h3>                                
+                            <div class="p-10 pb-6 bg-gray-box rounded-3xl">
+                                <!-- 상품 금리 데이터 -->
+                                <div class="swiper main-swiper w-[calc(100%+16px)] !ml-[-8px]">
+                                    <div class="flex items-center justify-between mx-2">
+                                        <h4 class="text-xl font-bold">상품 금리 데이터</h4>
+                                        <div class="flex gap-3">                                                
+                                            <div class="button-prev">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                    <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.75 3.75 7.5 10l6.25 6.25"/>
+                                                </svg>
+                                            </div>
+                                            <div class="button-next">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                    <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 3.75 13.75 10 7.5 16.25"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-wrapper mt-2 p-4 ml-[-14px] pl-3.5">
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-gray-700 group-hover:border-white">                                                            
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="m-auto text-gray-700 group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-width="1.5" d="M4 10.575c0-2.878 0-4.317.336-4.8C4.67 5.29 6.007 4.826 8.68 3.9l.51-.177C10.581 3.241 11.278 3 12 3c.721 0 1.418.241 2.81.724l.51.177c2.673.926 4.009 1.39 4.344 1.873.336.484.336 1.923.336 4.801v1.417c0 5.075-3.768 7.537-6.132 8.582-.641.284-.962.426-1.868.426-.906 0-1.227-.142-1.868-.425C7.768 19.529 4 17.067 4 11.992v-1.417Z"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 13.333V16m1.5-3.024c-1.435.736-3.27.299-4.098-.976-.828-1.275-.336-2.906 1.098-3.642a3.3 3.3 0 0 1 1.859-.339c.904.098 1.748.56 2.239 1.315.49.755.518 1.635.16 2.38a2.784 2.784 0 0 1-1.258 1.262Z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                                       
+                                </div>
+                                <!-- //상품 금리 데이터 -->
+
+                                <!-- 상품 수수료 데이터 -->           
+                                <div class="swiper main-swiper w-[calc(100%+16px)] !ml-[-8px] mt-6">
+                                    <div class="flex items-center justify-between mx-2">
+                                        <h4 class="text-xl font-bold">상품 수수료 데이터</h4>
+                                        <div class="flex gap-3">                                                
+                                            <div class="button-prev">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                    <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.75 3.75 7.5 10l6.25 6.25"/>
+                                                </svg>
+                                            </div>
+                                            <div class="button-next">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                    <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 3.75 13.75 10 7.5 16.25"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-wrapper mt-2 p-4 ml-[-14px] pl-3.5">
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-gray-700 group-hover:border-white">                                                            
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="m-auto text-gray-700 group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-width="1.5" d="M4 10.575c0-2.878 0-4.317.336-4.8C4.67 5.29 6.007 4.826 8.68 3.9l.51-.177C10.581 3.241 11.278 3 12 3c.721 0 1.418.241 2.81.724l.51.177c2.673.926 4.009 1.39 4.344 1.873.336.484.336 1.923.336 4.801v1.417c0 5.075-3.768 7.537-6.132 8.582-.641.284-.962.426-1.868.426-.906 0-1.227-.142-1.868-.425C7.768 19.529 4 17.067 4 11.992v-1.417Z"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 13.333V16m1.5-3.024c-1.435.736-3.27.299-4.098-.976-.828-1.275-.336-2.906 1.098-3.642a3.3 3.3 0 0 1 1.859-.339c.904.098 1.748.56 2.239 1.315.49.755.518 1.635.16 2.38a2.784 2.784 0 0 1-1.258 1.262Z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                                       
+                                </div>
+                                <!-- //상품 수수료 데이터 -->
+
+                            </div>
+                        </div>
+                        <!-- //부서 별 많이 찾는 -->
+
+                        <!-- #모두가 관심있는 -->
+                        <div>
+                            <h3 class="text-32 font-bold leading-full mb-8"><span class="text-primary-woori">#모두</span>가 관심있는</h3>                                
+                            <div class="p-10 pb-6 bg-gray-box rounded-3xl">
+                                <!-- 상품 금리 데이터 -->
+                                <div class="swiper main-swiper w-[calc(100%+16px)] !ml-[-8px]">
+                                    <div class="flex items-center justify-between mx-2">
+                                        <h4 class="text-xl font-bold">상품 금리 데이터</h4>
+                                        <div class="flex gap-3">                                                
+                                            <div class="button-prev">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                    <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.75 3.75 7.5 10l6.25 6.25"/>
+                                                </svg>
+                                            </div>
+                                            <div class="button-next">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                    <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 3.75 13.75 10 7.5 16.25"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-wrapper mt-2 p-4 ml-[-14px] pl-3.5">
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-gray-700 group-hover:border-white">                                                            
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="m-auto text-gray-700 group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-width="1.5" d="M4 10.575c0-2.878 0-4.317.336-4.8C4.67 5.29 6.007 4.826 8.68 3.9l.51-.177C10.581 3.241 11.278 3 12 3c.721 0 1.418.241 2.81.724l.51.177c2.673.926 4.009 1.39 4.344 1.873.336.484.336 1.923.336 4.801v1.417c0 5.075-3.768 7.537-6.132 8.582-.641.284-.962.426-1.868.426-.906 0-1.227-.142-1.868-.425C7.768 19.529 4 17.067 4 11.992v-1.417Z"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 13.333V16m1.5-3.024c-1.435.736-3.27.299-4.098-.976-.828-1.275-.336-2.906 1.098-3.642a3.3 3.3 0 0 1 1.859-.339c.904.098 1.748.56 2.239 1.315.49.755.518 1.635.16 2.38a2.784 2.784 0 0 1-1.258 1.262Z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                                       
+                                </div>
+                                <!-- //상품 금리 데이터 -->
+
+                                <!-- 상품 수수료 데이터 -->           
+                                <div class="swiper main-swiper w-[calc(100%+16px)] !ml-[-8px] mt-6">
+                                    <div class="flex items-center justify-between mx-2">
+                                        <h4 class="text-xl font-bold">상품 수수료 데이터</h4>
+                                        <div class="flex gap-3">                                                
+                                            <div class="button-prev">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                    <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.75 3.75 7.5 10l6.25 6.25"/>
+                                                </svg>
+                                            </div>
+                                            <div class="button-next">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                                    <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 3.75 13.75 10 7.5 16.25"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-wrapper mt-2 p-4 ml-[-14px] pl-3.5">
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-gray-700 group-hover:border-white">                                                            
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="m-auto text-gray-700 group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-width="1.5" d="M4 10.575c0-2.878 0-4.317.336-4.8C4.67 5.29 6.007 4.826 8.68 3.9l.51-.177C10.581 3.241 11.278 3 12 3c.721 0 1.418.241 2.81.724l.51.177c2.673.926 4.009 1.39 4.344 1.873.336.484.336 1.923.336 4.801v1.417c0 5.075-3.768 7.537-6.132 8.582-.641.284-.962.426-1.868.426-.906 0-1.227-.142-1.868-.425C7.768 19.529 4 17.067 4 11.992v-1.417Z"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 13.333V16m1.5-3.024c-1.435.736-3.27.299-4.098-.976-.828-1.275-.336-2.906 1.098-3.642a3.3 3.3 0 0 1 1.859-.339c.904.098 1.748.56 2.239 1.315.49.755.518 1.635.16 2.38a2.784 2.784 0 0 1-1.258 1.262Z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide px-2">
+                                            <div class="p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue group">
+                                                <span class="font-bold text-sm text-primary-blue group-hover:text-[#c8dffe]">상품 수수료</span>
+                                                <p class="font-bold text-xl mt-5 group-hover:text-white">수수료 원장</p>
+                                                <div class="mt-2 text-sm line-clamp-3 leading-22 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                <div class="flex items-center justify-between mt-6">
+                                                    <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
+                                                    <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                                       
+                                </div>
+                                <!-- //상품 수수료 데이터 -->
+                            </div>
+                        </div>
+                        <!-- //#모두가 관심있는 -->
+                    </div>
+
+                    <!-- 커뮤니티 -->
+                    <div class="w-[420px] flex-none">
+                        <h3 class="text-32 font-bold leading-full mb-10">커뮤니티</h3>
+                        <div class="flex flex-col gap-15">
+                            <!-- Q&A -->
+                            <div>
+                                <h4 class="text-xl font-bold leading-full">Q&A</h4>
+                                <ul>
+                                    <li class="py-6 flex">
+                                        <img src="/pub/img/dummy.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[Q&A]  Python 변수 메모리 공유 질문</span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 flex border-t border-gray-line">
+                                        <img src="/pub/img/dummy.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[Q&A]  Python 변수 메모리 공유 질문</span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 flex border-t border-gray-line">
+                                        <img src="/pub/img/dummy.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[Q&A]  Python 변수 메모리 공유 질문</span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 flex border-t border-gray-line">
+                                        <img src="/pub/img/dummy.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[Q&A]  Python 변수 메모리 공유 질문</span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 flex border-t border-gray-line">
+                                        <img src="/pub/img/dummy.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[Q&A]  Python 변수 메모리 공유 질문</span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //Q&A -->
+
+                            <!-- TIP -->
+                            <div>
+                                <h4 class="text-xl font-bold leading-full">TIP</h4>
+                                <ul>
+                                    <li class="py-6 flex">
+                                        <img src="/pub/img/dummy2.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다</span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 flex border-t border-gray-line">
+                                        <img src="/pub/img/dummy2.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 [TIP] 게시물 제목입니다 </span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 flex border-t border-gray-line">
+                                        <img src="/pub/img/dummy2.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 </span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 flex border-t border-gray-line">
+                                        <img src="/pub/img/dummy2.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 </span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 flex border-t border-gray-line">
+                                        <img src="/pub/img/dummy2.png" alt="">
+                                        <div>
+                                            <a href="" class="block">
+                                                <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 </span>
+                                                <span class="mt-2 text-sm text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                            </a>
+                                            <div class="flex items-center gap-4 mt-3">
+                                                <span class="text-gray-date text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                                <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //TIP -->
+
+                            <!-- 활동 점수 Top 5 -->
+                            <div>
+                                <h4 class="text-xl font-bold leading-full">활동 점수 Top 5</h4>
+                                <ul class="mt-6 flex flex-col gap-2">
+                                    <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
+                                        <div class="flex items-center">
+                                            <span class="w-6 h-6 rounded-lg block text-center leading-6 text-white font-bold text-[13px] font-RobotoMono bg-primary-woori">1</span>
+                                            <span class="ml-3 font-medium">김광현</span>
+                                            <span class="ml-2 text-sm text-gray-600">디지털전략부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">1,680</span> 점
+                                        </div>
+                                    </li>
+                                    <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
+                                        <div class="flex items-center">
+                                            <span class="w-6 h-6 rounded-lg block text-center leading-6 text-white font-bold text-[13px] font-RobotoMono bg-[#C5D0D8]">2</span>
+                                            <span class="ml-3 font-medium">최정</span>
+                                            <span class="ml-2 text-sm text-gray-600">빅데이터사업부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">1,580</span> 점
+                                        </div>
+                                    </li>
+                                    <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
+                                        <div class="flex items-center">
+                                            <span class="w-6 h-6 rounded-lg block text-center leading-6 text-white font-bold text-[13px] font-RobotoMono bg-[#C5D0D8]">3</span>
+                                            <span class="ml-3 font-medium">김강민</span>
+                                            <span class="ml-2 text-sm text-gray-600">AI사업부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">1,170</span> 점
+                                        </div>
+                                    </li>
+                                    <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
+                                        <div class="flex items-center">
+                                            <span class="w-6 h-6 rounded-lg block text-center leading-6 text-white font-bold text-[13px] font-RobotoMono bg-[#C5D0D8]">4</span>
+                                            <span class="ml-3 font-medium">김성현</span>
+                                            <span class="ml-2 text-sm text-gray-600">디지털전략부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">988</span> 점
+                                        </div>
+                                    </li>
+                                    <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
+                                        <div class="flex items-center">
+                                            <span class="w-6 h-6 rounded-lg block text-center leading-6 text-white font-bold text-[13px] font-RobotoMono bg-[#C5D0D8]">5</span>
+                                            <span class="ml-3 font-medium">추신수</span>
+                                            <span class="ml-2 text-sm text-gray-600">디지털전략부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">961</span> 점
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //활동 점수 Top 5 -->
+
+                        </div>
+                    </div>
+                    <!-- //커뮤니티 -->
+                </div>
+            </div>
+            <!-- // contents -->            
+        </div>
+        <script>
+            var swiper = new Swiper(".main-swiper", {
+            navigation: {
+                nextEl: ".button-next",
+                prevEl: ".button-prev",
+            },
+            slidesPerView: 4, 
+            spaceBetween: 0,
+ 
+            });
+        </script>
+    </body>
+</html>

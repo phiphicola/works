@@ -6,6 +6,7 @@ module.exports = {
     "./pub/**/*.{html,js}",
     // "./node_modules/tw-elements/dist/js/**/*.js"
   ],  
+  mode: "jit",
   theme: {
     extend: {
       backgroundImage: {
@@ -16,10 +17,14 @@ module.exports = {
         'select': "url('/pub/img/icon-onoff.svg')",
       },
       height:{
-        '13':'3.125rem',
+        '13':'50px',
+        '15':'60px',
       },
       lineHeight: {
-        '13': '3.125rem',
+        '13': '50px',
+        '22': '22px',
+        '68': '68px',
+        'full': '100%'
       },
       colors: {
         'gray-300': '#BCC1C5',
@@ -28,6 +33,8 @@ module.exports = {
         'gray-700': '#5B6168',
         'gray-700': '#44494E',      
         'gray-900': '#2C3036',
+        'gray-date': '#8A919A',  
+        'gray-box':'#F4F7FA',
         'gray-line': '#E9EAEB',      
         'primary-woori': '#0067AC',
         'primary-dark': '#090909',
@@ -37,14 +44,34 @@ module.exports = {
         'dark': '#F0F2F4',
         'disabled': '#EEF0F2',
         'white': '#FFFFFF',
-        'transparent' : 'transparent'
+        'transparent' : 'transparent',        
       },
       fontSize:{
-        'md': '0.938rem',
+        'md': '15px',
+        '28': '28px',
+        '32': '32px'
       },
       borderRadius: {
-        '2xlm':'1.25rem',
+        '20':'20px',
+        '40':'40px',
       },
+      fontFamily: {
+        RobotoMono: ["RobotoMono"],
+      },
+      gap: {
+        '15' : '60px'
+      },
+      padding: {
+        '15' : '60px'
+      },
+      opacity: {
+        '85': '.85'
+      },
+      boxShadow: {
+        'card-blue': '0px 4px 10px 0px rgba(58, 141, 253, 0.48);',
+        'card': '0px 4px 10px 0px rgba(0, 0, 0, 0.08);',
+        
+      }
     },
     fontFamily: {
       NotoSansKR: ["NotoSansKR"],
