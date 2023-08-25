@@ -16,6 +16,9 @@ module.exports = {
         'radio-check-on': "url('/pub/img/radio-check-on.svg')",
         'select': "url('/pub/img/icon-onoff.svg')",
       },
+      minWidth:{
+        '4':'16px',
+      },
       height:{
         '13':'50px',
         '15':'60px',
