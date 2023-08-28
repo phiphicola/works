@@ -30,6 +30,7 @@ module.exports = {
         'full': '100%'
       },
       colors: {
+        'gray-50': '#F9FAFB',
         'gray-300': '#BCC1C5',
         'gray-400': '#A4AAB0',
         'gray-600': '#727A82',
@@ -43,6 +44,7 @@ module.exports = {
         'primary-dark': '#090909',
         'primary-blue': '#3A8DFD',
         'primary-err': '#EA1917',
+        'red': '#F0360D',
         'light': '#F7F8F9',
         'dark': '#F0F2F4',
         'disabled': '#EEF0F2',
@@ -50,11 +52,20 @@ module.exports = {
         'transparent' : 'transparent',        
       },
       fontSize:{
-        'md': '15px',
+        '12': '12px',
+        '14': '14px',
+        '15': '15px',
+        '16': '16px',
+        '18': '18px',
+        '20': '20px',
+        '24': '24px',
         '28': '28px',
         '32': '32px'
       },
       borderRadius: {
+        '4':'4px',
+        '8':'8px',
+        '16':'16px',
         '20':'20px',
         '40':'40px',
       },
@@ -67,13 +78,22 @@ module.exports = {
       padding: {
         '15' : '60px'
       },
+      margin: {
+        '15' : '60px'
+      },
       opacity: {
         '85': '.85'
       },
       boxShadow: {
+        'blue': '0px 8px 20px 0px rgba(58, 141, 253, 0.48);',
         'card-blue': '0px 4px 10px 0px rgba(58, 141, 253, 0.48);',
+        'card-blue-w': '0px 4px 10px 0px rgba(58, 141, 253, 0.48);',
         'card': '0px 4px 10px 0px rgba(0, 0, 0, 0.08);',
+        'card-w': '0px 4px 20px 0px rgba(0, 0, 0, 0.08);',
         
+      },
+      letterSpacing: {
+        '4': "-0.4px"
       }
     },
     fontFamily: {

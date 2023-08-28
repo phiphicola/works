@@ -13,18 +13,17 @@ const select = function () {
     parent.forEach(function(select) {
         const selectBox = select.querySelector('select');
         selectBox.addEventListener('click', function(e) {
-            select.classList.add('focus');
+            select.classList.toggle('focus');
         });
 
-        selectBox.addEventListener('blur', function(e) {
-            select.classList.remove('focus');
+        // selectBox.addEventListener('blur', function(e) {
+        //     select.classList.remove('focus');
             
-        });
-        selectBox.addEventListener('change', function(e) {
-            select.classList.remove('focus');
+        // });
+        // selectBox.addEventListener('change', function(e) {
+        //     select.classList.remove('focus');
             
-        });        
-
+        // });      
     });
    
     
@@ -33,18 +32,21 @@ const select = function () {
 const tabs = function () {
 	const tabsContainer = document.querySelector("[tab-list]");
     const tabTogglers = document.querySelectorAll("[tab-list] a");
+    
     console.log(tabTogglers);
     tabTogglers.forEach(function(toggler) {
     toggler.addEventListener("click", function(e) {
         e.preventDefault();
 
         let tabName = this.getAttribute("href");
-
         let tabContents = document.querySelector("[tab-contents]");
 
-        for (let i = 0; i < tabContents.children.length; i++) {
-        
+        for (let i = 0; i < tabContents.children.length; i++) {   
+                 
         tabTogglers[i].classList.remove("text-primary-dark", "border-b-2", "border-b-primary-dark");
+        if (tabsContainer.classList.contains("blue-type")) {
+            tabTogglers[i].classList.remove("text-primary-blue", "border-b-primary-blue"); 
+        }
         tabContents.children[i].classList.remove("hidden");
         if ("#" + tabContents.children[i].id === tabName) {
             continue;
@@ -53,6 +55,10 @@ const tabs = function () {
         
         }
         e.target.classList.add("text-primary-dark", "border-b-2", "border-b-primary-dark");
+        if (tabsContainer.classList.contains("blue-type")) {
+            e.target.classList.add("text-primary-blue", "border-b-primary-blue");
+            e.target.classList.remove("text-primary-dark", "border-b-primary-dark");
+        } 
     });
     });
 };
