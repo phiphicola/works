@@ -87,9 +87,10 @@ module.exports = {
       boxShadow: {
         'blue': '0px 8px 20px 0px rgba(58, 141, 253, 0.48);',
         'card-blue': '0px 4px 10px 0px rgba(58, 141, 253, 0.48);',
-        'card-blue-w': '0px 4px 10px 0px rgba(58, 141, 253, 0.48);',
+        'card-blue-w': '0px 4px 20px 0px rgba(58, 141, 253, 0.48);',
         'card': '0px 4px 10px 0px rgba(0, 0, 0, 0.08);',
         'card-w': '0px 4px 20px 0px rgba(0, 0, 0, 0.08);',
+        'nav': '30px 0px 30px 0px rgba(255, 255, 255, 0.5);',
         
       },
       letterSpacing: {

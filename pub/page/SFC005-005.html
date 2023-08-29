@@ -110,7 +110,23 @@
                                 그럼 한번 따라해보세요.
                                 <img src="/pub/img/dummy-board.png" alt=""> 
                             </div>
+                                                            
+                            <div class="mt-8 text-center">
+                                <button type="button" class="h-12 leading-12 px-6 flex items-center gap-2 bg-red rounded-md font-semibold text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none">
+                                        <g fill="#fff" clip-path="url(#a)">
+                                            <path d="M1.833 6.091c0 3.242 2.68 4.97 4.641 6.516.693.546 1.36 1.06 2.026 1.06.667 0 1.333-.514 2.025-1.06 1.962-1.546 4.642-3.274 4.642-6.516S11.5.551 8.5 3.667C5.5.55 1.833 2.849 1.833 6.091Z"/><path d="m6.474 12.607.62-.785-.62.785ZM8.5 3.667l-.72.694a1 1 0 0 0 1.44 0l-.72-.694Zm2.025 8.94.62.786-.62-.786Zm-3.432-.785c-1.04-.82-2.09-1.557-2.927-2.5-.804-.906-1.333-1.922-1.333-3.23h-2c0 1.932.811 3.401 1.838 4.557.992 1.118 2.263 2.017 3.184 2.744l1.238-1.571Zm-4.26-5.73c0-1.247.704-2.267 1.624-2.688.858-.392 2.078-.336 3.322.957L9.22 2.974C7.465 1.149 5.352.796 3.626 1.585 1.963 2.345.833 4.096.833 6.091h2Zm3.022 7.3c.337.266.73.575 1.137.813.406.237.92.462 1.508.462v-2c-.08 0-.232-.033-.499-.189-.266-.156-.552-.376-.908-.656l-1.238 1.57Zm5.29 0c.92-.726 2.192-1.625 3.184-2.743 1.027-1.156 1.838-2.625 1.838-4.558h-2c0 1.31-.53 2.325-1.333 3.23-.838.944-1.887 1.681-2.928 2.5l1.239 1.572Zm5.022-7.3c0-1.996-1.13-3.747-2.793-4.507-1.726-.789-3.839-.436-5.595 1.389L9.22 4.36c1.244-1.293 2.465-1.349 3.322-.957.92.42 1.625 1.44 1.625 2.687h2Zm-6.26 5.73c-.356.28-.642.5-.908.656-.267.156-.42.189-.5.189v2c.588 0 1.102-.225 1.509-.462.406-.238.8-.547 1.137-.813l-1.239-1.57Z"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="a"><rect width="16" height="16" x=".5" fill="#fff" rx="5"/></clipPath>
+                                        </defs>
+                                    </svg>
+                                    좋아요<span class="font-bold text-[#FFF494]">827</span>
+                                </button>
+                            </div>
                         </div>
+                        <!-- //상세 -->
+
                         <div class="flex items-center justify-between mt-6">
                             <div class="flex gap-2">
                                 <button type="button" class="h-10 leading-10 rounded-md px-6 text-14 font-medium border border-gray-line">목록</button>
@@ -119,12 +135,78 @@
                             </div>
                             <div class="flex gap-2">
                                 <button type="button" class="h-10 leading-10 rounded-md px-6 text-14 font-medium border border-primary-dark">답변</button>
-                                <button type="button" class="flex items-center gap-1.5 h-10 leading-10 rounded-md px-6 text-14 font-medium border border-primary-blue text-primary-blue">                                    
+                                <button type="button" class="flex items-center gap-1.5 h-10 leading-10 rounded-md px-4 text-14 font-medium border border-primary-blue text-primary-blue">                                    
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
                                         <path fill="#3A8DFD" d="m13.717 5.015-2.703-2.71a.976.976 0 0 0-1.404-.018L8 3.892 2.287 9.61A.97.97 0 0 0 2 10.3v2.728a.976.976 0 0 0 .976.976h2.728a.983.983 0 0 0 .69-.286l7.323-7.324a.982.982 0 0 0 0-1.379Zm-1.953 1.953L9.037 4.24 10.3 2.977l2.728 2.728-1.264 1.263Z"/>
                                     </svg>
                                     <span>글쓰기</span>
                                 </button>
+                            </div>
+                        </div>
+
+                        <div class="mt-9">
+                            <div class="flex items-center gap-3 tracking-4">
+                                <span class="text-18">댓글</span><span class="text-18 font-bold text-primary-blue">25</span>
+                            </div>
+                            <div class="my-4 rounded-xl bg-gray-50 py-4 px-6">
+                                <textarea name="" id="" cols="30" rows="3" class="w-full bg-gray-50" placeholder="저작권 등 다른 사람의 권리를 침해하거나 명예를 훼손하는 게시물은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다."></textarea>
+                                <div class="flex items-center justify-between tracking-4">
+                                    <span class="text-15 font-medium">홍길동</span>
+                                    <div class="flex items-center">
+                                        <span class="text-14 font-semibold mr-5">0 / <span class="text-gray-300">1,000</span></span>
+                                        <button type="button" class="h-10 leading-10 rounded-md px-6 text-14 font-medium bg-primary-blue text-primary-blue text-white">등록</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-line rounded-xl p-8">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <span><span class="text-semibold">홍길동</span> (외환그룹)</span>
+                                        <span class="text-14 text-gray-500">2023.08.21  13:54</span>
+                                    </div>
+                                    <button type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                            <path fill="#A4AAB0" d="M8 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="mt-3">
+                                    댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 
+                                </div>
+                                <div class="flex items-center justify-between mt-3">
+                                    <button type="button" class="text-14 text-gray-600 font-medium underline">답글 쓰기</button>
+                                    <button type="button" class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                            <path fill="#8A919A" d="m5.975 12.607.31-.392-.31.392ZM8 3.667l-.36.347a.5.5 0 0 0 .72 0L8 3.667Zm2.026 8.94.31.393-.31-.393Zm-3.742-.392c-1.01-.797-2.115-1.575-2.992-2.562-.859-.968-1.458-2.097-1.458-3.562h-1c0 1.777.74 3.133 1.71 4.226.954 1.074 2.17 1.933 3.121 2.683l.62-.785ZM1.834 6.09c0-1.434.81-2.636 1.916-3.142 1.074-.49 2.518-.36 3.89 1.065l.72-.694C6.733 1.63 4.843 1.35 3.334 2.04c-1.477.675-2.5 2.243-2.5 4.051h1ZM5.665 13c.342.27.708.556 1.08.773.371.217.795.394 1.255.394v-1c-.206 0-.45-.08-.75-.257-.302-.176-.615-.419-.966-.695L5.665 13Zm4.67 0c.951-.75 2.167-1.609 3.12-2.683.972-1.093 1.712-2.449 1.712-4.226h-1c0 1.465-.6 2.594-1.459 3.562-.877.987-1.981 1.765-2.992 2.562l.62.785Zm4.832-6.909c0-1.808-1.023-3.376-2.5-4.051-1.51-.69-3.4-.411-5.027 1.28l.72.694c1.372-1.426 2.816-1.556 3.89-1.065 1.107.506 1.917 1.708 1.917 3.142h1Zm-5.45 6.124c-.352.276-.664.519-.966.695-.302.176-.544.257-.75.257v1c.46 0 .883-.177 1.255-.394.371-.217.738-.504 1.08-.773l-.62-.785Z"/>
+                                        </svg>
+                                         <span class="text-red text-14 font-medium ml-1.5">26</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="border border-gray-line rounded-xl p-8 mt-3">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <span><span class="text-semibold">홍길동</span> (외환그룹)</span>
+                                        <span class="text-14 text-gray-500">2023.08.21  13:54</span>
+                                    </div>
+                                    <button type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                            <path fill="#A4AAB0" d="M8 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="mt-3">
+                                    댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 
+                                </div>
+                                <div class="flex items-center justify-between mt-3">
+                                    <button type="button" class="text-14 text-gray-600 font-medium underline">답글 쓰기</button>
+                                    <button type="button" class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                            <path fill="#8A919A" d="m5.975 12.607.31-.392-.31.392ZM8 3.667l-.36.347a.5.5 0 0 0 .72 0L8 3.667Zm2.026 8.94.31.393-.31-.393Zm-3.742-.392c-1.01-.797-2.115-1.575-2.992-2.562-.859-.968-1.458-2.097-1.458-3.562h-1c0 1.777.74 3.133 1.71 4.226.954 1.074 2.17 1.933 3.121 2.683l.62-.785ZM1.834 6.09c0-1.434.81-2.636 1.916-3.142 1.074-.49 2.518-.36 3.89 1.065l.72-.694C6.733 1.63 4.843 1.35 3.334 2.04c-1.477.675-2.5 2.243-2.5 4.051h1ZM5.665 13c.342.27.708.556 1.08.773.371.217.795.394 1.255.394v-1c-.206 0-.45-.08-.75-.257-.302-.176-.615-.419-.966-.695L5.665 13Zm4.67 0c.951-.75 2.167-1.609 3.12-2.683.972-1.093 1.712-2.449 1.712-4.226h-1c0 1.465-.6 2.594-1.459 3.562-.877.987-1.981 1.765-2.992 2.562l.62.785Zm4.832-6.909c0-1.808-1.023-3.376-2.5-4.051-1.51-.69-3.4-.411-5.027 1.28l.72.694c1.372-1.426 2.816-1.556 3.89-1.065 1.107.506 1.917 1.708 1.917 3.142h1Zm-5.45 6.124c-.352.276-.664.519-.966.695-.302.176-.544.257-.75.257v1c.46 0 .883-.177 1.255-.394.371-.217.738-.504 1.08-.773l-.62-.785Z"/>
+                                        </svg>
+                                         <span class="text-red text-14 font-medium ml-1.5">26</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         
