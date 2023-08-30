@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        font-family: NotoSansKR, RobotoMono, system-ui, sans-serif;color:#2C3036
+        font-family: NotoSansKR, RobotoMono, system-ui, sans-serif;color:#090909
     }
     input + label { font-size:1rem;line-height:1rem; color:#5B6168; cursor:pointer}
    

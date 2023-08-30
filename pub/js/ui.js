@@ -44,7 +44,7 @@ const tabs = function () {
 
         for (let i = 0; i < tabContents.children.length; i++) {   
                  
-        tabTogglers[i].classList.remove("text-primary-dark", "border-b-2", "border-b-primary-dark");
+        tabTogglers[i].classList.remove("font-semibold","text-primary-dark", "border-b-2", "border-b-primary-dark");
         if (tabsContainer.classList.contains("blue-type")) {
             tabTogglers[i].classList.remove("text-primary-blue", "border-b-primary-blue"); 
         }
@@ -55,7 +55,7 @@ const tabs = function () {
         tabContents.children[i].classList.add("hidden");
         
         }
-        e.target.classList.add("text-primary-dark", "border-b-2", "border-b-primary-dark");
+        e.target.classList.add("font-semibold", "text-primary-dark", "border-b-2", "border-b-primary-dark");
         if (tabsContainer.classList.contains("blue-type")) {
             e.target.classList.add("text-primary-blue", "border-b-primary-blue");
             e.target.classList.remove("text-primary-dark", "border-b-primary-dark");

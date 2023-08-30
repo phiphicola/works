@@ -19,15 +19,15 @@ module.exports = {
       minWidth:{
         '4':'16px',
       },
+      minHeight:{
+        '15':'60px',
+      },
       height:{
         '13':'50px',
         '15':'60px',
       },
       lineHeight: {
         '13': '50px',
-        '22': '22px',
-        '68': '68px',
-        'full': '100%'
       },
       colors: {
         'gray-50': '#F9FAFB',
@@ -48,7 +48,6 @@ module.exports = {
         'light': '#F7F8F9',
         'dark': '#F0F2F4',
         'disabled': '#EEF0F2',
-        'white': '#FFFFFF',
         'transparent' : 'transparent',        
       },
       fontSize:{
@@ -60,7 +59,8 @@ module.exports = {
         '20': '20px',
         '24': '24px',
         '28': '28px',
-        '32': '32px'
+        '32': '32px',
+        '40': '40px'
       },
       borderRadius: {
         '4':'4px',
@@ -79,7 +79,8 @@ module.exports = {
         '15' : '60px'
       },
       margin: {
-        '15' : '60px'
+        '15' : '60px',
+        '25' : '100px',
       },
       opacity: {
         '85': '.85'
@@ -90,7 +91,7 @@ module.exports = {
         'card-blue-w': '0px 4px 20px 0px rgba(58, 141, 253, 0.48);',
         'card': '0px 4px 10px 0px rgba(0, 0, 0, 0.08);',
         'card-w': '0px 4px 20px 0px rgba(0, 0, 0, 0.08);',
-        'nav': '30px 0px 30px 0px rgba(255, 255, 255, 0.5);',
+        'nav': '30px 0px 30px 0px rgba(255, 255, 255, 0.7);',
         
       },
       letterSpacing: {
