@@ -30,21 +30,23 @@ const select = function () {
     
 }
 
+
+
 const tabs = function () {
 	const tabsContainer = document.querySelector("[tab-list]");
-    const tabTogglers = document.querySelectorAll("[tab-list] a");
+    const tabTogglers = document.querySelectorAll("[tab-list] li");
     
     console.log(tabTogglers);
     tabTogglers.forEach(function(toggler) {
     toggler.addEventListener("click", function(e) {
         e.preventDefault();
 
-        let tabName = this.getAttribute("href");
+        let tabName = this.getAttribute("data-tab");
         let tabContents = document.querySelector("[tab-contents]");
 
         for (let i = 0; i < tabContents.children.length; i++) {   
                  
-        tabTogglers[i].classList.remove("font-semibold","text-primary-dark", "border-b-2", "border-b-primary-dark");
+        tabTogglers[i].classList.remove("font-bold", "text-primary-dark", "border-primary-dark", "border-b-white", "-mb-px", "z-10");
         if (tabsContainer.classList.contains("blue-type")) {
             tabTogglers[i].classList.remove("text-primary-blue", "border-b-primary-blue"); 
         }
@@ -55,7 +57,7 @@ const tabs = function () {
         tabContents.children[i].classList.add("hidden");
         
         }
-        e.target.classList.add("font-semibold", "text-primary-dark", "border-b-2", "border-b-primary-dark");
+        e.target.classList.add("font-bold", "text-primary-dark", "border-primary-dark", "border-b-white", "-mb-px", "z-10");
         if (tabsContainer.classList.contains("blue-type")) {
             e.target.classList.add("text-primary-blue", "border-b-primary-blue");
             e.target.classList.remove("text-primary-dark", "border-b-primary-dark");
@@ -102,3 +104,35 @@ const accordion = function () {
         });
     });
 }
+
+
+
+// 퍼블 include
+function includeHTML(){
+    let z, elmnt, file, xhttp; 
+    z = document.getElementsByTagName("*");
+    
+    for (let i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      file = elmnt.getAttribute("data-include");
+      
+      if (file) {
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            elmnt.removeAttribute("data-include");
+            includeHTML();
+          }
+        }
+ 
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        return;
+      }
+    }
+}
+window.addEventListener('DOMContentLoaded',()=>{
+    includeHTML();
+});

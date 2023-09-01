@@ -11,21 +11,7 @@
     </head>
     <body>
         <div class="flex items-stretch gap-15 p-6">
-            <nav class="sticky left-6 w-24 flex flex-col gap-15 items-center rounded-20 bg-primary-woori py-7 px-6 z-10 before:w-6 before:h-full before:bg-white before:absolute before:left-[-24px] before:top-0">
-                <div class="w-10 h-10">
-                    <img src="/pub/img/simbol.png" alt="우리은행 심볼">
-                </div>
-                <ul class="flex flex-col items-center gap-8">
-                    <li><a href=";"><img src="/pub/img/menu1.png" alt="대시보드"></a></li>
-                    <li><a href=";"><img src="/pub/img/menu2.png" alt="데이터 분석"></a></li>
-                    <li><a href=";"><img src="/pub/img/menu3-tab.png" alt="커뮤니티"></a></li>
-                    <li><a href=";"><img src="/pub/img/menu4.png" alt="마이페이지"></a></li>
-                </ul>
-                
-                <a href="" class="absolute bottom-7">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
-                </a>
-            </nav>
+            <nav class="sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 z-10 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav z-20" data-include="/pub/include/nav.html"></nav>
 
             <!-- contents -->
             <div class="w-[calc(100%-156px)] min-w-[1670px] pr-15">
@@ -35,16 +21,7 @@
                             <span class="text-28 font-bold">커뮤니티</span>
                         </h1>
                         <div class="flex items-center gap-6">
-                            <button type="button" class="flex items-center py-3 px-5 rounded-md bg-primary-blue mr-9">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                                    <path stroke="#fff" stroke-linecap="round" stroke-width="2" d="M8 4v8M4 8h8"/>
-                                </svg>
-                                <span class="text-sm text-white font-medium ml-1.5 tracking-4">글쓰기</span>
-                            </button>
-                            <div class="flex items-center gap-1.5 mr-5">
-                                <img src="/pub/img/icon-user.png" alt="사용자 이미지">
-                                <span class="font-semibold">홍길동<span class="text-gray-600 font-normal">님</span></span>
-                            </div>
+                            <span class="tracking-4 font-bold"><span>김우리</span> 님</span>
                             <button class="relative">                                
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                                     <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.613 3H8A4 4 0 0 0 4 7v10a4 4 0 0 0 4 4h6.613M10.5 12h10M17 16.5l3-2.5v0a2.561 2.561 0 0 0 0-4v0l-3-2.5"/>
@@ -61,159 +38,119 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                                     <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7 8 2-5M17 8l-2-5M8 12v5M16 12v5M12 12v5"/><path stroke="#090909" stroke-linecap="round" stroke-width="1.5" d="M3.884 16.076c.545 2.365.817 3.547 1.629 4.236C6.324 21 7.446 21 9.69 21h4.618c2.245 0 3.367 0 4.178-.688.812-.689 1.084-1.87 1.629-4.236.855-3.717 1.283-5.576.385-6.826C19.602 8 17.838 8 14.309 8H9.691C6.162 8 4.398 8 3.499 9.25c-.527.734-.598 1.677-.393 3.083"/>
                                 </svg>
-                            </button>                            
+                            </button>     
+                            <span><img src="/pub/img/icon-user.png" alt="사용자 이미지"></span>                         
                         </div>
                     </div>
                 </header>
-                <!-- 검색 -->
-                <div class="flex items-center gap-2 mt-12">
-                    <div class="w-full h-10 relative">
-                        <input type="text" class="w-full h-10 py-2 px-5 rounded-lg text-md placeholder:text-gray-300 bg-gray-50" placeholder="검색어를 입력해 주세요.">                           
-                        <button type="button" class="absolute top-1/2 right-5 translate-y-[-50%]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
-                                <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.063 15.625a6.562 6.562 0 1 0 0-13.125 6.562 6.562 0 0 0 0 13.125ZM13.703 13.703 17.5 17.5"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <button type="button" data-pop="pop-detail" class="h-10 flex items-center gap-1.5 flex-none ml-4 px-4 border border-gray-line rounded-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                            <path stroke="#2C3036" stroke-linecap="round" stroke-width="1.5" d="M2.664 4.333H13.33M4.667 8h6.666M7.336 11.667h1.333"/>
-                        </svg>
-                        <span class="text-sm font-medium">상세검색</span>
-                    </button>
-                </div>
-                <!-- // 검색 -->
 
-                <div class="flex flex-col gap-15 mt-8 min-w-0">
-                    <div class="w-full flex items-center gap-8">
-                        <!-- 활동 순위 -->
-                        <div class="p-10 flex-1 rounded-2xl border border-gray-line">
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-2xl font-bold leading-full">활동 순위</h3>
-                                <div>
-                                    <span class="text-[#5A6E7C] mr-2">내 활동 점수</span>
-                                    <span class="text-md font-bold text-primary-blue">965점 / 300위</span>
+                
+                <div class="mt-12 flex items-start gap-15">
+                    <div class="flex flex-col flex-1">
+                        <!-- 검색 -->
+                        <div class="flex items-center gap-2">
+                            <div class="w-full h-10 relative">
+                                <input type="text" class="w-full h-10 py-2 px-5 rounded-lg text-md placeholder:text-gray-300 bg-gray-50" placeholder="검색어를 입력해 주세요.">                           
+                                <button type="button" class="absolute top-1/2 right-5 translate-y-[-50%]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                                        <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.063 15.625a6.562 6.562 0 1 0 0-13.125 6.562 6.562 0 0 0 0 13.125ZM13.703 13.703 17.5 17.5"/>
+                                    </svg>
+                                </button>
+                            </div>                            
+                        </div>
+                        <div class="flex justify-between mt-2">
+                            <button type="button" data-pop="pop-detail" class="h-10 flex items-center gap-1.5 flex-none px-4 border border-gray-line rounded-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                    <path stroke="#2C3036" stroke-linecap="round" stroke-width="1.5" d="M2.664 4.333H13.33M4.667 8h6.666M7.336 11.667h1.333"/>
+                                </svg>
+                                <span class="text-14 font-medium">상세검색</span>
+                            </button>
+                            <button type="button" class="flex items-center py-2.5 px-5 rounded-md bg-primary-blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                    <path stroke="#fff" stroke-linecap="round" stroke-width="2" d="M8 4v8M4 8h8"/>
+                                </svg>
+                                <span class="text-14 text-white font-medium ml-1.5 tracking-4">글쓰기</span>
+                            </button>
+                        </div>
+                        <!-- // 검색 -->
+                        <div class="mt-10 border-b border-primary-dark">
+                            <ul tab-list class="flex items-center">
+                                <li data-tab="#tab-1" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-primary-dark font-bold border border-primary-dark border-b-white -mb-px z-10">
+                                    전체
+                                </li>
+                                <li data-tab="#tab-2" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-gray-500 font-medium border border-[#E7E9EB] border-b-white -ml-px">
+                                    자유글
+                                </li>
+                                <li data-tab="#tab-3" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-gray-500 font-medium border border-[#E7E9EB] border-b-white -ml-px">
+                                    Q&A
+                                </li>
+                                <li data-tab="#tab-4" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-gray-500 font-medium border border-[#E7E9EB] border-b-white -ml-px">
+                                    TIP
+                                </li>
+                            </ul>                            
+                        </div>
+
+                        <div tab-contents class="mt-8">
+                            <div class="flex justify-end ml-auto">
+                                <div selectbox class="min-w-[140px]">
+                                    <select class="h-10 text-md text-right px-3 pr-9 block w-full appearance-none cursor-pointer bg-transparent">
+                                        <option value="1">최신순</option>
+                                        <option value="2">좋아요 순</option>
+                                        <option value="3">많은 댓글 순</option>
+                                        <option value="4">많은 답변 순</option>
+                                    </select>
                                 </div>
                             </div>
-                            <ul class="mt-6 flex flex-col gap-2">
-                                <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
-                                    <div class="flex items-center">
-                                        <span class="w-6 h-6 rounded-lg block text-center leading-6 text-white font-bold text-[13px] font-RobotoMono bg-primary-woori">1</span>
-                                        <span class="ml-3 font-medium">김광현</span>
-                                        <span class="ml-2 text-sm text-gray-600">디지털전략부</span>
-                                    </div>
-                                    <div class="font-bold">
-                                        <span class="font-RobotoMono">1,680</span> 점
-                                    </div>
-                                </li>
-                                <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
-                                    <div class="flex items-center">
-                                        <span class="w-6 h-6 rounded-lg block text-center leading-6 text-white font-bold text-[13px] font-RobotoMono bg-[#C5D0D8]">2</span>
-                                        <span class="ml-3 font-medium">최정</span>
-                                        <span class="ml-2 text-sm text-gray-600">빅데이터사업부</span>
-                                    </div>
-                                    <div class="font-bold">
-                                        <span class="font-RobotoMono">1,580</span> 점
-                                    </div>
-                                </li>
-                                <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
-                                    <div class="flex items-center">
-                                        <span class="w-6 h-6 rounded-lg block text-center leading-6 text-white font-bold text-[13px] font-RobotoMono bg-[#C5D0D8]">3</span>
-                                        <span class="ml-3 font-medium">김강민</span>
-                                        <span class="ml-2 text-sm text-gray-600">AI사업부</span>
-                                    </div>
-                                    <div class="font-bold">
-                                        <span class="font-RobotoMono">1,170</span> 점
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //활동 순위 -->
-
-                        <!-- 인기글 -->
-                        <div class="p-10 flex-1 rounded-2xl border border-gray-line">
-                            <h3 class="text-2xl font-bold leading-full">인기글</h3>
-                            <ul class="mt-6 flex flex-col gap-2">
-                                <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
-                                    <p class="flex-1 line-clamp-1 mr-3 font-medium">우리아이 여름방학, 로블록스와 함께 창의력 쑥쑥!</p>
-                                    <span class="font-bold font-RobotoMono">&#x1F44D;&#x1F3FB; 1,680</span>
-                                </li>
-                                <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
-                                    <p class="flex-1 line-clamp-1 mr-3 font-medium">우리아이 여름방학, 로블록스와 함께 창의력 쑥쑥!</p>
-                                    <span class="font-bold font-RobotoMono">&#x1F44D;&#x1F3FB; 1,420</span>
-                                </li>
-                                <li class="p-5 flex items-center justify-between rounded-2xl bg-[#F9FAFB]">
-                                    <p class="flex-1 line-clamp-1 mr-3 font-medium">사전 지정하고 쿨하게 떠나다~</p>
-                                    <span class="font-bold font-RobotoMono">&#x1F44D;&#x1F3FB; 1,170</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //인기글 -->                        
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between items-start">
-                            <ul tab-list class="blue-type flex items-center gap-4">
-                                <li><a href="#tab-1" class="text-gray-500 text-md font-bold block text-primary-blue border-b-2 border-b-primary-blue">전체</a></li>
-                                <li><a href="#tab-2" class="text-gray-500 text-md font-bold block">자유글</a></li>
-                                <li><a href="#tab-3" class="text-gray-500 text-md font-bold block">Q&A</a></li>
-                                <li><a href="#tab-4" class="text-gray-500 text-md font-bold block">TIP</a></li>
-                            </ul>
-                            <div selectbox class="relative flex flex-col">
-                                <select class="h-10 text-md px-3 pr-8 block w-full appearance-none cursor-pointer bg-transparent">
-                                    <option value="1">최신순</option>
-                                    <option value="2">좋아요 순</option>
-                                    <option value="3">많은 댓글 순</option>
-                                    <option value="4">많은 답변 순</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div tab-contents>
-                            <div id="tab-1">
+                            <div id="tab-1" class="mt-5">
                                 <ul class="flex flex-col gap-4">
-                                    <li class="p-6 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
+                                    <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
                                         <a href="" class="block group">
-                                            <span class="text-sm font-bold text-[#37A884]">Q&A</span>
-                                            <div class="text-xl font-medium group-hover:text-primary-woori my-2">
-                                                <span>우리은행 직원 칭찬 방법, 은행 칭찬 온라인 접수 방법 </span>
-                                                <span class="text-base font-bold text-primary-blue ml-2.5">2</span>
+                                            <div class="flex items-center">
+                                                <span class="flex-none px-3 py-1 text-14 font-bold text-[#37A884] bg-[#37A884]/10 rounded-3xl">Q&A</span>
+                                                <div class="flex items-center group-hover:text-primary-woori ml-2">
+                                                    <span class="text-18 font-bold line-clamp-1">우리은행 직원 칭찬 방법, 은행 칭찬 온라인 접수 방법 </span>
+                                                    <span class="font-medium text-primary-blue ml-2.5">2</span>
+                                                </div>
                                             </div>
-                                            <div class="text-sm text-gray-600 line-clamp-2">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
+                                            <div class="h-15 text-14 text-gray-600 line-clamp-3 my-3">더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
                                         </a>
-                                        <div class="flex items-center gap-4 mt-5 text-sm">
+                                        <div class="flex items-center gap-4 mt-5 text-14">
                                             <span>홍길동</span>
                                             <span class="font-RobotoMono font-medium tracking-4">2023.07.13 </span>
                                             <span>조회 <span class="font-RobotoMono font-medium tracking-4">26,324</span></span>
                                             <span>좋아요 <span class="font-RobotoMono font-medium tracking-4 text-[#F0360D]">827</span></span>
                                         </div>
                                     </li>
-                                    <li class="p-6 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
+                                    <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
                                         <a href="" class="block group">
-                                            <span class="text-sm font-bold text-primary-blue">자유글</span>
-                                            <div class="text-xl font-medium group-hover:text-primary-woori my-2">
-                                                <span>우리은행 직원 칭찬 방법, 은행 칭찬 온라인 접수 방법 </span>
-                                                <span class="text-base font-bold text-primary-blue ml-2.5">2</span>
+                                            <div class="flex items-center">
+                                                <span class="flex-none px-3 py-1 text-14 font-bold text-primary-blue bg-primary-blue/10 rounded-3xl">자유글</span>
+                                                <div class="flex items-center group-hover:text-primary-woori ml-2">
+                                                    <span class="text-18 font-bold line-clamp-1">테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.제목이 많이 길어집니다. 제목이 많이 길어집니다.</span>
+                                                    <span class="font-medium text-primary-blue ml-2.5">2</span>
+                                                </div>
                                             </div>
-                                            <div class="text-sm text-gray-600 line-clamp-2">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
+                                            <div class="h-15 text-14 text-gray-600 line-clamp-3 my-3">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
                                         </a>
-                                        <div class="flex items-center gap-4 mt-5 text-sm">
+                                        <div class="flex items-center gap-4 mt-5 text-14">
                                             <span>홍길동</span>
                                             <span class="font-RobotoMono font-medium tracking-4">2023.07.13 </span>
                                             <span>조회 <span class="font-RobotoMono font-medium tracking-4">26,324</span></span>
                                             <span>좋아요 <span class="font-RobotoMono font-medium tracking-4 text-[#F0360D]">827</span></span>
                                         </div>
                                     </li>
-                                    <li class="p-6 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
+                                    <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
                                         <a href="" class="block group">
-                                            <span class="text-sm font-bold text-[#8350C6]">TIP</span>
-                                            <div class="text-xl font-medium group-hover:text-primary-woori my-2">
-                                                <span>[부서명]우리은행 직원 칭찬 방법, 은행 칭찬 온라인 접수 방법 </span>
-                                                <span class="text-base font-bold text-primary-blue ml-2.5">2</span>
+                                            <div class="flex items-center">
+                                                <span class="flex-none px-3 py-1 text-14 font-bold text-[#8350C6] bg-[#8350C6]/10 rounded-3xl">TIP</span>
+                                                <div class="flex items-center group-hover:text-primary-woori ml-2">
+                                                    <span class="text-18 font-bold line-clamp-1">우리은행 직원 칭찬 방법, 은행 칭찬 온라인 접수 방법</span>
+                                                    <span class="font-medium text-primary-blue ml-2.5">2</span>
+                                                </div>
                                             </div>
-                                            <div class="text-sm text-gray-600 line-clamp-2">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
+                                            <div class="h-15 text-14 text-gray-600 line-clamp-3 my-3">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
                                         </a>
-                                        <div class="flex items-center gap-4 mt-5 text-sm">
+                                        <div class="flex items-center gap-4 mt-5 text-14">
                                             <span>홍길동</span>
                                             <span class="font-RobotoMono font-medium tracking-4">2023.07.13 </span>
                                             <span>조회 <span class="font-RobotoMono font-medium tracking-4">26,324</span></span>
@@ -227,6 +164,189 @@
                             <div id="tab-4" class="hidden">tab4</div>
                         </div>
                     </div>
+
+
+                    <!-- 커뮤니티 -->
+                    <div class="w-[420px] flex-none">
+                        <h3 class="text-28 font-bold leading-none mb-10">커뮤니티</h3>
+                        <div class="flex flex-col gap-15">
+                            <!-- Q&A -->
+                            <div>
+                                <h4 class="text-20 font-bold font-RobotoMono leading-none">Q&A</h4>
+                                <ul>
+                                    <li class="py-6">
+                                        <a href="" class="block">
+                                            <span class="font-medium line-clamp-1">[Q&A]  Python 변수 메모리 공유 질문</span>
+                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
+                                        </a>
+                                        <div class="flex items-center gap-4 mt-3">
+                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 border-t border-gray-line">
+                                        <a href="" class="block">
+                                            <span class="font-medium line-clamp-1">[Q&A]  Python 변수 메모리 공유 질문 제목이 긴 글이 들어갑니다</span>
+                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
+                                        </a>
+                                        <div class="flex items-center gap-4 mt-3">
+                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 border-t border-gray-line">
+                                        <a href="" class="block">
+                                            <span class="font-medium line-clamp-1">[Q&A]  Python 변수 메모리 공유 질문</span>
+                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
+                                        </a>
+                                        <div class="flex items-center gap-4 mt-3">
+                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 border-t border-gray-line">
+                                        <a href="" class="block">
+                                            <span class="font-medium line-clamp-1">[Q&A]  Python 변수 메모리 공유 질문</span>
+                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
+                                        </a>
+                                        <div class="flex items-center gap-4 mt-3">
+                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //Q&A -->
+
+                            <!-- TIP -->
+                            <div>
+                                <h4 class="text-20 font-bold leading-none font-RobotoMono">TIP</h4>
+                                <ul>
+                                    <li class="py-6">
+                                        <a href="" class="block">
+                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다</span>
+                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다. TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                        </a>
+                                        <div class="flex items-center gap-4 mt-3">
+                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 border-t border-gray-line">
+                                        <a href="" class="block">
+                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 [TIP] 게시물 제목입니다 </span>
+                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                        </a>
+                                        <div class="flex items-center gap-4 mt-3">
+                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 border-t border-gray-line">
+                                        <a href="" class="block">
+                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 게시물 제목이 길어집니다. 게시물 제목</span>
+                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                        </a>
+                                        <div class="flex items-center gap-4 mt-3">
+                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 border-t border-gray-line">
+                                        <a href="" class="block">
+                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 </span>
+                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                        </a>
+                                        <div class="flex items-center gap-4 mt-3">
+                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </div>
+                                    </li>
+                                    <li class="py-6 border-t border-gray-line">
+                                        <a href="" class="block">
+                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 </span>
+                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
+                                        </a>
+                                        <div class="flex items-center gap-4 mt-3">
+                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
+                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //TIP -->
+
+                            <!-- 활동 점수 Top 5 -->
+                            <div>
+                                <h4 class="text-20 font-bold leading-none">활동 점수 Top 5</h4>
+                                <ul class="mt-6">
+                                    <li class="py-3.5 flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#E3F4FD]">
+                                                <img src="/pub/img/icon-top.png" alt="">
+                                            </span>
+                                            <span class="ml-3 font-medium">김광현</span>
+                                            <span class="ml-2 text-14 text-gray-600">디지털전략부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">1,680</span> 점
+                                        </div>
+                                    </li>
+                                    <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
+                                        <div class="flex items-center">
+                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50">
+                                                <img src="/pub/img/icon-top2.png" alt="">
+                                            </span>
+                                            <span class="ml-3 font-medium">최정</span>
+                                            <span class="ml-2 text-14 text-gray-600">빅데이터사업부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">1,580</span> 점
+                                        </div>
+                                    </li>
+                                    <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
+                                        <div class="flex items-center">
+                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50">
+                                                <img src="/pub/img/icon-top3.png" alt="">
+                                            </span>
+                                            <span class="ml-3 font-medium">김강민</span>
+                                            <span class="ml-2 text-14 text-gray-600">AI사업부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">1,170</span> 점
+                                        </div>
+                                    </li>
+                                    <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
+                                        <div class="flex items-center">
+                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50">
+                                                <img src="/pub/img/icon-top4.png" alt="">
+                                            </span>
+                                            <span class="ml-3 font-medium">김성현</span>
+                                            <span class="ml-2 text-14 text-gray-600">디지털전략부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">988</span> 점
+                                        </div>
+                                    </li>
+                                    <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
+                                        <div class="flex items-center">
+                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50">
+                                                <img src="/pub/img/icon-top5.png" alt="">
+                                            </span>
+                                            <span class="ml-3 font-medium">추신수</span>
+                                            <span class="ml-2 text-14 text-gray-600">디지털전략부</span>
+                                        </div>
+                                        <div class="font-bold">
+                                            <span class="font-RobotoMono">961</span> 점
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //활동 점수 Top 5 -->
+
+                        </div>
+                    </div>
+                    <!-- //커뮤니티 -->   
                 </div>
             </div>
             <!-- // contents -->            

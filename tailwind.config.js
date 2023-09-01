@@ -20,6 +20,7 @@ module.exports = {
         '4':'16px',
       },
       minHeight:{
+        '10':'40px',
         '15':'60px',
       },
       height:{
@@ -33,11 +34,11 @@ module.exports = {
         'gray-50': '#F9FAFB',
         'gray-300': '#BCC1C5',
         'gray-400': '#A4AAB0',
+        'gray-500': '#8A919A',
         'gray-600': '#727A82',
         'gray-700': '#5B6168',
         'gray-700': '#44494E',      
-        'gray-900': '#2C3036',
-        'gray-date': '#8A919A',  
+        'gray-900': '#2C3036',  
         'gray-box':'#F4F7FA',
         'gray-line': '#E9EAEB',      
         'primary-woori': '#0067AC',
