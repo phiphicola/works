@@ -51,8 +51,8 @@ const tabs = function () {
             tabTogglers[i].classList.remove("text-primary-blue", "border-b-primary-blue"); 
         }
         tabContents.children[i].classList.remove("hidden");
-        if ("#" + tabContents.children[i].id === tabName) {
-            continue;
+            if ("#" + tabContents.children[i].id === tabName) {
+                continue;
         }
         tabContents.children[i].classList.add("hidden");
         
