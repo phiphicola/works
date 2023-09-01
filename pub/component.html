@@ -274,11 +274,17 @@
             <h2 id="group03">Tab</h2>
             <div class="inner">
                 <div class="box">
-                    <ul tab-list class="flex items-center gap-5">
-                        <li class="text-gray-500"><a href="#tab-1" id="default-tab" class="text-20 text-primary-dark font-bold block pb-3 border-b-2 border-b-primary-dark">Tab 1</a></li>
-                        <li class="text-gray-500"><a href="#tab-2" class="text-20 font-bold block pb-3">Tab 2</a></li>
-                        <li class="text-gray-500"><a href="#tab-3" class="text-20 font-bold block pb-3">Tab 3</a></li>
-                    </ul>
+                    <ul tab-list class="flex items-center">
+                        <li data-tab="#tab-1" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-primary-dark font-bold border border-primary-dark border-b-white -mb-px z-10">
+                            전체
+                        </li>
+                        <li data-tab="#tab-2" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-gray-500 font-medium border border-[#E7E9EB] border-b-white -ml-px">
+                            자유글
+                        </li>
+                        <li data-tab="#tab-3" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-gray-500 font-medium border border-[#E7E9EB] border-b-white -ml-px">
+                            Q&A
+                        </li>
+                    </ul>    
                     <div tab-contents class="w-full">
                         <div id="tab-1" class="">
                             <span class="col-md-10">
