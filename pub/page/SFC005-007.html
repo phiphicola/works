@@ -90,13 +90,14 @@
                             </ul>                            
                         </div>
                         <div class="flex justify-end ml-auto">
-                            <div selectbox class="min-w-[140px]">
-                                <select class="h-10 text-md text-right px-3 pr-9 block w-full appearance-none cursor-pointer bg-transparent">
-                                    <option value="1">최신순</option>
-                                    <option value="2">좋아요 순</option>
-                                    <option value="3">많은 댓글 순</option>
-                                    <option value="4">많은 답변 순</option>
+                            <div selectbox class="after:z-[-1]">
+                                <select select-sizing class="h-10 text-md px-3 pr-9 block appearance-none cursor-pointer bg-transparent">
+                                    <option>최신순</option>
+                                    <option>좋아요 순</option>
+                                    <option>많은 댓글 순</option>
+                                    <option>많은 답변 순</option>
                                 </select>
+                                <span helper-element aria-hidden="true"></span>
                             </div>
                         </div>
                         <div tab-contents class="mt-8">                            
@@ -125,7 +126,7 @@
                                             <div class="flex items-center">
                                                 <span class="flex-none px-3 py-1 text-14 font-bold text-primary-blue bg-primary-blue/10 rounded-3xl">자유글</span>
                                                 <div class="flex items-center group-hover:text-primary-woori ml-2">
-                                                    <span class="text-18 font-bold line-clamp-1">테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.제목이 많이 길어집니다. 제목이 많이 길어집니다.</span>
+                                                    <span class="text-18 font-bold line-clamp-1">테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.</span>
                                                     <span class="font-medium text-primary-blue ml-2.5">2</span>
                                                 </div>
                                             </div>
@@ -244,57 +245,37 @@
 
                             <!-- TIP -->
                             <div>
-                                <h4 class="text-20 font-bold leading-none font-RobotoMono">TIP</h4>
+                                <h4 class="text-20 mb-6 font-bold leading-none font-RobotoMono">인기글</h4>
                                 <ul>
                                     <li class="py-6">
-                                        <a href="" class="block">
-                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다</span>
-                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다. TIP 인기 게시물 본문내용을 노출합니다.</span>
-                                        </a>
-                                        <div class="flex items-center gap-4 mt-3">
-                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
-                                        </div>
+                                        <a href="" class="flex items-center justify-between">
+                                            <span class="font-medium line-clamp-1">우리아이 여름방학, 로블록스와 함께 창의력 쑥쑥!</span>
+                                            <span class="font-medium font-RobotoMono flex-none">&#x1F44D;&#x1F3FB; 1,261</span>
+                                        </a>                                        
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
-                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 [TIP] 게시물 제목입니다 </span>
-                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
-                                        </a>
-                                        <div class="flex items-center gap-4 mt-3">
-                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
-                                        </div>
+                                        <a href="" class="flex items-center justify-between">
+                                            <span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법 파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
+                                            <span class="font-medium font-RobotoMono flex-none">&#x1F44D;&#x1F3FB; 1,108</span>
+                                        </a>  
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
-                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 게시물 제목이 길어집니다. 게시물 제목</span>
-                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
-                                        </a>
-                                        <div class="flex items-center gap-4 mt-3">
-                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
-                                        </div>
+                                        <a href="" class="flex items-center justify-between">
+                                            <span class="font-medium line-clamp-1">무더운 올여름, 시WON~하계 쏜다!</span>
+                                            <span class="font-medium font-RobotoMono flex-none">&#x1F44D;&#x1F3FB; 608</span>
+                                        </a>  
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
-                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 </span>
-                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
-                                        </a>
-                                        <div class="flex items-center gap-4 mt-3">
-                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
-                                        </div>
+                                        <a href="" class="flex items-center justify-between">
+                                            <span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
+                                            <span class="font-medium font-RobotoMono flex-none">&#x1F44D;&#x1F3FB; 308</span>
+                                        </a>  
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
-                                            <span class="font-medium line-clamp-1">[TIP] 게시물 제목입니다 </span>
-                                            <span class="mt-2 text-14 text-gray-600 line-clamp-1">TIP 인기 게시물 본문내용을 노출합니다.</span>
-                                        </a>
-                                        <div class="flex items-center gap-4 mt-3">
-                                            <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
-                                        </div>
+                                        <a href="" class="flex items-center justify-between">
+                                            <span class="font-medium line-clamp-1">청소년을 위한 우리미래드림바우처I</span>
+                                            <span class="font-medium font-RobotoMono flex-none">&#x1F44D;&#x1F3FB; 108</span>
+                                        </a>  
                                     </li>
                                 </ul>
                             </div>
@@ -308,7 +289,7 @@
         </div>
 
 
-        <div id="pop-detail" class="fixed w-screen h-screen opacity-0 invisible transition top-0 left-0 flex items-center justify-center">
+        <div id="pop-detail" class="fixed w-screen h-screen opacity-0 invisible transition top-0 left-0 flex items-center justify-center z-20">
             <div class="absolute bg-black opacity-50 w-full h-full pops-exit"></div>
             <div class="bg-white z-10">
                 <h1> pops</h1>

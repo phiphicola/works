@@ -8,8 +8,6 @@ window.onload = function() {
 const select = function () {
     
     const parent = document.querySelectorAll('[selectbox]');
-    
-
     parent.forEach(function(select) {
         const selectBox = select.querySelector('select');
         selectBox.addEventListener('click', function(e) {
@@ -27,7 +25,21 @@ const select = function () {
         // });      
     });
    
+    const resizingSelect = document.querySelectorAll("[select-sizing]");
     
+    resizingSelect.forEach(function (evt) {
+        const helperElement = document.querySelector("[helper-element]");
+        evt.addEventListener("change", function(e){
+            helperElement.innerHTML = e.target.querySelector(
+                "option:checked"
+            ).innerText;
+            resize(helperElement.offsetWidth);
+        });
+    });
+    function resize(width) {
+        const root = document.documentElement;
+        root.style.setProperty("--dynamic-size", `${width}px`);
+    }
 }
 
 

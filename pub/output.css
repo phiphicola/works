@@ -470,6 +470,22 @@ input + label {
   background-color:#F5F7F8
 }
 
+:root {
+  --dynamic-size: 50px;
+  --arrow-size: 50px;
+  --select-size: calc(var(--dynamic-size) + var(--arrow-size));
+}
+
+[select-sizing]{
+  width:var(--select-size)
+}
+
+[helper-element]{
+  position:absolute;
+  top:0;
+  left:-9999px
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -815,6 +831,10 @@ input + label {
   margin-bottom: 2.5rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -1116,10 +1136,6 @@ input + label {
   min-width: 16px;
 }
 
-.min-w-\[140px\] {
-  min-width: 140px;
-}
-
 .min-w-\[150px\] {
   min-width: 150px;
 }
@@ -1332,6 +1348,11 @@ input + label {
 
 .border-transparent {
   border-color: transparent;
+}
+
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(114 122 130 / var(--tw-border-opacity));
 }
 
 .border-b-gray-line {
@@ -1566,10 +1587,6 @@ input + label {
   padding-bottom: 2rem;
 }
 
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1612,10 +1629,6 @@ input + label {
 
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .font-RobotoMono {
@@ -1759,9 +1772,9 @@ input + label {
   color: rgb(131 80 198 / var(--tw-text-opacity));
 }
 
-.text-\[\#A9B3BC\] {
+.text-\[\#8A919A\] {
   --tw-text-opacity: 1;
-  color: rgb(169 179 188 / var(--tw-text-opacity));
+  color: rgb(138 145 154 / var(--tw-text-opacity));
 }
 
 .text-\[\#F0360D\] {
@@ -2062,6 +2075,11 @@ input + label {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.after\:z-\[-1\]::after {
+  content: var(--tw-content);
+  z-index: -1;
+}
+
 .checked\:border-disabled:checked {
   --tw-border-opacity: 1;
   border-color: rgb(238 240 242 / var(--tw-border-opacity));
@@ -2148,6 +2166,15 @@ input + label {
   background-color: transparent;
 }
 
+.group:hover .group-hover\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
 .group:hover .group-hover\:fill-primary-blue {
   fill: #3A8DFD;
 }
@@ -2160,4 +2187,8 @@ input + label {
 .group:hover .group-hover\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:opacity-10 {
+  opacity: 0.1;
 }
