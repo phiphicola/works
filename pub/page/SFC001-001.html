@@ -11,8 +11,235 @@
     </head>
     <body>
         <div class="flex items-stretch gap-15 p-6">
-            <nav class="sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 z-10 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav" data-include="/pub/include/nav.html"></nav>        
+            <nav class="close sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 z-10 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav">
+                <button type="button" class="toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
+                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 26.833 25 21l-5-5.833M15 26.833 20 21l-5-5.834"/>
+                    </svg>
+                </button>
+                <ul class="w-12 flex flex-col items-center gap-8">
+                    <li><a href=""><img src="/pub/img/menu.png" alt="?"></a></li>
+                    <li><a href="/pub/page/SFC001-001.html"><img src="/pub/img/menu1-tab.png" alt="대시보드"></a></li>
+                    <li><a href="/pub/page/SFC003-001.html"><img src="/pub/img/menu2.png" alt="데이터 분석"></a></li>
+                    <li><a href=";"><img src="/pub/img/menu3.png" alt="커뮤니티"></a></li>
+                    <li><a href=";"><img src="/pub/img/menu4.png" alt="마이페이지"></a></li>
+                </ul>
+                
+                <a href="" class="absolute bottom-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
+                </a>
+
+
+                <div class="menu-bar absolute right-100">
+                    <div class="menu">
+        
+                        <ul class="menu-links">
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-home-alt icon' ></i>
+                                    <span class="text nav-text">분석하기</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                                    <span class="text nav-text">대시보드</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-bell icon'></i>
+                                    <span class="text nav-text">데이터 분석</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-pie-chart-alt icon' ></i>
+                                    <span class="text nav-text">커뮤니티</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-heart icon' ></i>
+                                    <span class="text nav-text">마이페이지</span>
+                                </a>
+                            </li>        
+                        </ul>
+                    </div>
+               </div>
+            </nav>        
             
+
+
+            <style>
+                .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;  
+}
+.sidebar.close{
+    width: 88px;
+}
+
+/* ===== Reusable code - Here ===== */
+.sidebar li{
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon{
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar .icon{
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon{
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text{
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+.sidebar.close .text{
+    opacity: 0;
+}
+/* =========================== */
+
+.sidebar header{
+    position: relative;
+}
+
+.sidebar header .image-text{
+    display: flex;
+    align-items: center;
+}
+.sidebar header .logo-text{
+    display: flex;
+    flex-direction: column;
+}
+header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .image-text .profession{
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+.sidebar header .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar header .image img{
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+body.dark .sidebar header .toggle{
+    color: var(--text-color);
+}
+
+.sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu{
+    margin-top: 40px;
+}
+
+.sidebar li a{
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+
+.sidebar li a:hover{
+    background-color: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--sidebar-color);
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text{
+    color: var(--text-color);
+}
+
+.sidebar .menu-bar{
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+.menu-bar::-webkit-scrollbar{
+    display: none;
+}
+.sidebar .menu-bar .mode{
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    position: relative;
+    transition: var(--tran-05);
+}
+            </style>
             <div class="w-[calc(100%-156px)] min-w-[1670px] pr-15">
                 <header>
                     <div class="h-12 flex items-center justify-between">
@@ -28,18 +255,20 @@
                                 </svg>
                             </button>
                             <button class="relative">
-                                <span class="absolute right-[-5px] top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">99</span>
+                                <span class="absolute left-3 top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">99+</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                                     <path stroke="#090909" stroke-linecap="round" stroke-width="1.5" d="M9 2.674A7 7 0 0 1 19 9v.704c0 .845.25 1.671.719 2.374l1.148 1.723a2.771 2.771 0 0 1-1.576 4.21 27.71 27.71 0 0 1-14.582 0 2.771 2.771 0 0 1-1.576-4.21l1.148-1.723a4.28 4.28 0 0 0 .72-2.374V9c0-1.074.24-2.09.673-3M7.5 19c.655 1.748 2.422 3 4.5 3 .245 0 .485-.017.72-.05M16.5 19a4.498 4.498 0 0 1-1.302 1.84"/>
                                 </svg>
                             </button>
                             <button class="relative">
-                                <span class="absolute right-[-5px] top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">3</span>                               
+                                <span class="absolute left-3 top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">3</span>                               
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                                     <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7 8 2-5M17 8l-2-5M8 12v5M16 12v5M12 12v5"/><path stroke="#090909" stroke-linecap="round" stroke-width="1.5" d="M3.884 16.076c.545 2.365.817 3.547 1.629 4.236C6.324 21 7.446 21 9.69 21h4.618c2.245 0 3.367 0 4.178-.688.812-.689 1.084-1.87 1.629-4.236.855-3.717 1.283-5.576.385-6.826C19.602 8 17.838 8 14.309 8H9.691C6.162 8 4.398 8 3.499 9.25c-.527.734-.598 1.677-.393 3.083"/>
                                 </svg>
-                            </button>     
-                            <span><img src="/pub/img/icon-user.png" alt="사용자 이미지"></span>
+                            </button>  
+                            <button class="relative">
+                                <img src="/pub/img/icon-user.png" alt="사용자 이미지">
+                            </button>   
                         </div>
                     </div>
                     <div class="flex items-center mt-4 bg-primary-dark opacity-85 py-4 px-6 rounded-lg">
@@ -56,11 +285,11 @@
                     <strong class="text-primary-woori font-bold">김우리님,</strong> 어떤 데이터가 필요하신가요?
                 </div>
                 <!-- 검색 -->
-                <div class="w-[1320px] h-15 relative mt-8 mx-auto">
-                    <input type="text" class="w-full h-15 py-2.5 pl-8 pr-15 rounded-40 bg-[#F9FAFB]" placeholder="필요한 데이터를 검색해보세요. (ex. 외화)">                           
-                    <button type="button" class="absolute top-1/2 right-5 p-3 -translate-y-2/4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                            <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.875 18.75a7.875 7.875 0 1 0 0-15.75 7.875 7.875 0 0 0 0 15.75ZM16.444 16.444 21 21"/>
+                <div class="w-[1320px] h-20 relative mt-8 mx-auto">
+                    <input type="text" class="w-full h-20 py-2.5 pl-8 pr-15 rounded-40 text-18 border border-gray-line shadow-search placeholder:text-gray-500" placeholder="필요한 데이터를 검색해보세요. (ex. 외화)">                           
+                    <button type="button" class="absolute top-1/2 right-5 p-3 -translate-y-2/4">                       
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+                            <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.5 25C20.299 25 25 20.299 25 14.5S20.299 4 14.5 4 4 8.701 4 14.5 8.701 25 14.5 25ZM21.925 21.925 28 28"/>
                         </svg>
                     </button>
                 </div>
@@ -78,10 +307,10 @@
                                             <h4 class="text-20 font-bold leading-none">실시간 트렌드</h4>
                                             <p class="mt-2 text-15 text-gray-500 leading-none">2023/08/14 ~ 08/21</p>
                                         </div>
-                                        <ul tab-list class="flex items-center gap-4">
-                                            <li><a href="#tab-1" class="text-gray-500 tracking-4 text-15 block font-semibold text-primary-dark border-b-2 border-b-primary-dark">주별</a></li>
-                                            <li><a href="#tab-2" class="text-gray-500 tracking-4 text-15 block font-medium">월별</a></li>
-                                            <li><a href="#tab-3" class="text-gray-500 tracking-4 text-15 block font-medium">분기별</a></li>
+                                        <ul tab-list class="small-type flex items-center gap-4">
+                                            <li data-tab="#tab-1" class="tracking-4 text-15 font-semibold text-primary-dark border-b-2 border-b-primary-dark cursor-pointer">주별</li>
+                                            <li data-tab="#tab-2" class="text-gray-500 tracking-4 text-15 font-medium cursor-pointer">월별</li>
+                                            <li data-tab="#tab-3" class="text-gray-500 tracking-4 text-15 font-medium cursor-pointer">분기별</li>
                                         </ul>
                                     </div>
                                     <!-- 개발 차트 영역 -->
@@ -2005,6 +2234,16 @@
             <div class="pops-exit absolute bg-black w-full h-full opacity-60"></div>
             <div class="bg-yellow-300 z-10">
                 <h1>분석 환경 접속 권한 신청</h1>
+                <ul>
+                    <li>분석용 PC 신청을 먼저 완료하신 후 신청해주세요. 상세 신청 방법은 <button type="button" class="underline text-primary-blue font-bold">여기</button>를 참고해주세요</li>
+                    <li>장기간 미접속 또는 소속 부서 변경 시 접속 권한이 차단될 수 있스비다. 이때 권한을 재신청하지 않으면 데이터 조회 권한을 포함한 모든 권한이 회수됩니다.</li>
+                    <li>개인 데이터는 영구 보관되지 않으며 보관 목적으로 사용할 수 없습니다.</li>
+                    <li>자주 사용하는 데이터 조회 권한은 자동 부여됩니다.</li>
+                </ul>
+
+                <h2>신청 사유</h2>
+                <p>사용 목적은 업무와 관련하여 10자 이상 명확히 작성해주세요.</p>
+                <textarea name="" id="" cols="30" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg" placeholder="신청 사유를 입력해주세요.(200 bytes)"></textarea>
                 <div>
                     <input class="input" autocomplete="off" list="browsers" id="input" name="browsers" placeholder="Select your fav browser">
                     <datalist id="browsers">

@@ -3,6 +3,7 @@ window.onload = function() {
     tabs();
     opnePop();  
     accordion();  
+    sideMenu();
 }
 
 const select = function () {
@@ -59,8 +60,9 @@ const tabs = function () {
         for (let i = 0; i < tabContents.children.length; i++) {   
                  
         tabTogglers[i].classList.remove("font-bold", "text-primary-dark", "border-primary-dark", "border-b-white", "-mb-px", "z-10");
-        if (tabsContainer.classList.contains("blue-type")) {
-            tabTogglers[i].classList.remove("text-primary-blue", "border-b-primary-blue"); 
+        if (tabsContainer.classList.contains("small-type")) {
+            tabTogglers[i].classList.remove("font-semibold", "text-primary-dark", "border-b-2", "border-b-primary-dark"); 
+            tabTogglers[i].classList.add("text-gray-500","font-medium"); 
         }
         tabContents.children[i].classList.remove("hidden");
             if ("#" + tabContents.children[i].id === tabName) {
@@ -70,9 +72,9 @@ const tabs = function () {
         
         }
         e.target.classList.add("font-bold", "text-primary-dark", "border-primary-dark", "border-b-white", "-mb-px", "z-10");
-        if (tabsContainer.classList.contains("blue-type")) {
-            e.target.classList.add("text-primary-blue", "border-b-primary-blue");
-            e.target.classList.remove("text-primary-dark", "border-b-primary-dark");
+        if (tabsContainer.classList.contains("small-type")) {
+            e.target.classList.add("font-semibold","text-primary-dark", "border-b-2", "border-b-primary-dark");
+            e.target.classList.remove("text-gray-500","font-medium","border-b-white", "-mb-px", "z-10", "font-bold");
         } 
     });
     });
@@ -117,7 +119,16 @@ const accordion = function () {
     });
 }
 
+const sideMenu = function () {
+    const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle");
 
+    toggle.addEventListener("click" , () =>{
+        sidebar.classList.toggle("close");
+    })
+
+}
 
 // 퍼블 include
 function includeHTML(){
@@ -133,7 +144,6 @@ function includeHTML(){
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
             elmnt.removeAttribute("data-include");
             includeHTML();
           }

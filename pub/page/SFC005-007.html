@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="flex items-stretch gap-15 p-6">
-            <nav class="sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 z-10 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav z-20" data-include="/pub/include/nav.html"></nav>
+            <nav class="sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav z-20" data-include="/pub/include/nav.html"></nav>
 
             <!-- contents -->
             <div class="w-[calc(100%-156px)] min-w-[1670px] pr-15">
@@ -20,27 +20,8 @@
                         <h1 class="h-[26px] flex items-center gap-5">
                             <span class="text-28 font-bold">커뮤니티</span>
                         </h1>
-                        <div class="flex items-center gap-6">
-                            <span class="tracking-4 font-bold"><span>김우리</span> 님</span>
-                            <button class="relative">                                
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.613 3H8A4 4 0 0 0 4 7v10a4 4 0 0 0 4 4h6.613M10.5 12h10M17 16.5l3-2.5v0a2.561 2.561 0 0 0 0-4v0l-3-2.5"/>
-                                </svg>
-                            </button>
-                            <button class="relative">
-                                <span class="absolute right-[-5px] top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">99</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                                    <path stroke="#090909" stroke-linecap="round" stroke-width="1.5" d="M9 2.674A7 7 0 0 1 19 9v.704c0 .845.25 1.671.719 2.374l1.148 1.723a2.771 2.771 0 0 1-1.576 4.21 27.71 27.71 0 0 1-14.582 0 2.771 2.771 0 0 1-1.576-4.21l1.148-1.723a4.28 4.28 0 0 0 .72-2.374V9c0-1.074.24-2.09.673-3M7.5 19c.655 1.748 2.422 3 4.5 3 .245 0 .485-.017.72-.05M16.5 19a4.498 4.498 0 0 1-1.302 1.84"/>
-                                </svg>
-                            </button>
-                            <button class="relative">
-                                <span class="absolute right-[-5px] top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">3</span>                               
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                                    <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7 8 2-5M17 8l-2-5M8 12v5M16 12v5M12 12v5"/><path stroke="#090909" stroke-linecap="round" stroke-width="1.5" d="M3.884 16.076c.545 2.365.817 3.547 1.629 4.236C6.324 21 7.446 21 9.69 21h4.618c2.245 0 3.367 0 4.178-.688.812-.689 1.084-1.87 1.629-4.236.855-3.717 1.283-5.576.385-6.826C19.602 8 17.838 8 14.309 8H9.691C6.162 8 4.398 8 3.499 9.25c-.527.734-.598 1.677-.393 3.083"/>
-                                </svg>
-                            </button>     
-                            <span><img src="/pub/img/icon-user.png" alt="사용자 이미지"></span>                         
-                        </div>
+
+                        <div data-include="/pub/include/user.html"></div>                        
                     </div>
                 </header>
 

@@ -11,7 +11,67 @@
     </head>
     <body>
         <div class="flex items-stretch gap-15 p-6">
-            <nav class="sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 z-10 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav z-20" data-include="/pub/include/nav.html"></nav>        
+            <nav class="close sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 z-10 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav">
+                <button type="button" class="toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
+                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 26.833 25 21l-5-5.833M15 26.833 20 21l-5-5.834"/>
+                    </svg>
+                </button>
+                <ul class="w-12 flex flex-col items-center gap-8">
+                    <li><a href=""><img src="/pub/img/menu.png" alt="?"></a></li>
+                    <li><a href="/pub/page/SFC001-001.html"><img src="/pub/img/menu1-tab.png" alt="대시보드"></a></li>
+                    <li><a href="/pub/page/SFC003-001.html"><img src="/pub/img/menu2.png" alt="데이터 분석"></a></li>
+                    <li><a href=";"><img src="/pub/img/menu3.png" alt="커뮤니티"></a></li>
+                    <li><a href=";"><img src="/pub/img/menu4.png" alt="마이페이지"></a></li>
+                </ul>
+                
+                <a href="" class="absolute bottom-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
+                </a>
+
+
+                <div class="menu-bar absolute right-100">
+                    <div class="menu">
+        
+                        <ul class="menu-links">
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-home-alt icon' ></i>
+                                    <span class="text nav-text">분석하기</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                                    <span class="text nav-text">대시보드</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-bell icon'></i>
+                                    <span class="text nav-text">데이터 분석</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-pie-chart-alt icon' ></i>
+                                    <span class="text nav-text">커뮤니티</span>
+                                </a>
+                            </li>
+        
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-heart icon' ></i>
+                                    <span class="text nav-text">마이페이지</span>
+                                </a>
+                            </li>        
+                        </ul>
+                    </div>
+               </div>
+            </nav> 
 
             
             <div class="w-[calc(100%-156px)] min-w-[1670px] pr-15">
@@ -28,18 +88,20 @@
                                 </svg>
                             </button>
                             <button class="relative">
-                                <span class="absolute right-[-5px] top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">99</span>
+                                <span class="absolute left-3 top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">99+</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                                     <path stroke="#090909" stroke-linecap="round" stroke-width="1.5" d="M9 2.674A7 7 0 0 1 19 9v.704c0 .845.25 1.671.719 2.374l1.148 1.723a2.771 2.771 0 0 1-1.576 4.21 27.71 27.71 0 0 1-14.582 0 2.771 2.771 0 0 1-1.576-4.21l1.148-1.723a4.28 4.28 0 0 0 .72-2.374V9c0-1.074.24-2.09.673-3M7.5 19c.655 1.748 2.422 3 4.5 3 .245 0 .485-.017.72-.05M16.5 19a4.498 4.498 0 0 1-1.302 1.84"/>
                                 </svg>
                             </button>
                             <button class="relative">
-                                <span class="absolute right-[-5px] top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">3</span>                               
+                                <span class="absolute left-3 top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">3</span>                               
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                                     <path stroke="#090909" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7 8 2-5M17 8l-2-5M8 12v5M16 12v5M12 12v5"/><path stroke="#090909" stroke-linecap="round" stroke-width="1.5" d="M3.884 16.076c.545 2.365.817 3.547 1.629 4.236C6.324 21 7.446 21 9.69 21h4.618c2.245 0 3.367 0 4.178-.688.812-.689 1.084-1.87 1.629-4.236.855-3.717 1.283-5.576.385-6.826C19.602 8 17.838 8 14.309 8H9.691C6.162 8 4.398 8 3.499 9.25c-.527.734-.598 1.677-.393 3.083"/>
                                 </svg>
                             </button>     
-                            <span><img src="/pub/img/icon-user.png" alt="사용자 이미지"></span>                         
+                            <button class="relative">
+                                <img src="/pub/img/icon-user.png" alt="사용자 이미지">
+                            </button>  
                         </div>
                     </div>
                 </header>
@@ -71,21 +133,20 @@
                                     </svg>
                                 </button>
                             </div>
-                        </div>
-                        <div class="flex justify-between mt-2">
                             <button type="button" data-pop="pop-detail" class="h-10 flex items-center gap-1.5 flex-none px-4 border border-gray-line rounded-md">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
                                     <path stroke="#2C3036" stroke-linecap="round" stroke-width="1.5" d="M2.664 4.333H13.33M4.667 8h6.666M7.336 11.667h1.333"/>
                                 </svg>
                                 <span class="text-14 font-medium">필터</span>
                             </button>
-                            <button type="button" class="flex items-center py-2.5 px-5 rounded-md bg-primary-blue">
+                            <button type="button" class="flex-none flex items-center py-2.5 px-5 rounded-md bg-primary-blue">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
                                     <path stroke="#fff" stroke-linecap="round" stroke-width="2" d="M8 4v8M4 8h8"/>
                                 </svg>
                                 <span class="text-14 text-white font-medium ml-1.5 tracking-4">내 데이터 업로드</span>
                             </button>
                         </div>
+                        
                         <!-- // 검색 -->
 
                         <!-- 최근 한달간 가장 인기 있는 데이터는 -->
@@ -221,10 +282,10 @@
                                     </a>
                                     <div class="flex items-center justify-between mt-5">
                                         <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
-                                        <button type="button" class="w-10 h-10 rounded-full bg-[#E3F4FD] group-hover:bg-white group-hover:bg-opacity-10">
+                                        <button type="button" class="w-10 h-10 rounded-full bg-[#E3F4FD] group-hover:bg-white group-hover:bg-opacity-10">                                                           
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="m-auto text-primary-blue group-hover:text-white">
-                                                <path stroke="currentColor" stroke-width="1.5" d="M4 10.575c0-2.878 0-4.317.336-4.8C4.67 5.29 6.007 4.826 8.68 3.9l.51-.177C10.581 3.241 11.278 3 12 3c.721 0 1.418.241 2.81.724l.51.177c2.673.926 4.009 1.39 4.344 1.873.336.484.336 1.923.336 4.801v1.417c0 5.075-3.768 7.537-6.132 8.582-.641.284-.962.426-1.868.426-.906 0-1.227-.142-1.868-.425C7.768 19.529 4 17.067 4 11.992v-1.417Z"/>
-                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 13.333V16m1.5-3.024c-1.435.736-3.27.299-4.098-.976-.828-1.275-.336-2.906 1.098-3.642a3.3 3.3 0 0 1 1.859-.339c.904.098 1.748.56 2.239 1.315.49.755.518 1.635.16 2.38a2.784 2.784 0 0 1-1.258 1.262Z"/>
+                                                <path fill="currentColor" stroke="currentColor" stroke-width="1.5" d="M4 10.575c0-2.878 0-4.317.336-4.8C4.67 5.29 6.007 4.826 8.68 3.9l.51-.177C10.581 3.241 11.278 3 12 3c.721 0 1.418.241 2.81.724l.51.177c2.673.926 4.009 1.39 4.344 1.873.336.484.336 1.923.336 4.801v1.417c0 5.075-3.768 7.537-6.132 8.582-.641.284-.962.426-1.868.426-.906 0-1.227-.142-1.868-.425C7.768 19.529 4 17.067 4 11.992v-1.417Z"/>
+                                                <circle cx="8" cy="12" r="1" fill="#fff" class="group-hover:fill-primary-blue" /><circle cx="12" cy="12" r="1" fill="#fff" class="group-hover:fill-primary-blue"/><circle cx="16" cy="12" r="1" fill="#fff" class="group-hover:fill-primary-blue"/>
                                             </svg>
                                         </button>
                                     </div>
@@ -328,10 +389,10 @@
                                     </a>
                                     <div class="flex items-center justify-between mt-5">
                                         <p class="text-[13px] font-medium text-gray-600 group-hover:text-white">조회수<span>1618</span></p>
-                                        <button type="button" class="w-10 h-10 rounded-full bg-[#E3F4FD] group-hover:bg-white group-hover:bg-opacity-10">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="m-auto text-primary-blue group-hover:text-white">
+                                        <button type="button" class="w-10 h-10 rounded-full border border-gray-600 group-hover:border-white group-hover:bg-transparent">                                                            
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="m-auto text-gray-600 group-hover:text-white">
                                                 <path stroke="currentColor" stroke-width="1.5" d="M4 10.575c0-2.878 0-4.317.336-4.8C4.67 5.29 6.007 4.826 8.68 3.9l.51-.177C10.581 3.241 11.278 3 12 3c.721 0 1.418.241 2.81.724l.51.177c2.673.926 4.009 1.39 4.344 1.873.336.484.336 1.923.336 4.801v1.417c0 5.075-3.768 7.537-6.132 8.582-.641.284-.962.426-1.868.426-.906 0-1.227-.142-1.868-.425C7.768 19.529 4 17.067 4 11.992v-1.417Z"/>
-                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 13.333V16m1.5-3.024c-1.435.736-3.27.299-4.098-.976-.828-1.275-.336-2.906 1.098-3.642a3.3 3.3 0 0 1 1.859-.339c.904.098 1.748.56 2.239 1.315.49.755.518 1.635.16 2.38a2.784 2.784 0 0 1-1.258 1.262Z"/>
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 14v3m1.5-3.402a3 3 0 1 1-3-5.195 3 3 0 0 1 3 5.195Z"/>
                                             </svg>
                                         </button>
                                     </div>

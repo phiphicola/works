@@ -93,7 +93,7 @@ module.exports = {
         'card': '0px 4px 10px 0px rgba(0, 0, 0, 0.08);',
         'card-w': '0px 4px 20px 0px rgba(0, 0, 0, 0.08);',
         'nav': '30px 0px 30px 0px rgba(255, 255, 255, 0.7);',
-        
+        'search': '0px 2px 12px 0px rgba(0, 0, 0, 0.06);',
       },
       letterSpacing: {
         '4': "-0.4px"
