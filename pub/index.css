@@ -7,6 +7,7 @@
         font-family: NotoSansKR, RobotoMono, system-ui, sans-serif;color:#090909
     }
     input + label { font-size:1rem;line-height:1rem; color:#5B6168; cursor:pointer}
+    img{display:inline-block}
  
     [selectbox]{position:relative; display:flex}
     [selectbox]::after{content:'';width:1rem;height:1rem;background:url('/pub/img/icon-onoff.svg') no-repeat center; position:absolute; right:0.75rem; top:50%; transform:translateY(-50%)}
@@ -54,6 +55,17 @@
     [acc-tit].is-open + .accordionContent{display:block}
 
     .bg-main{background:linear-gradient(47deg, #EAF6FF 16.38%, #FCF3EA 100%);}
+
+    /* apply  */
+    .btn-medium{
+        @apply flex items-center h-10 py-3 px-5 rounded-md text-14 font-medium leading-full
+    }
+    .tab-line{
+        @apply min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-gray-500 font-medium border border-[#E7E9EB] border-b-white -ml-px
+    }
+    .page-btn{
+        @apply block w-9 h-9 leading-9 text-center text-14 text-gray-700 rounded-full hover:bg-dark hover:font-bold
+    }
 }
 @font-face {
     font-family: "NotoSansKR";
@@ -97,7 +109,7 @@
 
 
 /* 숫자,영문 자동반영 */
-/* @font-face {
+@font-face {
     font-family: "NotoSansKR";
     font-weight: 600;
     font-display: swap;
@@ -117,4 +129,4 @@
     font-display: swap;
     src: url("/pub/font/RobotoMono-Regular.woff") format('woff');
     unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
-} */
+}

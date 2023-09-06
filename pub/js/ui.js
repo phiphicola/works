@@ -3,7 +3,7 @@ window.onload = function() {
     tabs();
     opnePop();  
     accordion();  
-    sideMenu();
+    // sideMenu();
 }
 
 const select = function () {
@@ -119,16 +119,18 @@ const accordion = function () {
     });
 }
 
-const sideMenu = function () {
-    const body = document.querySelector('body'),
-            sidebar = body.querySelector('nav'),
-            toggle = body.querySelector(".toggle");
+// const sideMenu = function () {
+//     const body = document.querySelector('body'),
+//             sidebar = body.querySelector('nav'),
+//             toggle = body.querySelector(".toggle");
 
-    toggle.addEventListener("click" , () =>{
-        sidebar.classList.toggle("close");
-    })
+//             sidebar.forEach((toggle) => {
+//                 toggle.addEventListener("click" , () =>{
+//                 sidebar.classList.toggle("close");
+//         })
+//     });
 
-}
+// }
 
 // 퍼블 include
 function includeHTML(){

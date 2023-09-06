@@ -5,12 +5,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/pub/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="/pub/style.css">
         <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
         <script type="text/javascript" src="/pub/js/ui.js"></script> 
         <script src="/pub/js/swiper-bundle.min.js"></script>    
     </head>
     <body>
-        <div class="flex items-stretch gap-15 p-6">
+        <div class="body-wrap flex items-stretch gap-15 p-6">
             <nav class="close sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 z-10 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav">
                 <button type="button" class="toggle">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
@@ -18,7 +19,7 @@
                     </svg>
                 </button>
                 <ul class="w-12 flex flex-col items-center gap-8">
-                    <li><a href=""><img src="/pub/img/menu.png" alt="?"></a></li>
+                    <li><a href=""><img src="/pub/img/menu.png" alt="분석하기"></a></li>
                     <li><a href="/pub/page/SFC001-001.html"><img src="/pub/img/menu1-tab.png" alt="대시보드"></a></li>
                     <li><a href="/pub/page/SFC003-001.html"><img src="/pub/img/menu2.png" alt="데이터 분석"></a></li>
                     <li><a href=";"><img src="/pub/img/menu3.png" alt="커뮤니티"></a></li>
@@ -26,7 +27,9 @@
                 </ul>
                 
                 <a href="" class="absolute bottom-7">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0-6-6m6 6-6 6"/>
+                    </svg>
                 </a>
 
 
@@ -2017,7 +2020,7 @@ body.dark .sidebar li a:hover .text{
                         <div class="flex flex-col gap-15">
                             <!-- Q&A -->
                             <div>
-                                <h4 class="text-20 font-bold font-RobotoMono leading-none">Q&A</h4>
+                                <h4 class="text-20 font-bold leading-none">Q&A</h4>
                                 <ul>
                                     <li class="py-6">
                                         <a href="" class="block">
@@ -2026,7 +2029,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
@@ -2036,7 +2039,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
@@ -2046,7 +2049,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
@@ -2056,7 +2059,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
@@ -2066,7 +2069,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 988</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 988</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -2075,7 +2078,7 @@ body.dark .sidebar li a:hover .text{
 
                             <!-- TIP -->
                             <div>
-                                <h4 class="text-20 font-bold leading-none font-RobotoMono">TIP</h4>
+                                <h4 class="text-20 font-bold leading-none">TIP</h4>
                                 <ul>
                                     <li class="py-6">
                                         <a href="" class="block">
@@ -2084,7 +2087,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
@@ -2094,7 +2097,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
@@ -2104,7 +2107,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
@@ -2114,7 +2117,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
@@ -2124,7 +2127,7 @@ body.dark .sidebar li a:hover .text{
                                         </a>
                                         <div class="flex items-center gap-4 mt-3">
                                             <span class="text-gray-500 text-[13px] font-medium">조회수 <span>20,875</span></span>
-                                            <span class="font-medium font-RobotoMono">&#x1F44D;&#x1F3FB; 1,261</span>
+                                            <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -2144,7 +2147,7 @@ body.dark .sidebar li a:hover .text{
                                             <span class="ml-2 text-14 text-gray-600">디지털전략부</span>
                                         </div>
                                         <div class="font-bold">
-                                            <span class="font-RobotoMono">1,680</span> 점
+                                            <span>1,680</span> 점
                                         </div>
                                     </li>
                                     <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
@@ -2156,7 +2159,7 @@ body.dark .sidebar li a:hover .text{
                                             <span class="ml-2 text-14 text-gray-600">빅데이터사업부</span>
                                         </div>
                                         <div class="font-bold">
-                                            <span class="font-RobotoMono">1,580</span> 점
+                                            <span>1,580</span> 점
                                         </div>
                                     </li>
                                     <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
@@ -2168,7 +2171,7 @@ body.dark .sidebar li a:hover .text{
                                             <span class="ml-2 text-14 text-gray-600">AI사업부</span>
                                         </div>
                                         <div class="font-bold">
-                                            <span class="font-RobotoMono">1,170</span> 점
+                                            <span>1,170</span> 점
                                         </div>
                                     </li>
                                     <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
@@ -2180,7 +2183,7 @@ body.dark .sidebar li a:hover .text{
                                             <span class="ml-2 text-14 text-gray-600">디지털전략부</span>
                                         </div>
                                         <div class="font-bold">
-                                            <span class="font-RobotoMono">988</span> 점
+                                            <span>988</span> 점
                                         </div>
                                     </li>
                                     <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
@@ -2192,7 +2195,7 @@ body.dark .sidebar li a:hover .text{
                                             <span class="ml-2 text-14 text-gray-600">디지털전략부</span>
                                         </div>
                                         <div class="font-bold">
-                                            <span class="font-RobotoMono">961</span> 점
+                                            <span>961</span> 점
                                         </div>
                                     </li>
                                 </ul>
@@ -2223,14 +2226,16 @@ body.dark .sidebar li a:hover .text{
             <div class="bg-yellow-300 z-10">
                 <h1>관심 카테고리 설정</h1>
                 <div>
-                    
+                    원하는 데이터를 선택하여 메인 화면에 노출합니다.(최대3개)
+                    <p>클릭 시 선택한 데이터 카테고리를 메인에 추가할 수 있으며, 클릭 시 메인에서 제거됩니다.</p>
                 </div>
+                div.flex
                 <button class="pops-close pops-exit">X</button>
             </div>
         </div>
 
         <!-- 분석 환경 접속 권한 신청 -->
-        <div id="apply" class="fixed w-full h-screen opacity-0 invisible transition top-0 left-0 flex items-center justify-center z-10">
+        <div id="apply" class="fixed w-full h-screen max-h-[90vh] px-10 opacity-0 invisible transition top-0 left-0 flex items-center justify-center z-10">
             <div class="pops-exit absolute bg-black w-full h-full opacity-60"></div>
             <div class="bg-yellow-300 z-10">
                 <h1>분석 환경 접속 권한 신청</h1>
@@ -2244,6 +2249,35 @@ body.dark .sidebar li a:hover .text{
                 <h2>신청 사유</h2>
                 <p>사용 목적은 업무와 관련하여 10자 이상 명확히 작성해주세요.</p>
                 <textarea name="" id="" cols="30" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg" placeholder="신청 사유를 입력해주세요.(200 bytes)"></textarea>
+
+                <h2>분석용 PC 지급 여부</h2>
+                <div class="flex gap-4">
+                    <div class="flex items-center gap-2">
+                        <input type="radio" id="rdo" name="radiogroup2" class="radio" checked>
+                        <label for="rdo" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">완료</label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="radio" id="rdo2" name="radiogroup2" class="radio">
+                        <label for="rdo2" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">미완료</label>
+                    </div>
+                </div>
+                <h2>보안서약서</h2>
+                <div class="h-10 overflow-y-scroll">
+                    <ol>
+                        <li>1. 나는 우리SQL(UB계정)을 사용하여 알게 된 개인(신용)정보 및 은행 업무에 관한 중요 정보에 대하여 업무 목적 이외의 용도로 사용하지 않는다.</li>
+                        <li>2. 나는 우리SQL(UB계정)을 사용하여 알게 된 개인(신용)정보 및 은행 업무에 관한 중요 정보에 대하여 업무 목적 이외의 용도로 사용하지 않는다.</li>
+                        <li>2. 나는 우리SQL(UB계정)을 사용하여 알게 된 개인(신용)정보 및 은행 업무에 관한 중요 정보에 대하여 업무 목적 이외의 용도로 사용하지 않는다.</li>
+                        <li>2. 나는 우리SQL(UB계정)을 사용하여 알게 된 개인(신용)정보 및 은행 업무에 관한 중요 정보에 대하여 업무 목적 이외의 용도로 사용하지 않는다.</li>
+                        <li>2. 나는 우리SQL(UB계정)을 사용하여 알게 된 개인(신용)정보 및 은행 업무에 관한 중요 정보에 대하여 업무 목적 이외의 용도로 사용하지 않는다.</li>
+                        <li>2. 나는 우리SQL(UB계정)을 사용하여 알게 된 개인(신용)정보 및 은행 업무에 관한 중요 정보에 대하여 업무 목적 이외의 용도로 사용하지 않는다.</li>
+                    </ol>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="chk" class="checkbox" checked>
+                    <label for="chk">보안서약 내용을 모두 확인하였으며 이에 동의합니다.</label>
+                </div>
+                <h2>결재선</h2>
+                <p>1차 팀장</p>                
                 <div>
                     <input class="input" autocomplete="off" list="browsers" id="input" name="browsers" placeholder="Select your fav browser">
                     <datalist id="browsers">
@@ -2254,6 +2288,9 @@ body.dark .sidebar li a:hover .text{
                         <option value="Firefox">Firefox</option>
                       </datalist>
                 </div>
+                <button type="button" class="flex items-center gap-2 rounded-40 bg-primary-woori py-5 px-8 font-bold text-18 text-white">
+                    <span>분석 환경 접속 권한 신청하기</span>
+                </button>
                 <button class="pops-close pops-exit">X</button>
             </div>
         </div>

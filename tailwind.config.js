@@ -29,6 +29,7 @@ module.exports = {
       },
       lineHeight: {
         '13': '50px',
+        'full': '100%',
       },
       colors: {
         'gray-50': '#F9FAFB',
@@ -42,6 +43,7 @@ module.exports = {
         'gray-box':'#F4F7FA',
         'gray-line': '#E9EAEB',      
         'primary-woori': '#0067AC',
+        'primary-navy': '#082F7A',
         'primary-dark': '#090909',
         'primary-blue': '#3A8DFD',
         'primary-err': '#EA1917',
@@ -53,6 +55,7 @@ module.exports = {
       },
       fontSize:{
         '12': '12px',
+        '13': '13px',
         '14': '14px',
         '15': '15px',
         '16': '16px',
@@ -66,12 +69,10 @@ module.exports = {
       borderRadius: {
         '4':'4px',
         '8':'8px',
+        '12':'12px',
         '16':'16px',
         '20':'20px',
         '40':'40px',
-      },
-      fontFamily: {
-        RobotoMono: ["RobotoMono"],
       },
       gap: {
         '15' : '60px'
