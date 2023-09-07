@@ -50,7 +50,7 @@ module.exports = {
         'red': '#F0360D',
         'light': '#F7F8F9',
         'dark': '#F0F2F4',
-        'disabled': '#EEF0F2',
+        'disabled': '#F5F7F8',
         'transparent' : 'transparent',        
       },
       fontSize:{
@@ -68,6 +68,7 @@ module.exports = {
       },
       borderRadius: {
         '4':'4px',
+        '6':'6px',
         '8':'8px',
         '12':'12px',
         '16':'16px',

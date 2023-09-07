@@ -11,11 +11,30 @@
     </head>
     <body>
         <div class="flex items-stretch gap-15 p-6">
-            <nav class="sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav z-20" data-include="/pub/include/nav.html"></nav>
+            <nav>
+                <button type="button" class="toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
+                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 26.833 25 21l-5-5.833M15 26.833 20 21l-5-5.834"/>
+                    </svg>
+                </button>
+                <ul class="w-12 flex flex-col items-center gap-8">
+                    <li><a href="#"><img src="/pub/img/menu.png" alt="분석하기"></a></li>
+                    <li><a href="#"><img src="/pub/img/menu1.png" alt="대시보드"></a></li>
+                    <li><a href="#"><img src="/pub/img/menu2.png" alt="데이터 분석"></a></li>
+                    <li><a href="#"><img src="/pub/img/menu3-tab.png" alt="커뮤니티"></a></li>
+                    <li><a href="#"><img src="/pub/img/menu4.png" alt="마이페이지"></a></li>
+                </ul>
+                
+                <a href="#" class="absolute bottom-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0-6-6m6 6-6 6"/>
+                    </svg>
+                </a>
+            </nav>
 
             <!-- contents -->
-            <div class="w-[calc(100%-156px)] min-w-[1670px] pr-15">
-                <header class="border-b border-b-gray-line pb-4">
+            <div class="cont-body">
+                <header>
                     <div class="h-12 flex items-center justify-between">
                         <h1 class="h-[26px] flex items-center gap-5">
                             <span class="text-28 font-bold">커뮤니티</span>
@@ -71,10 +90,10 @@
                         <!-- // 검색 -->
                         <div class="mt-8 border-b border-primary-dark">
                             <ul tab-list class="flex items-center">
-                                <li data-tab="#tab-1" class="tab-line text-primary-dark font-bold border border-primary-dark border-b-white -mb-px z-10">전체</li>
-                                <li data-tab="#tab-2" class="tab-line">TIP</li>
-                                <li data-tab="#tab-3" class="tab-line">Q&A</li>
-                                <li data-tab="#tab-4" class="tab-line">자유글</li>
+                                <li class="tab-line on"><span data-tab="#tab-1">전체</span></li>
+                                <li class="tab-line"><span data-tab="#tab-2">TIP</span></li>
+                                <li class="tab-line"><span data-tab="#tab-3">Q&A</span></li>
+                                <li class="tab-line"><span data-tab="#tab-4">자유글</span></li>
                             </ul>                            
                         </div>
                         <div class="mt-8 flex justify-end ml-auto">
@@ -92,7 +111,7 @@
                             <div id="tab-1">
                                 <ul class="flex flex-col gap-4">
                                     <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
-                                        <a href="" class="block group">
+                                        <a href="#" class="block group">
                                             <div class="flex items-center">
                                                 <span class="flex-none px-3 py-1 text-14 font-bold text-[#37A884] bg-[#37A884]/10 rounded-3xl">Q&A</span>
                                                 <div class="flex items-center group-hover:text-primary-woori ml-2">
@@ -109,7 +128,7 @@
                                         </div>
                                     </li>
                                     <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
-                                        <a href="" class="block group">
+                                        <a href="#" class="block group">
                                             <div class="flex items-center">
                                                 <span class="flex-none px-3 py-1 text-14 font-bold text-primary-blue bg-primary-blue/10 rounded-3xl">자유글</span>
                                                 <div class="flex items-center group-hover:text-primary-woori ml-2">
@@ -126,7 +145,7 @@
                                         </div>
                                     </li>
                                     <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
-                                        <a href="" class="block group">
+                                        <a href="#" class="block group">
                                             <div class="flex items-center">
                                                 <span class="flex-none px-3 py-1 text-14 font-bold text-[#8350C6] bg-[#8350C6]/10 rounded-3xl">TIP</span>
                                                 <div class="flex items-center group-hover:text-primary-woori ml-2">
@@ -143,7 +162,7 @@
                                         </div>
                                     </li>
                                     <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
-                                        <a href="" class="block group">
+                                        <a href="#" class="block group">
                                             <div class="flex items-center">
                                                 <span class="flex-none px-3 py-1 text-14 font-bold text-primary-blue bg-primary-blue/10 rounded-3xl">자유글</span>
                                                 <div class="flex items-center group-hover:text-primary-woori ml-2">
@@ -162,15 +181,15 @@
                                 </ul>
 
                                 <ul class="pagination mt-8 mb-6 flex items-center justify-center gap-1">
-                                    <li><a href=""><img src="/pub/img/arr-start.svg" alt=""></a></li>
-                                    <li><a href=""><img src="/pub/img/arr-prev.svg" alt=""></a></li>
-                                    <li class="ml-4"><a href="" class="page-btn font-bold text-white bg-primary-blue hover:bg-primary-blue">1</a></li>
-                                    <li><a href="" class="page-btn">2</a></li>
-                                    <li><a href="" class="page-btn">3</a></li>
-                                    <li><a href="" class="page-btn">4</a></li>
-                                    <li><a href="" class="page-btn">5</a></li>
-                                    <li class="ml-4"><a href=""><img src="/pub/img/arr-next.svg" alt=""></a></li>
-                                    <li><a href=""><img src="/pub/img/arr-end.svg" alt=""></a></li>
+                                    <li><a href="#"><img src="/pub/img/arr-start.svg" alt=""></a></li>
+                                    <li><a href="#"><img src="/pub/img/arr-prev.svg" alt=""></a></li>
+                                    <li class="ml-4"><a href="#" class="page-btn font-bold text-white bg-primary-blue hover:bg-primary-blue">1</a></li>
+                                    <li><a href="#" class="page-btn">2</a></li>
+                                    <li><a href="#" class="page-btn">3</a></li>
+                                    <li><a href="#" class="page-btn">4</a></li>
+                                    <li><a href="#" class="page-btn">5</a></li>
+                                    <li class="ml-4"><a href="#"><img src="/pub/img/arr-next.svg" alt=""></a></li>
+                                    <li><a href="#"><img src="/pub/img/arr-end.svg" alt=""></a></li>
                                 </ul>
                             </div>
                             <div id="tab-2" class="hidden">tab2</div>
@@ -262,31 +281,31 @@
                                 <h4 class="text-20 mb-6 font-bold leading-none">인기글</h4>
                                 <ul>
                                     <li class="py-6">
-                                        <a href="" class="flex items-center justify-between">
+                                        <a href="#" class="flex items-center justify-between">
                                             <span class="font-medium line-clamp-1">우리아이 여름방학, 로블록스와 함께 창의력 쑥쑥!</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </a>                                        
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between">
+                                        <a href="#" class="flex items-center justify-between">
                                             <span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법 파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 1,108</span>
                                         </a>  
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between">
+                                        <a href="#" class="flex items-center justify-between">
                                             <span class="font-medium line-clamp-1">무더운 올여름, 시WON~하계 쏜다!</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 608</span>
                                         </a>  
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between">
+                                        <a href="#" class="flex items-center justify-between">
                                             <span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 308</span>
                                         </a>  
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between">
+                                        <a href="#" class="flex items-center justify-between">
                                             <span class="font-medium line-clamp-1">청소년을 위한 우리미래드림바우처I</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 108</span>
                                         </a>  

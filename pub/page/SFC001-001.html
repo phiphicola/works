@@ -5,245 +5,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/pub/output.css" rel="stylesheet">
-        <link rel="stylesheet" href="/pub/style.css">
         <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
         <script type="text/javascript" src="/pub/js/ui.js"></script> 
         <script src="/pub/js/swiper-bundle.min.js"></script>    
     </head>
     <body>
         <div class="body-wrap flex items-stretch gap-15 p-6">
-            <nav class="close sticky left-6 w-24 flex flex-col gap-10 items-center flex-none rounded-20 bg-primary-woori py-7 z-10 before:w-6 before:h-full before:bg-white before:absolute before:-left-6 before:top-0 shadow-nav">
-                <button type="button" class="toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
-                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 26.833 25 21l-5-5.833M15 26.833 20 21l-5-5.834"/>
-                    </svg>
-                </button>
-                <ul class="w-12 flex flex-col items-center gap-8">
-                    <li><a href=""><img src="/pub/img/menu.png" alt="분석하기"></a></li>
-                    <li><a href="/pub/page/SFC001-001.html"><img src="/pub/img/menu1-tab.png" alt="대시보드"></a></li>
-                    <li><a href="/pub/page/SFC003-001.html"><img src="/pub/img/menu2.png" alt="데이터 분석"></a></li>
-                    <li><a href=";"><img src="/pub/img/menu3.png" alt="커뮤니티"></a></li>
-                    <li><a href=";"><img src="/pub/img/menu4.png" alt="마이페이지"></a></li>
-                </ul>
-                
-                <a href="" class="absolute bottom-7">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0-6-6m6 6-6 6"/>
-                    </svg>
-                </a>
+            <nav data-include="/pub/include/nav.html"></nav>   
 
-
-                <div class="menu-bar absolute right-100">
-                    <div class="menu">
-        
-                        <ul class="menu-links">
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-home-alt icon' ></i>
-                                    <span class="text nav-text">분석하기</span>
-                                </a>
-                            </li>
-        
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bar-chart-alt-2 icon' ></i>
-                                    <span class="text nav-text">대시보드</span>
-                                </a>
-                            </li>
-        
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bell icon'></i>
-                                    <span class="text nav-text">데이터 분석</span>
-                                </a>
-                            </li>
-        
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-pie-chart-alt icon' ></i>
-                                    <span class="text nav-text">커뮤니티</span>
-                                </a>
-                            </li>
-        
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-heart icon' ></i>
-                                    <span class="text nav-text">마이페이지</span>
-                                </a>
-                            </li>        
-                        </ul>
-                    </div>
-               </div>
-            </nav>        
-            
-
-
-            <style>
-                .sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    padding: 10px 14px;
-    background: var(--sidebar-color);
-    transition: var(--tran-05);
-    z-index: 100;  
-}
-.sidebar.close{
-    width: 88px;
-}
-
-/* ===== Reusable code - Here ===== */
-.sidebar li{
-    height: 50px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.sidebar header .image,
-.sidebar .icon{
-    min-width: 60px;
-    border-radius: 6px;
-}
-
-.sidebar .icon{
-    min-width: 60px;
-    border-radius: 6px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-}
-
-.sidebar .text,
-.sidebar .icon{
-    color: var(--text-color);
-    transition: var(--tran-03);
-}
-
-.sidebar .text{
-    font-size: 17px;
-    font-weight: 500;
-    white-space: nowrap;
-    opacity: 1;
-}
-.sidebar.close .text{
-    opacity: 0;
-}
-/* =========================== */
-
-.sidebar header{
-    position: relative;
-}
-
-.sidebar header .image-text{
-    display: flex;
-    align-items: center;
-}
-.sidebar header .logo-text{
-    display: flex;
-    flex-direction: column;
-}
-header .image-text .name {
-    margin-top: 2px;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-header .image-text .profession{
-    font-size: 16px;
-    margin-top: -2px;
-    display: block;
-}
-
-.sidebar header .image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidebar header .image img{
-    width: 40px;
-    border-radius: 6px;
-}
-
-.sidebar header .toggle{
-    position: absolute;
-    top: 50%;
-    right: -25px;
-    transform: translateY(-50%) rotate(180deg);
-    height: 25px;
-    width: 25px;
-    background-color: var(--primary-color);
-    color: var(--sidebar-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    cursor: pointer;
-    transition: var(--tran-05);
-}
-
-body.dark .sidebar header .toggle{
-    color: var(--text-color);
-}
-
-.sidebar.close .toggle{
-    transform: translateY(-50%) rotate(0deg);
-}
-
-.sidebar .menu{
-    margin-top: 40px;
-}
-
-.sidebar li a{
-    list-style: none;
-    height: 100%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: var(--tran-03);
-}
-
-.sidebar li a:hover{
-    background-color: var(--primary-color);
-}
-.sidebar li a:hover .icon,
-.sidebar li a:hover .text{
-    color: var(--sidebar-color);
-}
-body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .text{
-    color: var(--text-color);
-}
-
-.sidebar .menu-bar{
-    height: calc(100% - 55px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-y: scroll;
-}
-.menu-bar::-webkit-scrollbar{
-    display: none;
-}
-.sidebar .menu-bar .mode{
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
-    position: relative;
-    transition: var(--tran-05);
-}
-            </style>
-            <div class="w-[calc(100%-156px)] min-w-[1670px] pr-15">
+            <div class="cont-body">
                 <header>
                     <div class="h-12 flex items-center justify-between">
                         <h1 class="h-[26px] flex items-center gap-5">
@@ -311,16 +81,16 @@ body.dark .sidebar li a:hover .text{
                                             <p class="mt-2 text-15 text-gray-500 leading-none">2023/08/14 ~ 08/21</p>
                                         </div>
                                         <ul tab-list class="small-type flex items-center gap-4">
-                                            <li data-tab="#tab-1" class="tracking-4 text-15 font-semibold text-primary-dark border-b-2 border-b-primary-dark cursor-pointer">주별</li>
-                                            <li data-tab="#tab-2" class="text-gray-500 tracking-4 text-15 font-medium cursor-pointer">월별</li>
-                                            <li data-tab="#tab-3" class="text-gray-500 tracking-4 text-15 font-medium cursor-pointer">분기별</li>
+                                            <li class="on"><span data-tab="#tab-1">전체</span></li>
+                                            <li><span data-tab="#tab-2">월별</span></li>
+                                            <li><span data-tab="#tab-3">분기별</span></li>
                                         </ul>
                                     </div>
                                     <!-- 개발 차트 영역 -->
                                     <div tab-contents class="w-[464px] h-[207px] mt-8">
                                         <div id="tab-1"><img src="/pub/img/bubble-chart.png" alt=""></div>
-                                        <div id="tab-2" class="hidden"><img src="/pub/img/bubble-chart.png" alt=""></div>
-                                        <div id="tab-3" class="hidden"><img src="/pub/img/bubble-chart.png" alt=""></div>
+                                        <div id="tab-2" class="hidden"><img src="/pub/img/bubble-chart.png" alt="">차트</div>
+                                        <div id="tab-3" class="hidden"><img src="/pub/img/bubble-chart.png" alt="">차트2</div>
                                     </div>
                                     <!-- //개발 차트 영역 -->
                         
@@ -368,7 +138,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 첫번째 글입니다.</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -383,7 +153,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -398,7 +168,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -412,7 +182,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -431,7 +201,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -446,7 +216,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -461,7 +231,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -476,7 +246,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -517,7 +287,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 첫번째 글입니다.</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -532,7 +302,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -547,7 +317,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -562,7 +332,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -581,7 +351,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -596,7 +366,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -611,7 +381,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -626,7 +396,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -645,7 +415,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -660,7 +430,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -675,7 +445,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -690,7 +460,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -731,7 +501,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 첫번째 글입니다.</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -746,7 +516,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -761,7 +531,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -776,7 +546,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -795,7 +565,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -810,7 +580,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -825,7 +595,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -840,7 +610,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -859,7 +629,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -874,7 +644,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -889,7 +659,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -904,7 +674,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -953,7 +723,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 첫번째 글입니다.</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -968,7 +738,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -983,7 +753,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -998,7 +768,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1017,7 +787,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1032,7 +802,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1047,7 +817,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1062,7 +832,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1081,7 +851,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1096,7 +866,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1111,7 +881,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1126,7 +896,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1167,7 +937,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 첫번째 글입니다.</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1182,7 +952,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1197,7 +967,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1212,7 +982,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1231,7 +1001,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1246,7 +1016,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1261,7 +1031,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1276,7 +1046,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1295,7 +1065,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1310,7 +1080,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1325,7 +1095,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1340,7 +1110,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1381,7 +1151,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 첫번째 글입니다.</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1396,7 +1166,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1411,7 +1181,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1426,7 +1196,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1445,7 +1215,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1460,7 +1230,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1475,7 +1245,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1490,7 +1260,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1509,7 +1279,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1524,7 +1294,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1539,7 +1309,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1554,7 +1324,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1603,7 +1373,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 첫번째 글입니다.</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1617,7 +1387,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1632,7 +1402,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1647,7 +1417,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1666,7 +1436,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1681,7 +1451,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1696,7 +1466,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1711,7 +1481,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1730,7 +1500,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1745,7 +1515,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1760,7 +1530,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1775,7 +1545,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1817,7 +1587,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 첫번째 글입니다.</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1832,7 +1602,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1847,7 +1617,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1862,7 +1632,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1881,7 +1651,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1896,7 +1666,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1911,7 +1681,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1926,7 +1696,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1945,7 +1715,7 @@ body.dark .sidebar li a:hover .text{
                                         <div class="swiper-slide px-2 !h-[initial]">
                                             <div class="flex gap-4">
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 1</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1960,7 +1730,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장 2</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1975,7 +1745,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장3</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -1990,7 +1760,7 @@ body.dark .sidebar li a:hover .text{
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 relative h-full p-6 rounded-2xl bg-white shadow-card hover:bg-primary-blue hover:shadow-card-blue hover:-translate-y-2.5 transition duration-300 ease-in-out group">
-                                                    <a href="" class="block">
+                                                    <a href="#" class="block">
                                                         <p class="font-bold text-20 line-clamp-1 group-hover:text-white">수수료 원장4</p>
                                                         <div class="mt-2 min-h-15 text-14 line-clamp-3 leading-5 text-gray-900 group-hover:text-white">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
@@ -2023,7 +1793,7 @@ body.dark .sidebar li a:hover .text{
                                 <h4 class="text-20 font-bold leading-none">Q&A</h4>
                                 <ul>
                                     <li class="py-6">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">Python 변수 메모리 공유 질문</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
                                         </a>
@@ -2033,7 +1803,7 @@ body.dark .sidebar li a:hover .text{
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">Python 변수 메모리 공유 질문 제목이 긴 글이 들어갑니다</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
                                         </a>
@@ -2043,7 +1813,7 @@ body.dark .sidebar li a:hover .text{
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">속도향상을 위한 DB튜닝에 대한 질문</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
                                         </a>
@@ -2053,7 +1823,7 @@ body.dark .sidebar li a:hover .text{
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">Python 변수 메모리 공유 질문</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">파이썬 코드 작성중 궁금한 점이 생겨 글을 올립니다.</span>
                                         </a>
@@ -2063,7 +1833,7 @@ body.dark .sidebar li a:hover .text{
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">주피터 노트북 환경에서 DB접속을 통한 데이터 분석을 하려면 어떻게</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">기존 우리SQL을 통해서만 이용해봐서 모르겠네요 알려주세요</span>
                                         </a>
@@ -2081,7 +1851,7 @@ body.dark .sidebar li a:hover .text{
                                 <h4 class="text-20 font-bold leading-none">TIP</h4>
                                 <ul>
                                     <li class="py-6">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">담당자 변경에 따른 쉬운 인수인계방법 공유</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">장바구니의 인수인계버튼을 이용하면 한 번에 인수인계가 가능합니다.</span>
                                         </a>
@@ -2091,7 +1861,7 @@ body.dark .sidebar li a:hover .text{
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">파이썬을 환경세팅 없이 쉽게 사용하는 방법</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">분석DW 분석하기 기능을 활용하면 주피터노트북을 통해 쉽게 사용이 가능합니다.</span>
                                         </a>
@@ -2101,7 +1871,7 @@ body.dark .sidebar li a:hover .text{
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">테이블 권한신청하는 최적의 방법</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">테이블 권한 신청을 하기 위해서는 아래와 같습니다.</span>
                                         </a>
@@ -2111,7 +1881,7 @@ body.dark .sidebar li a:hover .text{
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">우리부서에서 많이쓰는 데이터는 무엇일까</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">사용자포탈 메인화면에 주로쓰는 데이터가 자동 추천됩니다.</span>
                                         </a>
@@ -2121,7 +1891,7 @@ body.dark .sidebar li a:hover .text{
                                         </div>
                                     </li>
                                     <li class="py-6 border-t border-gray-line">
-                                        <a href="" class="block">
+                                        <a href="#" class="block">
                                             <span class="font-medium line-clamp-1">원하는 데이터를 정확하게 검색하려면</span>
                                             <span class="mt-2 text-14 text-gray-600 line-clamp-1">검색기 필터에서 검색하고 싶은 영역을 지정하고 검색하면 정확하게 조회가 가능합니다.</span>
                                         </a>

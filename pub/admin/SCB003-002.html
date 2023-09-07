@@ -11,36 +11,18 @@
     </head>
     <body>
         <div class="flex items-stretch gap-15 p-6">
-            <nav class="sticky left-6 w-24 flex flex-col gap-15 items-center rounded-20 bg-primary-navy py-7 px-6 z-10 before:w-6 before:h-full before:bg-white before:absolute before:left-[-24px] before:top-0">
-                <button type="button" class="toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
-                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 26.833 25 21l-5-5.833M15 26.833 20 21l-5-5.834"/>
-                    </svg>
-                </button>
-                <ul class="flex flex-col items-center gap-8">
-                    <li><a href=";"><img src="/pub/img/adm-menu1-tab.png" alt="대시보드"></a></li>
-                    <li><a href=";"><img src="/pub/img/adm-menu2.png" alt="데이터 분석"></a></li>
-                    <li><a href=";"><img src="/pub/img/adm-menu3.png" alt="커뮤니티"></a></li>
-                    <li><a href=";"><img src="/pub/img/adm-menu4.png" alt="마이페이지"></a></li>
-                    <li><a href=";"><img src="/pub/img/adm-menu5.png" alt="마이페이지"></a></li>
-                    <li><a href=";"><img src="/pub/img/adm-menu6.png" alt="마이페이지"></a></li>
-                </ul>
-                
-                <a href="" class="absolute bottom-7">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
-                </a>
-            </nav>
-
+            <nav class="bg-primary-navy" data-include="/pub/include/nav-adm.html"></nav>
+            
             <!-- contents -->
-            <div class="w-[calc(100%-156px)] min-w-[1670px] pr-15">
-                <header class="border-b border-b-gray-line pb-4">
+            <div class="cont-body">
+                <header>
                     <div class="h-12 flex items-center justify-between">
                         <h1 class="h-[26px] flex items-center gap-5">
                             <img src="/pub/img/logo.png" alt="우리은행 로고" class="w-[106px]">
                         </h1>
                         <div class="flex items-center gap-6">
                             <div selectbox class="relative">
-                                <select select-sizing class="min-w-[80px] h-8 bg-gray-100 rounded-20 text-14 font-medium px-2 pl-4 pr-10 block appearance-none cursor-pointer">
+                                <select select-sizing class="min-w-[80px] h-8 bg-gray-100 rounded-20 text-14 font-medium px-2 pl-4 pr-10 border-none">
                                     <option value="1">관리자</option>
                                     <option value="2">텍스트2</option>
                                     <option value="3">dd</option>
@@ -66,280 +48,260 @@
                     </div>
                 </header>
 
-                <div class="flex gap-15 mt-12">
-                    
-                    <div class="">
-                        <!-- 제목영역 -->
-                        <div class="flex flex-col gap-5">
-                            <span class="text-primary-blue font-bold leading-full">자유글</span>
-                            <p class="text-32 font-bold leading-full">준영아빠님의 좋은글이 있어서 올림니다 " 테라데이타 압축방식”</p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center">
-                                    <span class="flex-none"><img src="/pub/img/icon-user.png" alt="사용자 이미지"></span>
-                                    <div class="ml-2">
-                                        <span class="text-medium">홍길동 과장</span><span class="text-gray-600">(빅데이터사업부)</span>
-                                        <div class="mt-0.5"><span class="text-gray-500 mr-4">2023.07.13</span> <span class="text-gray-900 mr-1">조회</span>26,324</div>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-5">
-                                    <span class="flex items-center gap-1.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><g clip-path="url(#a)">
-                                            <path fill="#8A919A" d="M6 8a.667.667 0 1 1-1.334 0A.667.667 0 0 1 6 8ZM8.666 8a.667.667 0 1 1-1.333 0 .667.667 0 0 1 1.333 0ZM11.333 8A.667.667 0 1 1 10 8a.667.667 0 0 1 1.333 0Z"/><path stroke="#8A919A" d="M8 14.667a6.667 6.667 0 1 0-5.971-3.699c.118.238.158.51.089.766l-.397 1.484a.867.867 0 0 0 1.061 1.061l1.484-.397c.256-.069.528-.03.766.09A6.64 6.64 0 0 0 8 14.666Z"/></g>
-                                            <defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs>
-                                        </svg>
-                                        <span class="text-15">댓글</span><span class="text-15 text-primary-blue font-medium">25</span>
-                                    </span>
-                                    <span class="flex items-center gap-1.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                                            <path fill="#8A919A" d="m5.975 12.607.31-.392-.31.392ZM8 3.667l-.36.347a.5.5 0 0 0 .72 0L8 3.667Zm2.026 8.94.31.393-.31-.393Zm-3.742-.392c-1.01-.797-2.115-1.575-2.992-2.562-.859-.968-1.458-2.097-1.458-3.562h-1c0 1.777.74 3.133 1.71 4.226.954 1.074 2.17 1.933 3.121 2.683l.62-.785ZM1.834 6.09c0-1.434.81-2.636 1.916-3.142 1.074-.49 2.518-.36 3.89 1.065l.72-.694C6.733 1.63 4.843 1.35 3.334 2.04c-1.477.675-2.5 2.243-2.5 4.051h1ZM5.665 13c.342.27.708.556 1.08.773.371.217.795.394 1.255.394v-1c-.206 0-.45-.08-.75-.257-.302-.176-.615-.419-.966-.695L5.665 13Zm4.67 0c.951-.75 2.167-1.609 3.12-2.683.972-1.093 1.712-2.449 1.712-4.226h-1c0 1.465-.6 2.594-1.459 3.562-.877.987-1.981 1.765-2.992 2.562l.62.785Zm4.832-6.909c0-1.808-1.023-3.376-2.5-4.051-1.51-.69-3.4-.411-5.027 1.28l.72.694c1.372-1.426 2.816-1.556 3.89-1.065 1.107.506 1.917 1.708 1.917 3.142h1Zm-5.45 6.124c-.352.276-.664.519-.966.695-.302.176-.544.257-.75.257v1c.46 0 .883-.177 1.255-.394.371-.217.738-.504 1.08-.773l-.62-.785Z"/>
-                                        </svg>
-                                        <span class="text-15">좋아요</span><span class="text-15 text-red font-medium">827</span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //제목영역 -->
+                
 
-                        <!-- 상세 -->
-                        <div class="border border-[#D3D7D9] rounded-2xl mt-6 p-10">
-                            <div class="flex items-center gap-5">                                
-                                <a href="">
-                                    <img src="/pub/img/icon-file.svg" alt="">
-                                    <span class="underline text-15 ml-2">images. 2515.png</span>
-                                </a>
-                                <a href="" class="underline text-15"><span>테라모니터링 Tool 실행.pdf</span></a>
-                            </div>
-
-                            <!-- 본문 -->
-                            <div class="mt-8">
-                                테라데이터 실행에 앞서 호스트 설정 후 TaraData Manager 12.0 > TaraData Manager 를 실행해주세요.
-                                Logon Infomation 에서 System (DBS) Name , User Name, Password를 입력하시고 Profile은 DEFAULT 로 선택해주세요. Monitor > Session > All 을 선택해주세요. 일반적으로 많이 보는 모니터 메뉴입니다.
-                                그럼 한번 따라해보세요.
-                                <div><img src="/pub/img/dummy-board.png" alt=""> </div>
-                            </div>
-                                                            
-                            <div class="mt-8">
-                                <button type="button" class="h-12 leading-12 px-6 m-auto flex items-center gap-2 bg-red rounded-md font-semibold text-white">
-                                    <img src="/pub/img/icon-heart.svg" alt="">
-                                    좋아요<span class="font-bold text-[#FFF494]">827</span>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- //상세 -->
-
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex gap-2">
-                                <button type="button" class="btn-medium border border-gray-line">목록</button>
-                                <button type="button" class="btn-medium border border-gray-line text-primary-blue">수정</button>
-                                <button type="button" class="btn-medium border border-gray-line text-primary-err">삭제</button>
-                            </div>
-                            <div class="flex gap-2">
-                                <button type="button" class="btn-medium border border-primary-dark">답변</button>
-                                <button type="button" class="btn-medium border border-primary-blue text-primary-blue">                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                                        <path fill="#3A8DFD" d="m13.717 5.015-2.703-2.71a.976.976 0 0 0-1.404-.018L8 3.892 2.287 9.61A.97.97 0 0 0 2 10.3v2.728a.976.976 0 0 0 .976.976h2.728a.983.983 0 0 0 .69-.286l7.323-7.324a.982.982 0 0 0 0-1.379Zm-1.953 1.953L9.037 4.24 10.3 2.977l2.728 2.728-1.264 1.263Z"/>
-                                    </svg>
-                                    <span>글쓰기</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="mt-9">
-                            <div class="flex items-center gap-3 tracking-4">
-                                <span class="text-18">댓글</span><span class="text-18 font-bold text-primary-blue">25</span>
-                            </div>
-                            <div class="my-4 rounded-xl bg-gray-50 py-4 px-6">
-                                <textarea name="" id="" cols="30" rows="3" class="w-full bg-gray-50" placeholder="저작권 등 다른 사람의 권리를 침해하거나 명예를 훼손하는 게시물은 이용약관 및 관련 법률에 의해 제재를 받을 수 있습니다."></textarea>
-                                <div class="flex items-center justify-between tracking-4">
-                                    <span class="text-15 font-medium">홍길동</span>
-                                    <div class="flex items-center">
-                                        <span class="text-14 font-semibold mr-5">0 / <span class="text-gray-300">1,000</span></span>
-                                        <button type="button" class="btn-medium bg-primary-blue text-white">등록</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border border-gray-line rounded-xl p-8">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-3">
-                                        <span><span class="font-semibold">홍길동</span> (외환그룹)</span>
-                                        <span class="text-14 text-gray-500">2023.08.21  13:54</span>
-                                    </div>
-                                    <button type="button">
-                                        <img src="/pub/img/icon-edit.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="mt-3 line-clamp-3">
-                                    댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 
-                                </div>
-                                <div class="flex items-center justify-between mt-3">
-                                    <button type="button" class="text-14 text-gray-600 font-medium underline">답글 쓰기</button>
-                                    <button type="button" class="flex items-center">
-                                        <img src="/pub/img/icon-like-full.svg" alt="">
-                                         <span class="text-red text-14 font-medium ml-1.5">26</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="border border-gray-line rounded-xl p-8 mt-3">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-3">
-                                        <span><span class="font-semibold">홍길동</span> (외환그룹)</span>
-                                        <span class="text-14 text-gray-500">2023.08.21  13:54</span>
-                                    </div>
-                                    <button type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                                            <path fill="#A4AAB0" d="M8 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="mt-3 line-clamp-3">
-                                    댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 
-                                </div>
-                                <div class="flex items-center justify-between mt-3">
-                                    <button type="button" class="text-14 text-gray-600 font-medium underline">답글 쓰기</button>
-                                    <button type="button" class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                                            <path fill="#8A919A" d="m5.975 12.607.31-.392-.31.392ZM8 3.667l-.36.347a.5.5 0 0 0 .72 0L8 3.667Zm2.026 8.94.31.393-.31-.393Zm-3.742-.392c-1.01-.797-2.115-1.575-2.992-2.562-.859-.968-1.458-2.097-1.458-3.562h-1c0 1.777.74 3.133 1.71 4.226.954 1.074 2.17 1.933 3.121 2.683l.62-.785ZM1.834 6.09c0-1.434.81-2.636 1.916-3.142 1.074-.49 2.518-.36 3.89 1.065l.72-.694C6.733 1.63 4.843 1.35 3.334 2.04c-1.477.675-2.5 2.243-2.5 4.051h1ZM5.665 13c.342.27.708.556 1.08.773.371.217.795.394 1.255.394v-1c-.206 0-.45-.08-.75-.257-.302-.176-.615-.419-.966-.695L5.665 13Zm4.67 0c.951-.75 2.167-1.609 3.12-2.683.972-1.093 1.712-2.449 1.712-4.226h-1c0 1.465-.6 2.594-1.459 3.562-.877.987-1.981 1.765-2.992 2.562l.62.785Zm4.832-6.909c0-1.808-1.023-3.376-2.5-4.051-1.51-.69-3.4-.411-5.027 1.28l.72.694c1.372-1.426 2.816-1.556 3.89-1.065 1.107.506 1.917 1.708 1.917 3.142h1Zm-5.45 6.124c-.352.276-.664.519-.966.695-.302.176-.544.257-.75.257v1c.46 0 .883-.177 1.255-.394.371-.217.738-.504 1.08-.773l-.62-.785Z"/>
-                                        </svg>
-                                         <span class="text-red text-14 font-medium ml-1.5">26</span>
-                                    </button>
-                                </div>
-
-                                <div class="border-t border-t-gray-line mt-8 p-8">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-3 relative">
-                                            <span class="absolute -top-1 -left-5"><img src="/pub/img/icon-reply.svg" alt=""></span>
-                                            <span><span class="font-semibold">김우리</span> (디지털전략그룹)</span>
-                                            <span class="text-14 text-gray-500">2023.08.21  13:54</span>
-                                        </div>
-                                        <button type="button">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                                                <path fill="#A4AAB0" d="M8 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="mt-3 line-clamp-3">
-                                        댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 
-                                    </div>
-                                </div>
-                                <div class="border-t border-t-gray-line mt-8 p-8">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-3 relative">
-                                            <span class="absolute -top-1 -left-5"><img src="/pub/img/icon-reply.svg" alt=""></span>
-                                            <span><span class="font-semibold">김우리</span> (디지털전략그룹)</span>
-                                            <span class="text-14 text-gray-500">2023.08.21  13:54</span>
-                                        </div>
-                                        <button type="button">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                                                <path fill="#A4AAB0" d="M8 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="mt-3 line-clamp-3">
-                                        댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다.댓글표시영역입니다. 최대 글자수는 1,000자이므로 글을 3줄은 넘지 않습니다. 줄바꿈은 되지 않으며 내용이 모두 표시되도록 되어있습니다. 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- //상세 -->
+                <div class="mt-8">                    
+                    <div class="border-b border-primary-dark">
+                        <ul tab-list class="flex items-center remove-type">
+                            <li class="tab-line on">
+                                <span data-tab="#tab-1">데이터 현황 01</span>
+                                <button type="button" class="w-4 h-4 flex-none mr-3"><img src="/pub/img/icon-close.svg" alt="" class="block"></button>
+                            </li>
+                            <li class="tab-line">
+                                <span data-tab="#tab-2">데이터 현황 02</span>
+                                <button type="button" class="hidden w-4 h-4 flex-none mr-3"><img src="/pub/img/icon-close.svg" alt="" class="block"></button>
+                            </li>
+                            <li class="tab-line">
+                                <span data-tab="#tab-3">데이터 현황 03</span>
+                                <button type="button" class="hidden w-4 h-4 flex-none mr-3"><img src="/pub/img/icon-close.svg" alt="" class="block"></button>
+                            </li>
+                        </ul>                            
                     </div>
-
-                    <div class="w-[360px] flex-none">
-                        <div class="flex flex-col gap-15">
-
-                            <!-- 커뮤니티 인기글 -->
-                            <div>
-                                <div class="flex items-center justify-between mb-2">
-                                    <h4 class="text-20 font-bold leading-none">커뮤니티 인기글</h4>
-                                    <img src="/pub/img/icon-plus-b.svg" alt="">
-                                </div>
-                                <ul>
-                                    <li class="py-4">
-                                        <a href="" class="flex items-center justify-between gap-4">
-                                            <div>
-                                                <span class="text-13 font-medium line-clamp-1">우리아이 여름방학, 로블록스와 함께 창의력 쑥쑥!</span>
-                                                <span class="text-13 text-gray-500">조회 <span>20,875</span></span>
-                                            </div>
-                                            <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 1,261</span>
-                                        </a>                                        
-                                    </li>
-                                    <li class="py-4 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between gap-4">
-                                            <div>
-                                                <span class="text-13 font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법 파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
-                                                <span class="text-13 text-gray-500">조회 <span>20,875</span></span>
-                                            </div>
-                                            <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 1,108</span>
-                                        </a>  
-                                    </li>
-                                    <li class="py-4 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between gap-4">
-                                            <div>
-                                                <span class="text-13 font-medium line-clamp-1">무더운 올여름, 시WON~하계 쏜다!</span>
-                                                <span class="text-13 text-gray-500">조회 <span>20,875</span></span>
-                                            </div>
-                                            <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 608</span>
-                                        </a>  
-                                    </li>
-                                    <li class="py-4 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between gap-4">
-                                            <div>
-                                                <span class="text-13 font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
-                                                <span class="text-13 text-gray-500">조회 <span>20,875</span></span>
-                                            </div>
-                                            <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 308</span>
-                                        </a>  
-                                    </li>
-                                    <li class="py-4 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between gap-4">
-                                            <div>
-                                                <span class="text-13 font-medium line-clamp-1">청소년을 위한 우리미래드림바우처I</span>
-                                                <span class="text-13 text-gray-500">조회 <span>20,875</span></span>
-                                            </div>
-                                            <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 108</span>
-                                        </a>  
-                                    </li>
-                                    <li class="py-4 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between gap-4">
-                                            <div>
-                                                <span class="text-13 font-medium line-clamp-1">무더운 올여름, 시WON~하계 쏜다! 무더운 올여름, 시WON~하계 쏜다! 무더운 올여름, 시WON~하계 쏜다!</span>
-                                                <span class="text-13 text-gray-500">조회 <span>20,875</span></span>
-                                            </div>
-                                            <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 1,108</span>
-                                        </a>  
-                                    </li>
-                                    <li class="py-4 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between gap-4">
-                                            <div>
-                                                <span class="text-13 font-medium line-clamp-1">무더운 올여름, 시WON~하계 쏜다!</span>
-                                                <span class="text-13 text-gray-500">조회 <span>20,875</span></span>
-                                            </div>
-                                            <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 608</span>
-                                        </a>  
-                                    </li>
-                                    <li class="py-4 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between gap-4">
-                                            <div>
-                                                <span class="text-13 font-medium line-clamp-1">청소년을 위한 우리미래드림바우처I</span>
-                                                <span class="text-13 text-gray-500">조회 <span>20,875</span></span>
-                                            </div>
-                                            <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 308</span>
-                                        </a>  
-                                    </li>
-                                    <li class="py-4 border-t border-gray-line">
-                                        <a href="" class="flex items-center justify-between gap-4">
-                                            <div>
-                                                <span class="text-13 font-medium line-clamp-1">청소년을 위한 우리미래드림바우처I</span>
-                                                <span class="text-13 text-gray-500">조회 <span>20,875</span></span>
-                                            </div>
-                                            <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 108</span>
-                                        </a>  
-                                    </li>
-                                </ul>
+                    <div class="location">
+                        <span>HOME</span> 
+                        <span>데이터 관리</span>
+                        <span>데이터 현황</span>
+                    </div>
+                    <div tab-contents class="mt-6">                                                    
+                        <div tab-item id="tab-1">
+                            <div class="tit-large justify-between">
+                                <h2>데이터 현황</h2>
+                                <button class="btn-medium line-dark">저장</button>
                             </div>
-                            <!-- //커뮤니티 인기글 -->
+
+                            <!-- 조회영역 -->
+                            <div class="flex items-end justify-between bg-gray-box rounded-16 p-6 relative">
+                                <div class="flex flex-col gap-2 flex-1">
+                                    <div class="flex flex-wrap">
+                                        <div class="flex-item">
+                                            <dt class="min-w-[130px] text-right font-medium">구분</dt>
+                                            <dd>
+                                                <div class="w-[214px] flex flex-col">
+                                                    <input type="text" class="input" placeholder="직접입력">
+                                                </div>
+                                            </dd>
+                                        </div>
+                                        <div class="flex-item">
+                                            <dt class="min-w-[130px] text-right font-medium">적재일</dt>
+                                            <dd>
+                                                <div selectbox>
+                                                    <select>
+                                                        <option value="1">전체 데이터</option>
+                                                        <option value="2">전체 데이터2</option>
+                                                        <option value="3">전체 데이터3</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                        <div class="flex-item w-auto">
+                                            <dt class="min-w-[130px] text-right font-medium">기간</dt>
+                                            <dd>
+                                                <div class="datepicker">
+                                                    <div class="w-[275px] flex flex-col relative">
+                                                        <input type="text" class="input" value="2023-07-22" readonly>
+                                                        <button type="button" class="open-calendar"><span class="hidden">달력선택</span></button>
+                                                    </div>
+                                                    <span>~</span>
+                                                    <div class="w-[275px] flex flex-col relative">
+                                                        <input type="text" class="input" value="2023-07-22" readonly>
+                                                        <button type="button" class="open-calendar"><span class="hidden">달력선택</span></button>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap">
+                                        <div class="flex-item">
+                                            <dt class="min-w-[130px] text-right font-medium">정함성 체크</dt>
+                                            <dd>
+                                                <div selectbox>
+                                                    <select>
+                                                        <option value="1">전체 데이터</option>
+                                                        <option value="2">전체 데이터2</option>
+                                                        <option value="3">전체 데이터3</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                        <div class="flex-item">
+                                            <dt class="min-w-[130px] text-right font-medium">미실행 승인대상</dt>
+                                            <dd>
+                                                <div selectbox>
+                                                    <select>
+                                                        <option value="1">전체 데이터</option>
+                                                        <option value="2">전체 데이터2</option>
+                                                        <option value="3">전체 데이터3</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                        <div class="flex-item">
+                                            <dt class="min-w-[130px] text-right font-medium">동기화 체크</dt>
+                                            <dd>
+                                                <div selectbox>
+                                                    <select>
+                                                        <option value="1">전체 데이터</option>
+                                                        <option value="2">전체 데이터2</option>
+                                                        <option value="3">전체 데이터3</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                        <div class="flex-item">
+                                            <dt class="min-w-[130px] text-right font-medium">보관주기 대상</dt>
+                                            <dd>
+                                                <div selectbox>
+                                                    <select>
+                                                        <option value="1">전체 데이터</option>
+                                                        <option value="2">전체 데이터2</option>
+                                                        <option value="3">전체 데이터3</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap">
+                                        <div class="flex-item w-auto">
+                                            <dt class="min-w-[130px] text-right font-medium">보관주기 대상</dt>
+                                            <dd>
+                                                <div selectbox class="w-[214px]">
+                                                    <select>
+                                                        <option value="1">전체 데이터</option>
+                                                        <option value="2">전체 데이터2</option>
+                                                        <option value="3">전체 데이터3</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <div class="w-[214px] flex flex-col">
+                                                    <input type="text" class="input" placeholder="직접입력">
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <div class="flex items-center gap-2">
+                                                    <input type="checkbox" id="chk" class="checkbox" checked>
+                                                    <label for="chk">체크박스 기본</label>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn-large navy">조회</button>
+                            </div>
+                            <!-- //조회영역 -->
+
+                            <div class="mt-15">
+                                <div class="tit-tbl-header">
+                                    <div class="flex items-center gap-4">
+                                        <h3>데이터 현황 목록</h3>
+                                        <span class="font-medium">총 <span class="text-primary-blue">192</span>건</span>
+                                    </div>
+                                    <button class="btn-medium line-gray">다운로드</button>
+                                </div>
+                                
+
+                                <!-- table -->
+                                <table class="box_table">
+                                    <caption>검색결과 리스트 테이블입니다. 회사명, 채용제목, 마감일, 상태, 스크랩 날짜, 메모 항목이 있습니다.</caption>
+                                    <colgroup>
+                                        <col style="width:8%">
+                                        <col>
+                                        <col style="width:15%">
+                                        <col style="width:15%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                <div class="box_chk-group">
+                                                    <span>
+                                                        <input type="checkbox">
+                                                        <label for=""><span class="blind">선택</span></label>
+                                                    </span>
+                                                </div>
+                                            </th>
+                                            <th scope="col">제목</th>
+                                            <th scope="col">게시일</th>
+                                            <th scope="col">등록일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="box_chk-group">
+                                                    <span>
+                                                        <input type="checkbox">
+                                                        <label for=""><span class="blind">선택</span></label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td><a href="#;" class="btn_txt">넥슨, 하반기 인턴십 '넥토리얼'…정직원급 파격 대우</a></td>
+                                            <td>2021-08-27</td>
+                                            <td>2021-08-20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="box_chk-group">
+                                                    <span>
+                                                        <input type="checkbox">
+                                                        <label for=""><span class="blind">선택</span></label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td><a href="#;" class="btn_txt">넥슨, 하반기 인턴십 '넥토리얼'…정직원급 파격 대우</a></td>
+                                            <td>2021-08-27</td>
+                                            <td>2021-08-20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- //table -->
+
+                                <div class="section_bottom">
+                                    <!-- pagination -->
+                                    <div class="box_pagination">
+                                        <button type="button" class="btn_page first"><span class="blind">처음으로 가기</span></button>
+                                        <button type="button" class="btn_page prev"><span class="blind">이전</span></button>
+                                        <button type="button" class="active">1</button>  <!-- D: 활성화 되었을경우 -->
+                                        <button type="button">2</button>
+                                        <button type="button">3</button>
+                                        <button type="button">4</button>
+                                        <button type="button">5</button>
+                                        <button type="button">6</button>
+                                        <button type="button">7</button>
+                                        <button type="button">8</button>
+                                        <button type="button">9</button>
+                                        <button type="button">10</button>
+                                        <button type="button" class="btn_page next"><span class="blind">다음</span></button>
+                                        <button type="button" class="btn_page last"><span class="blind">마지막으로 가기</span></button>
+                                    </div>
+                                    <!-- //pagination -->
+                                </div>
+
+                                <div class="box_btn_wrap flex_al_r mt24">
+                                    <a href="#none" class="btn medium type02">삭제</a>
+                                </div>
+
+                                
+
+                            </div>
                         </div>
-                    </div>                    
+                        <div tab-item id="tab-2" class="hidden">2
+                        </div>
+                        <div tab-item id="tab-3" class="hidden">    
+                            3  
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <!-- // contents -->            

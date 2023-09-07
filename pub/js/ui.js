@@ -47,35 +47,37 @@ const select = function () {
 
 const tabs = function () {
 	const tabsContainer = document.querySelector("[tab-list]");
-    const tabTogglers = document.querySelectorAll("[tab-list] li");
+    const tabTogglers = document.querySelectorAll("[tab-list] li span");
     
-    console.log(tabTogglers);
+    // console.log(tabTogglers);
     tabTogglers.forEach(function(toggler) {
     toggler.addEventListener("click", function(e) {
         e.preventDefault();
 
         let tabName = this.getAttribute("data-tab");
         let tabContents = document.querySelector("[tab-contents]");
+         
 
         for (let i = 0; i < tabContents.children.length; i++) {   
                  
-        tabTogglers[i].classList.remove("font-bold", "text-primary-dark", "border-primary-dark", "border-b-white", "-mb-px", "z-10");
-        if (tabsContainer.classList.contains("small-type")) {
-            tabTogglers[i].classList.remove("font-semibold", "text-primary-dark", "border-b-2", "border-b-primary-dark"); 
-            tabTogglers[i].classList.add("text-gray-500","font-medium"); 
+        
+        tabTogglers[i].parentElement.classList.remove("on");
+        
+        if (tabsContainer.classList.contains("remove-type")) {
+            tabTogglers[i].nextElementSibling.classList.add("hidden");
         }
         tabContents.children[i].classList.remove("hidden");
             if ("#" + tabContents.children[i].id === tabName) {
                 continue;
         }
+        
         tabContents.children[i].classList.add("hidden");
         
         }
-        e.target.classList.add("font-bold", "text-primary-dark", "border-primary-dark", "border-b-white", "-mb-px", "z-10");
-        if (tabsContainer.classList.contains("small-type")) {
-            e.target.classList.add("font-semibold","text-primary-dark", "border-b-2", "border-b-primary-dark");
-            e.target.classList.remove("text-gray-500","font-medium","border-b-white", "-mb-px", "z-10", "font-bold");
-        } 
+        e.target.parentElement.classList.add("on");  
+        if (tabsContainer.classList.contains("remove-type")) {
+            e.target.nextElementSibling.classList.remove("hidden");
+        }
     });
     });
 };

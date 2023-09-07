@@ -3,18 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: NotoSansKR, RobotoMono, system-ui, sans-serif;color:#090909
-    }
-    input + label { font-size:1rem;line-height:1rem; color:#5B6168; cursor:pointer}
+    html {font-family: NotoSansKR, RobotoMono, system-ui, sans-serif;color:#090909;}
+    input + label {font-size:1rem;line-height:1rem; color:#5B6168; cursor:pointer}
     img{display:inline-block}
- 
-    [selectbox]{position:relative; display:flex}
-    [selectbox]::after{content:'';width:1rem;height:1rem;background:url('/pub/img/icon-onoff.svg') no-repeat center; position:absolute; right:0.75rem; top:50%; transform:translateY(-50%)}
-    [selectbox].focus::after{transform:rotate(180deg) translateY(50%);}
-
-    [disabled]{background-color:#F5F7F8}
-
+    
     :root {
     --dynamic-size: 50px;
     --arrow-size: 50px;
@@ -25,31 +17,47 @@
     
 }
 @layer components {
-    .radio {
-        position: relative; width:1.25rem;height:1.25rem; appearance: none;border-radius: 100%; border:1px solid #E9EAEB; outline:none; flex:none
+    [selectbox]{
+        @apply relative flex
     }
-    .radio:hover{
-        cursor:pointer
+    [selectbox]::after{
+        @apply w-4 h-4 absolute right-3 top-1/2 -translate-y-2/4; 
+        content:'';
+        background:url('/pub/img/icon-onoff.svg') no-repeat center; 
+    }
+    [selectbox].focus::after{
+        @apply rotate-180
+    }
+    select{
+        @apply text-14 h-10 rounded-8 px-4 pr-8 block w-full appearance-none cursor-pointer border border-gray-line
+    }
+
+    [disabled]{
+        @apply bg-disabled
+    }
+    .radio {
+        @apply relative w-5 h-5 appearance-none rounded-full border border-gray-line outline-none flex-none
+    }
+    .radio:hover,
+    .checkbox:hover{
+        @apply cursor-pointer
     }
     .radio:checked {
-        border:1px solid #2C3036; background-color:#2C3036;
+        @apply border border-gray-900 bg-gray-900
     }
     .radio:checked::before{
         content:''; position: absolute; background-color:#fff; left:50%; top:50%; transform: translate(-50%, -50%); width:0.469rem;height:0.469rem; border-radius:100%
     }
-    .checkbox {
-        position: relative; width:1.25rem;height:1.25rem; appearance: none;border-radius: 0.25rem; border:1px solid #E9EAEB; outline:none;        
-    }
-    .checkbox:hover{
-        cursor:pointer
+    .checkbox {    
+        @apply relative w-5 h-5 appearance-none rounded-4 border border-gray-line outline-none flex-none bg-white
     }
     .checkbox:checked {
-        border:1px solid #2C3036; background:url("/pub/img/checkbox-on.svg") no-repeat center;
+        @apply border-gray-900 bg-gray-900 bg-checkbox-on bg-center
     }
-    .input{border:1px solid #E9EAEB; color: #090909;border-radius:0.5rem}
-    .input:placeholder{color:#BCC1C5}
-
-    
+    .input{
+        @apply h-10 text-14 border border-gray-line rounded-8 py-2 px-4
+    }
+    .input:placeholder{color:#BCC1C5}    
     
     [acc-tit] + .accordionContent{display:none}
     [acc-tit].is-open + .accordionContent{display:block}
@@ -57,14 +65,98 @@
     .bg-main{background:linear-gradient(47deg, #EAF6FF 16.38%, #FCF3EA 100%);}
 
     /* apply  */
-    .btn-medium{
-        @apply flex items-center h-10 py-3 px-5 rounded-md text-14 font-medium leading-full
+    .cont-body{
+        @apply w-[calc(100%-156px)] min-w-[1670px] pr-15
     }
-    .tab-line{
+    header{
+        @apply border-b border-b-gray-line pb-4
+    }
+    .location{
+        @apply flex items-center justify-end gap-1 text-gray-600 text-14 font-medium mt-4
+    }
+    .location span + span{
+        @apply flex items-center gap-1
+    }
+    .location span + span::before{
+        content:'';
+        background: url(/pub/img/arr-right.svg) no-repeat center;
+        @apply w-3 h-3 block
+    }
+    .tit-large{
+        @apply flex items-center mt-6 mb-4
+    }
+    .tit-large h2 {
+        @apply text-28 font-bold leading-full
+    }
+    .tit-tbl-header{
+        @apply flex items-center mb-4 justify-between
+    }
+    .tit-tbl-header h3 {
+        @apply text-20 font-bold leading-full
+    }
+    .btn-small{
+        @apply flex items-center h-6 px-2 text-12 font-medium rounded-4
+    }
+    .btn-medium{
+        @apply flex items-center h-[34px] px-3 text-14 font-medium rounded-6
+    }
+    .btn-large{
+        @apply flex items-center h-10 px-6 text-16 font-medium rounded-6
+    }
+    [class^="btn"].line-dark{
+        @apply border border-primary-dark 
+    }
+    [class^="btn"].line-gray{
+        @apply border border-gray-line 
+    }
+    [class^="btn"].line-blue{
+        @apply border border-primary-blue 
+    }
+    [class^="btn"].navy{
+        @apply bg-primary-navy text-white
+    }
+
+    [tab-list] li span{
+        @apply text-gray-500 text-15 font-medium cursor-pointer
+    }
+    [tab-list] li.on span{
+        @apply font-semibold text-primary-dark border-b-2 border-b-primary-dark
+    }
+    [tab-list] .tab-line{
         @apply min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-gray-500 font-medium border border-[#E7E9EB] border-b-white -ml-px
+    }
+    [tab-list] .tab-line span{
+        @apply flex items-center justify-center w-full h-10 text-16
+    }
+    [tab-list] .tab-line.on{
+        @apply font-bold text-primary-dark border-primary-dark border-b-white -mb-px z-10 border-b
+    }
+    [tab-list] .tab-line.on span{
+        @apply border-b-0
     }
     .page-btn{
         @apply block w-9 h-9 leading-9 text-center text-14 text-gray-700 rounded-full hover:bg-dark hover:font-bold
+    }
+    nav{
+        @apply sticky left-6 w-24 flex-none flex flex-col gap-15 items-center rounded-20 bg-primary-woori py-7 px-6 z-20 before:w-6 before:h-full before:bg-white before:absolute before:left-[-24px] before:top-0 shadow-nav
+    }
+
+    .data-box{
+
+    }
+    .datepicker{
+        @apply flex gap-2 items-center
+    }
+    .open-calendar{        
+        @apply block w-6 h-6 absolute right-3 top-2;
+        background:url(/pub/img/icon-calendar.svg) no-repeat center;
+    }
+
+    .flex-item{
+        @apply flex w-[360px] items-center gap-4
+    }
+    .flex-item dd{
+        @apply flex-1
     }
 }
 @font-face {
@@ -84,27 +176,6 @@
     font-weight: 400;
     font-display: swap;
     src: url("/pub/font/NotoSansKR-Regular.woff2") format('woff2'), url("/pub/font/NotoSansKR-Regular.woff") format('woff'), url("/pub/font/NotoSansKR-Regular.otf") format('opentype');
-}
-
-
-/* 숫자,영문 */
-@font-face {
-    font-family: "RobotoMono";
-    font-weight: 600;
-    font-display: swap;
-    src: url("/pub/font/RobotoMono-Bold.woff") format('woff');
-}
-@font-face {
-    font-family: "RobotoMono";
-    font-weight: 500;
-    font-display: swap;
-    src: url("/pub/font/RobotoMono-Medium.woff") format('woff');
-}
-@font-face {
-    font-family: "RobotoMono";
-    font-weight: 400;
-    font-display: swap;
-    src: url("/pub/font/RobotoMono-Regular.woff") format('woff');
 }
 
 
