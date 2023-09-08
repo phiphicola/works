@@ -4,6 +4,18 @@ window.onload = function() {
     opnePop();  
     accordion();  
     // sideMenu();
+    onOffToggle(); 
+}
+
+
+const onOffToggle = function () {
+    const toggleBody = document.querySelectorAll('.toggle-body');
+    toggleBody.forEach(function(toggle) {
+        const toggleBtn = toggle.querySelector('.open-extend');
+        toggleBtn.addEventListener('click', function(e) {
+            toggle.classList.toggle('open');
+        });
+    });
 }
 
 const select = function () {
@@ -13,17 +25,11 @@ const select = function () {
         const selectBox = select.querySelector('select');
         selectBox.addEventListener('click', function(e) {
             select.classList.toggle('focus');
-            console.log("열림")
         });
 
         selectBox.addEventListener('blur', function(e) {
             select.classList.remove('focus');
-            console.log("포커스아웃")
-        });
-        // selectBox.addEventListener('change', function(e) {
-        //     select.classList.remove('focus');
-        //     console.log("선택")
-        // });      
+        });     
     });
    
     const resizingSelect = document.querySelectorAll("[select-sizing]");
@@ -44,40 +50,54 @@ const select = function () {
 }
 
 
+let getSiblings = function (e) {
+    let siblings = [];
+
+    if(!e.parentNode) {
+        return siblings;
+    }
+    let sibling  = e.parentNode.firstChild;
+    while (sibling) {
+        if (sibling.nodeType === 1 && sibling !== e) {
+            siblings.push(sibling);
+        }
+        sibling = sibling.nextSibling;
+    }
+    return siblings;
+};
+
 
 const tabs = function () {
 	const tabsContainer = document.querySelector("[tab-list]");
     const tabTogglers = document.querySelectorAll("[tab-list] li span");
     
-    // console.log(tabTogglers);
     tabTogglers.forEach(function(toggler) {
     toggler.addEventListener("click", function(e) {
         e.preventDefault();
 
         let tabName = this.getAttribute("data-tab");
-        let tabContents = document.querySelector("[tab-contents]");
-         
 
-        for (let i = 0; i < tabContents.children.length; i++) {   
-                 
-        
-        tabTogglers[i].parentElement.classList.remove("on");
-        
-        if (tabsContainer.classList.contains("remove-type")) {
-            tabTogglers[i].nextElementSibling.classList.add("hidden");
-        }
-        tabContents.children[i].classList.remove("hidden");
-            if ("#" + tabContents.children[i].id === tabName) {
-                continue;
-        }
-        
-        tabContents.children[i].classList.add("hidden");
-        
-        }
-        e.target.parentElement.classList.add("on");  
-        if (tabsContainer.classList.contains("remove-type")) {
-            e.target.nextElementSibling.classList.remove("hidden");
-        }
+        let tabContents = document.querySelectorAll("[tab-contents] > div");
+
+        let tabLinkSiblings = getSiblings(toggler.closest('li'));
+        let togglerParent = toggler.closest('li');
+
+        togglerParent.classList.add('on')
+        tabLinkSiblings.forEach(function (_this) {
+            _this.classList.remove('on');
+        })
+
+        tabContents.forEach(function (_this) {
+            let tabId = `#${_this.id}`;
+            if (tabName === tabId) {
+                _this.classList.remove('hidden');
+                let _thisSiblings = getSiblings(_this);
+                // console.log(_thisSiblings)
+                _thisSiblings.forEach(function (tabSiblings) {
+                    tabSiblings.classList.add('hidden');
+                })
+            }
+        });
     });
     });
 };

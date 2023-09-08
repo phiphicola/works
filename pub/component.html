@@ -281,38 +281,105 @@
 
             <h2 id="group03">Tab</h2>
             <div class="inner">
+                <h3>TAB 기본</h3>
                 <div class="box">
-                    <ul tab-list class="flex items-center">
-                        <li data-tab="#tab-1" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-primary-dark font-bold border border-primary-dark border-b-white -mb-px z-10">
-                            전체
-                        </li>
-                        <li data-tab="#tab-2" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-gray-500 font-medium border border-[#E7E9EB] border-b-white -ml-px">
-                            자유글
-                        </li>
-                        <li data-tab="#tab-3" class="min-w-[160px] min-h-10 cursor-pointer flex items-center justify-center text-gray-500 font-medium border border-[#E7E9EB] border-b-white -ml-px">
-                            Q&A
-                        </li>
-                    </ul>    
-                    <div tab-contents class="w-full">
-                        <div id="tab-1" class="">
+                    <div class="border-b border-primary-dark">
+                        <ul tab-list class="flex items-center">
+                            <li class="tab-line on"><span data-tab="#tab-1">전체</span></li>
+                            <li class="tab-line"><span data-tab="#tab-2">TIP</span></li>
+                            <li class="tab-line"><span data-tab="#tab-3">Q&A</span></li>
+                        </ul>       
+                    </div>
+                    <div tab-contents class="mt-6">                                                    
+                        <div id="tab-1">
                             <span class="col-md-10">
                                 <h3>Feature 1</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </span>
                         </div>
                         <div id="tab-2" class="hidden">
-                            <span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
                             <span class="col-md-10">
                                 <h3>Feature 2</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </span>
                         </div>
                         <div id="tab-3" class="hidden">
-                            <span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
                             <span class="col-md-10">
                                 <h3>Feature 3</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>삭제버튼 포함</h3>
+                <div class="box">
+                    <div class="border-b border-primary-dark">
+                        <ul tab-list class="flex items-center remove-type">
+                            <li class="tab-line on">
+                                <span data-tab="#tab-01">데이터 현황 01</span>
+                                <button type="button" class="w-4 h-4 flex-none mr-3"><img src="/pub/img/icon-close.svg" alt="" class="block"></button>
+                            </li>
+                            <li class="tab-line">
+                                <span data-tab="#tab-02">데이터 현황 02</span>
+                                <button type="button" class="hidden w-4 h-4 flex-none mr-3"><img src="/pub/img/icon-close.svg" alt="" class="block"></button>
+                            </li>
+                            <li class="tab-line">
+                                <span data-tab="#tab-03">데이터 현황 03</span>
+                                <button type="button" class="hidden w-4 h-4 flex-none mr-3"><img src="/pub/img/icon-close.svg" alt="" class="block"></button>
+                            </li>
+                        </ul>      
+                    </div>
+                    <div tab-contents class="mt-6">                                                    
+                        <div id="tab-01">
+                            <span class="col-md-10">
+                                <h3>Feature 1</h3>
+                            </span>
+                        </div>
+                        <div id="tab-02" class="hidden">
+                            <span class="col-md-10">
+                                <h3>Feature 2</h3>
+                            </span>
+                        </div>
+                        <div id="tab-03" class="hidden">
+                            <span class="col-md-10">
+                                <h3>Feature 3</h3>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Small</h3>
+                <div class="box">
+                    <ul tab-list class="small-type flex items-center gap-4">
+                        <li class="on"><span data-tab="#tabs-1">전체</span></li>
+                        <li><span data-tab="#tabs-2">월별</span></li>
+                        <li><span data-tab="#tabs-3">분기별</span></li>
+                    </ul>
+                    <div tab-contents class="mt-6">
+                        <div id="tabs-01">
+                            <h3>Feature 1</h3>
+                        </div>
+                        <div id="tabs-02" class="hidden">
+                            <h3>Feature 2</h3>
+                        </div>
+                        <div id="tabs-03" class="hidden">
+                            <h3>Feature 3</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>2depth</h3>
+                <div class="box">
+                    <div class="border-b border-[#D3D7D9]">
+                        <ul tab-list class="depth-type flex items-center">
+                            <li class="on"><span data-tab="#tab2-1">관리자 포털</span></li>
+                            <li><span data-tab="#tab2-2">사용자 포털</span></li>
+                        </ul>
+                    </div>
+                    <div tab-contents class="mt-6">
+                        <div id="tab2-01">
+                            <h3>Feature 1</h3>
+                        </div>
+                        <div id="tab2-02" class="hidden">
+                            <h3>Feature 2</h3>
                         </div>
                     </div>
                 </div>

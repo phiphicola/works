@@ -20,6 +20,7 @@ module.exports = {
         '4':'16px',
       },
       minHeight:{
+        '8':'32px',
         '10':'40px',
         '15':'60px',
       },
@@ -52,6 +53,8 @@ module.exports = {
         'dark': '#F0F2F4',
         'disabled': '#F5F7F8',
         'transparent' : 'transparent',        
+        'gray' : '#A9B3BC',
+        
       },
       fontSize:{
         '12': '12px',
