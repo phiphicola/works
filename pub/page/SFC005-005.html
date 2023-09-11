@@ -4,13 +4,13 @@
         <title>우리은행</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/pub/output.css" rel="stylesheet">
+        <link href="/pub/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
         <script type="text/javascript" src="/pub/js/ui.js"></script> 
         <script src="/pub/js/swiper-bundle.min.js"></script>    
     </head>
     <body>
-        <div class="flex items-stretch gap-15 p-6">
+        <div class="body-wrap">
             <nav class="sticky left-6 w-24 flex flex-col gap-15 items-center rounded-20 bg-primary-woori py-7 px-6 z-10 before:w-6 before:h-full before:bg-white before:absolute before:left-[-24px] before:top-0">
                 <div class="w-10 h-10">
                     <img src="/pub/img/simbol.png" alt="우리은행 심볼">
@@ -30,11 +30,11 @@
             <!-- contents -->
             <div class="cont-body">
                 <header>
-                    <div class="h-12 flex items-center justify-between">
-                        <h1 class="h-[26px] flex items-center gap-5">
+                    <div class="header-inner">
+                        <h1>
                             <span class="text-28 font-bold">커뮤니티</span>
                         </h1>
-                        <div class="flex items-center gap-6">
+                        <div class="user-items">
                             <div class="flex items-center gap-1.5 mr-5">
                                 <img src="/pub/img/icon-user.png" alt="사용자 이미지">
                                 <span class="font-semibold">홍길동<span class="text-gray-600 font-normal">님</span></span>
@@ -98,7 +98,7 @@
                             </div>
 
                             <!-- 본문 -->
-                            <div class="mt-8">
+                            <div class="content">
                                 테라데이터 실행에 앞서 호스트 설정 후 TaraData Manager 12.0 > TaraData Manager 를 실행해주세요.
                                 Logon Infomation 에서 System (DBS) Name , User Name, Password를 입력하시고 Profile은 DEFAULT 로 선택해주세요. Monitor > Session > All 을 선택해주세요. 일반적으로 많이 보는 모니터 메뉴입니다.
                                 그럼 한번 따라해보세요.

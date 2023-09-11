@@ -4,25 +4,25 @@
         <title>우리은행</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/pub/output.css" rel="stylesheet">
+        <link href="/pub/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
         <script type="text/javascript" src="/pub/js/ui.js"></script> 
         <script src="/pub/js/swiper-bundle.min.js"></script>    
     </head>
     <body>
-        <div class="flex items-stretch gap-15 p-6">
+        <div class="body-wrap">
             <nav data-include="/pub/include/nav.html"></nav>
 
             <!-- contents -->
             <div class="cont-body">
                 <header>
-                    <div class="h-12 flex items-center justify-between">
-                        <h1 class="h-[26px] flex items-center gap-5">
+                    <div class="header-inner">
+                        <h1>
                             <span class="text-28 font-bold">커뮤니티</span>
                         </h1>
 
-                        <div class="flex items-center gap-6">
-                            <span class="tracking-4 font-bold"><span>김우리</span> 님</span>
+                        <div class="user-items">
+                            <span class="user-name"><span>김우리</span> 님</span>
                             <button class="relative">                                
                                 <img src="/pub/img/icon-logout.svg" alt="">
                             </button>
@@ -42,11 +42,11 @@
                 </header>
 
                 
-                <div class="mt-12 flex items-start gap-15">
+                <div class="sub-cont">
                     <div class="flex flex-col flex-1">
                         <!-- 검색 -->
-                        <div class="flex items-center gap-2">
-                            <div class="w-full h-10 relative">
+                        <div class="item-gap">
+                            <div class="search-input">
                                 <input type="text" class="w-full h-10 py-2 px-5 rounded-lg text-md placeholder:text-gray-300 bg-gray-50" placeholder="검색어를 입력해 주세요.">                           
                                 <button type="button" class="absolute top-1/2 right-5 translate-y-[-50%]">
                                     <img src="/pub/img/icon-search.svg" alt="검색">
@@ -180,7 +180,7 @@
                             <!-- 활동 순위 -->
                             <div>
                                 <div class="flex items-center justify-between mb-6">
-                                    <h4 class="text-20 font-bold leading-none">활동 순위</h4>
+                                    <h4 class=tit-medium>활동 순위</h4>
                                     <div>
                                         <span class="text-[#5A6E7C]">내 활동 점수</span>
                                         <span class="text-15 font-bold text-primary-blue">965점 / 300위</span>
@@ -192,8 +192,8 @@
                                             <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#E3F4FD]">
                                                 <img src="/pub/img/icon-top.png" alt="">
                                             </span>
-                                            <span class="ml-3 font-medium">김광현</span>
-                                            <span class="ml-2 text-14 text-gray-600">디지털전략부</span>
+                                            <span class="ranker">김광현</span>
+                                            <span class="part">디지털전략부</span>
                                         </div>
                                         <div class="font-bold">
                                             <span>1,680</span> 점
@@ -201,11 +201,11 @@
                                     </li>
                                     <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
                                         <div class="flex items-center">
-                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50">
+                                            <span class="rank-icon">
                                                 <img src="/pub/img/icon-top2.png" alt="">
                                             </span>
-                                            <span class="ml-3 font-medium">최정</span>
-                                            <span class="ml-2 text-14 text-gray-600">빅데이터사업부</span>
+                                            <span class="ranker">최정</span>
+                                            <span class="part">빅데이터사업부</span>
                                         </div>
                                         <div class="font-bold">
                                             <span>1,580</span> 점
@@ -213,11 +213,11 @@
                                     </li>
                                     <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
                                         <div class="flex items-center">
-                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50">
+                                            <span class="rank-icon">
                                                 <img src="/pub/img/icon-top3.png" alt="">
                                             </span>
-                                            <span class="ml-3 font-medium">김강민</span>
-                                            <span class="ml-2 text-14 text-gray-600">AI사업부</span>
+                                            <span class="ranker">김강민</span>
+                                            <span class="part">AI사업부</span>
                                         </div>
                                         <div class="font-bold">
                                             <span>1,170</span> 점
@@ -225,11 +225,11 @@
                                     </li>
                                     <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
                                         <div class="flex items-center">
-                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50">
+                                            <span class="rank-icon">
                                                 <img src="/pub/img/icon-top4.png" alt="">
                                             </span>
-                                            <span class="ml-3 font-medium">김성현</span>
-                                            <span class="ml-2 text-14 text-gray-600">디지털전략부</span>
+                                            <span class="ranker">김성현</span>
+                                            <span class="part">디지털전략부</span>
                                         </div>
                                         <div class="font-bold">
                                             <span>988</span> 점
@@ -237,11 +237,11 @@
                                     </li>
                                     <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
                                         <div class="flex items-center">
-                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50">
+                                            <span class="rank-icon">
                                                 <img src="/pub/img/icon-top5.png" alt="">
                                             </span>
-                                            <span class="ml-3 font-medium">추신수</span>
-                                            <span class="ml-2 text-14 text-gray-600">디지털전략부</span>
+                                            <span class="ranker">추신수</span>
+                                            <span class="part">디지털전략부</span>
                                         </div>
                                         <div class="font-bold">
                                             <span>961</span> 점
@@ -261,25 +261,25 @@
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </a>                                        
                                     </li>
-                                    <li class="py-6 border-t border-gray-line">
+                                    <li>
                                         <a href="#" class="flex items-center justify-between">
                                             <span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법 파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 1,108</span>
                                         </a>  
                                     </li>
-                                    <li class="py-6 border-t border-gray-line">
+                                    <li>
                                         <a href="#" class="flex items-center justify-between">
                                             <span class="font-medium line-clamp-1">무더운 올여름, 시WON~하계 쏜다!</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 608</span>
                                         </a>  
                                     </li>
-                                    <li class="py-6 border-t border-gray-line">
+                                    <li>
                                         <a href="#" class="flex items-center justify-between">
                                             <span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 308</span>
                                         </a>  
                                     </li>
-                                    <li class="py-6 border-t border-gray-line">
+                                    <li>
                                         <a href="#" class="flex items-center justify-between">
                                             <span class="font-medium line-clamp-1">청소년을 위한 우리미래드림바우처I</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 108</span>

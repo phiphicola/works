@@ -4,23 +4,23 @@
         <title>우리은행</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/pub/output.css" rel="stylesheet">
+        <link href="/pub/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
         <script type="text/javascript" src="/pub/js/ui.js"></script> 
         <script src="/pub/js/swiper-bundle.min.js"></script>    
     </head>
     <body>
-        <div class="flex items-stretch gap-15 p-6">
+        <div class="body-wrap">
             <nav class="bg-primary-navy" data-include="/pub/include/nav-adm.html"></nav>
             
             <!-- contents -->
             <div class="cont-body">
                 <header>
-                    <div class="h-12 flex items-center justify-between">
-                        <h1 class="h-[26px] flex items-center gap-5">
+                    <div class="header-inner">
+                        <h1>
                             <img src="/pub/img/logo.png" alt="우리은행 로고" class="w-[106px]">
                         </h1>
-                        <div class="flex items-center gap-6">
+                        <div class="user-items">
                             <div selectbox>
                                 <select select-sizing class="min-w-[80px] h-8 bg-gray-100 rounded-20 text-14 font-medium px-2 pl-4 pr-10 border-none">
                                     <option value="1">관리자</option>
@@ -29,7 +29,7 @@
                                 </select>
                                 <span helper-element aria-hidden="true"></span>
                             </div>
-                            <span class="tracking-4 font-bold"><span>김우리</span> 님</span>
+                            <span class="user-name"><span>김우리</span> 님</span>
                             <button class="relative">
                                 <span class="absolute left-3 top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">99+</span>
                                 <img src="/pub/img/icon-alarm.svg" alt="">
@@ -46,7 +46,7 @@
 
                 
 
-                <div class="mt-8">                    
+                <div class="content">                    
                     <div class="border-b border-primary-dark">
                         <ul tab-list class="flex items-center remove-type">
                             <li class="tab-line on">
@@ -82,7 +82,7 @@
                                         <dl class="flex-item">
                                             <dt class="min-w-[130px] text-right font-medium">구분</dt>
                                             <dd>
-                                                <div class="flex flex-col">
+                                                <div class="flex-col-box">
                                                     <input type="text" class="input w-full" placeholder="직접입력">
                                                 </div>
                                             </dd>
@@ -171,7 +171,7 @@
                                     <div class="flex flex-wrap">
                                         <dl class="flex-item mix">
                                             <dt class="min-w-[130px] text-right font-medium">보관주기 대상</dt>
-                                            <dd class="flex items-center gap-2">
+                                            <dd class="item-gap">
                                                 <div selectbox class="flex-1">
                                                     <select>
                                                         <option value="1">전체 데이터</option>
@@ -194,7 +194,7 @@
                                     <div class="flex flex-wrap">
                                         <dl class="flex-item w-1/2">
                                             <dt class="min-w-[130px] text-right font-medium">메뉴명</dt>
-                                            <dd class="flex items-center gap-2">
+                                            <dd class="item-gap">
                                                 <div selectbox class="flex-1">
                                                     <select>
                                                         <option value="1">전체 데이터</option>

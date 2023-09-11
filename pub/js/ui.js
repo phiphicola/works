@@ -3,7 +3,7 @@ window.onload = function() {
     tabs();
     opnePop();  
     accordion();  
-    // sideMenu();
+    sideMenu();
     onOffToggle(); 
 }
 
@@ -109,14 +109,14 @@ const opnePop = function () {
     trigger.addEventListener("click", function (event) {
         event.preventDefault();
         const pops = document.getElementById(trigger.dataset.pop);
-        pops.classList.add("visible", "opacity-100", "delay-0");
-        pops.classList.remove("invisible", "opacity-0");
+        pops.classList.add("open");
+        // pops.classList.remove("open");
         const exits = pops.querySelectorAll(".pops-exit");
         exits.forEach(function (exit) {
         exit.addEventListener("click", function (event) {
             event.preventDefault();
-            pops.classList.remove("visible", "opacity-100", "delay-0");
-            pops.classList.add("invisible", "opacity-0");
+            pops.classList.remove("open");
+            // pops.classList.add("invisible", "opacity-0");
         });
         });
     });
@@ -141,18 +141,21 @@ const accordion = function () {
     });
 }
 
-// const sideMenu = function () {
-//     const body = document.querySelector('body'),
-//             sidebar = body.querySelector('nav'),
-//             toggle = body.querySelector(".toggle");
+const sideMenu = function () {
+    const arrow = document.querySelectorAll(".acc");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{   
+        e.classList.toggle("show-menu");
+    });
+  }
+  const sidebar = document.querySelector("nav");
+  const sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
 
-//             sidebar.forEach((toggle) => {
-//                 toggle.addEventListener("click" , () =>{
-//                 sidebar.classList.toggle("close");
-//         })
-//     });
-
-// }
+}
 
 // 퍼블 include
 function includeHTML(){

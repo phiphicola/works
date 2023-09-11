@@ -21,7 +21,7 @@
         @apply relative flex
     }
     [selectbox]::after{
-        @apply w-4 h-4 absolute right-3 top-1/2 -translate-y-2/4; 
+        @apply w-4 h-4 absolute right-3 top-1/2 -translate-y-2/4 z-[-1];
         content:'';
         background:url('/pub/img/icon-onoff.svg') no-repeat center; 
     }
@@ -29,7 +29,7 @@
         @apply rotate-180
     }
     select{
-        @apply text-14 h-10 rounded-8 px-4 pr-8 block w-full appearance-none cursor-pointer border border-gray-line
+        @apply text-14 h-10 rounded-8 px-4 pr-8 block w-full border border-gray-line text-primary-dark appearance-none cursor-pointer bg-transparent
     }
 
     [disabled]{

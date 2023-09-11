@@ -4,7 +4,7 @@
         <title>우리은행</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/pub/output.css" rel="stylesheet">
+        <link href="/pub/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
         <script type="text/javascript" src="/pub/js/ui.js"></script> 
         <script src="/pub/js/swiper-bundle.min.js"></script>
@@ -35,9 +35,9 @@
         <div class="container">
             <h2 id="group00">Title</h2>
             <div class="inner">
-                <div class="tit-large justify-between">
-                    <h2>타이틀 h2</h2>
-                    <button class="btn-small line">저장</button>
+                <div class="tit-wrap">
+                    <h2 class="tit-large">타이틀 h2</h2>
+                    <button class="btn-small line-gray">저장</button>
                 </div>
             </div>
             
@@ -46,29 +46,29 @@
                 <h3>checkbox</h3>
                 <div class="box">
                     <h4>세로형</h4>
-                    <div class="flex items-center gap-2">
+                    <div class="item-gap">
                         <input type="checkbox" id="chk" class="checkbox" checked>
                         <label for="chk">체크박스 기본</label>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="item-gap">
                         <input type="checkbox" id="chk2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
                         <label for="chk2" class="text-gray-400">체크박스 disabled</label>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="item-gap">
                         <input type="checkbox" id="chk3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
                         <label for="chk3" class="text-gray-600">체크박스 disabled check</label>
                     </div>
                     <h4>가로형</h4>
                     <div class="flex gap-4">
-                        <div class="flex items-center gap-2">
+                        <div class="item-gap">
                             <input type="checkbox" id="check" class="checkbox" checked>
                             <label for="check">체크박스 기본</label>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="item-gap">
                             <input type="checkbox" id="check2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
                             <label for="check2" class="text-gray-400">체크박스 disabled</label>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="item-gap">
                             <input type="checkbox" id="check3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
                             <label for="check3" class="text-gray-600">체크박스 disabled check</label>
                         </div>
@@ -78,48 +78,48 @@
                 <h3>radio</h3>
                 <div class="box">
                     <h4>세로형</h4>
-                    <div class="flex items-center gap-2">
+                    <div class="item-gap">
                         <input type="radio" id="radio" name="radiogroup" class="radio" checked>
                         <label for="radio">라디오 기본</label>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="item-gap">
                         <input type="radio" id="radio2" name="radiogroup" class="radio">
                         <label for="radio2">라디오 기본</label>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="item-gap">
                         <input type="checkbox" id="radio3" name="radiogroup" class="radio bg-disabled before:pointer-events-none" disabled>
                         <label for="radio3" class="text-gray-400">체크박스 disabled</label>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="item-gap">
                         <input type="checkbox" id="radio4" name="radiogroup"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
                         <label for="radio4" class="text-gray-600">체크박스 disabled check</label>
                     </div>
                     <h4>가로형</h4>
                     <div class="flex gap-4">
-                        <div class="flex items-center gap-2">
+                        <div class="item-gap">
                             <input type="radio" id="rdo" name="radiogroup2" class="radio" checked>
                             <label for="rdo" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">라디오 기본</label>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="item-gap">
                             <input type="radio" id="rdo2" name="radiogroup2" class="radio">
                             <label for="rdo2" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">라디오 기본</label>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="item-gap">
                             <input type="checkbox" id="rdo3" name="radiogroup2" class="radio bg-disabled before:pointer-events-none" disabled>
                             <label for="rdo3" class="flex gap-2 items-center text-16 text-gray-400 cursor-pointer">체크박스 disabled</label>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="item-gap">
                             <input type="checkbox" id="rdo4" name="radiogroup2"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
                             <label for="rdo4" class="flex gap-2 items-center text-16 text-gray-600 cursor-pointer">체크박스 disabled check</label>
                         </div>
                     </div>
                     <h4>동의형</h4>
                     <div class="flex gap-4">
-                        <div class="flex items-center gap-2">
+                        <div class="item-gap">
                             <input type="radio" id="radioAgree" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none" checked>
                             <label for="radioAgree" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">동의</label>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="item-gap">
                             <input type="radio" id="radioAgree2" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none">
                             <label for="radioAgree2" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">미동의</label>
                         </div>
@@ -130,31 +130,31 @@
                     <div class="cont">
                         <div>
                             <h4>small</h4>
-                            <div class="flex flex-col">
+                            <div class="flex-col-box">
                                 <input type="text" class="input h-8 py-2 px-3 text-14" placeholder="입력하세요.">
                             </div>
                         </div>
                         <div>
                             <h4>medium</h4>
-                            <div class="flex flex-col">
+                            <div class="flex-col-box">
                                 <input type="text" class="input h-10 py-3 px-4 text-15" placeholder="입력하세요.">
                             </div>
                         </div>
                         <div>
                             <h4>large</h4>
-                            <div class="flex flex-col">
+                            <div class="flex-col-box">
                                 <input type="text" class="input h-[3.125rem] py-4 px-5" placeholder="입력하세요.">
                             </div>
                         </div>
                         <div>
                             <h4>disabled</h4>
-                            <div class="flex flex-col">
+                            <div class="flex-col-box">
                                 <input type="text" class="input h-[3.125rem] py-4 px-5" placeholder="입력하세요." disabled>
                             </div>
                         </div>
                         <div>
                             <h4>error</h4>
-                            <div class="flex flex-col">
+                            <div class="flex-col-box">
                                 <input type="text" class="input h-8 text-14 text-primary-dark py-2 px-3 border border-solid border-primary-err focus:border-primary-err" placeholder="입력하세요.">
                                 <p class="mt-2 text-primary-err text-xs">에러 메세지입니다.</p>
                             </div>
@@ -174,8 +174,8 @@
                     <div class="cont flex-wrap">
                         <div class="flex-1">
                             <h4>small</h4>
-                            <div selectbox class="relative flex flex-col">
-                                <select class="h-8 border border-gray-line rounded-lg text-primary-dark text-14 px-2 pr-7 block w-full appearance-none cursor-pointer bg-transparent">
+                            <div selectbox>
+                                <select class="h-8">
                                     <option value="1">텍스트1</option>
                                     <option value="2">텍스트2</option>
                                     <option value="3">dd</option>
@@ -184,8 +184,8 @@
                         </div>
                         <div class="flex-1">
                             <h4>medium</h4>
-                            <div selectbox class="relative flex flex-col">
-                                <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-15 px-3 pr-8 block w-full appearance-none cursor-pointer bg-transparent">
+                            <div selectbox>
+                                <select>
                                     <option value="1">텍스트1</option>
                                     <option value="2">텍스트2</option>
                                     <option value="3">dd</option>
@@ -194,8 +194,8 @@
                         </div>
                         <div class="flex-1">
                             <h4>large</h4>
-                            <div selectbox class="relative flex flex-col">
-                                <select class="h-[3.125rem] border border-gray-line rounded-lg text-primary-dark px-5 pr-9 block w-full appearance-none cursor-pointer bg-transparent">
+                            <div selectbox>
+                                <select class="h-[3.125rem]">
                                     <option value="1">텍스트1</option>
                                     <option value="2">텍스트2</option>
                                     <option value="3">dd</option>
@@ -204,7 +204,7 @@
                         </div>
                         <div class="flex-1">
                             <h4>disabled</h4>
-                            <div selectbox class="relative flex flex-col">
+                            <div selectbox>
                                 <select class="h-10 border border-gray-line rounded-lg text-primary-dark text-15 px-3 pr-8 block w-full appearance-none cursor-pointer bg-disabled gray-800" disabled>
                                     <option value="1">텍스트1</option>
                                     <option value="2">텍스트2</option>
@@ -214,12 +214,24 @@
                         </div>
                         <div class="flex-1">
                             <h4>line style</h4>
-                            <div selectbox class="relative flex flex-col">
+                            <div selectbox>
                                 <select class="h-10 border-b border-gray-line text-primary-dark text-15 px-1 pr-5 block w-full appearance-none cursor-pointer bg-transparent">
                                     <option value="1">텍스트1</option>
                                     <option value="2">텍스트2</option>
                                     <option value="3">dd</option>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h4>size auto</h4>
+                            <div selectbox class="after:z-[-1]">
+                                <select select-sizing class="h-10 text-md px-3 pr-9 block appearance-none">
+                                    <option>최신순</option>
+                                    <option>좋아요 순</option>
+                                    <option>많은 댓글 순</option>
+                                    <option>많은 답변 순</option>
+                                </select>
+                                <span helper-element aria-hidden="true"></span>
                             </div>
                         </div>
                     </div>
