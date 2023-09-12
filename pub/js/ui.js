@@ -142,14 +142,16 @@ const accordion = function () {
 }
 
 const sideMenu = function () {
-    const arrow = document.querySelectorAll(".acc");
-  for (var i = 0; i < arrow.length; i++) {
-    arrow[i].addEventListener("click", (e)=>{   
-        e.classList.toggle("show-menu");
-    });
-  }
-  const sidebar = document.querySelector("nav");
-  const sidebarBtn = document.querySelector(".bx-menu");
+    const arrow = document.querySelectorAll(".menu-wrap");
+    for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=>{   
+            const arrowPoint = e.target.parentElement;
+            arrowPoint.classList.toggle("show-menu");
+        });
+    }
+
+  let sidebar = document.querySelector("nav");
+  let sidebarBtn = document.querySelector(".bx-menu");
   console.log(sidebarBtn);
   sidebarBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("close");
