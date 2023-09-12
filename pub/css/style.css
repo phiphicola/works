@@ -945,6 +945,6 @@ datalist {
 
 .drag-list{display: flex;flex-direction: column;gap: 8px;margin-top: 24px;}
 .drag-list li{position: relative;}
-.drag-list .drag-item{width:24px;height:24px;position: absolute;background: url(/pub/img/icon-drag.png) no-repeat center;right: 12px;top: 8px;}
+/* .drag-list .drag-item{width:24px;height:24px;position: absolute;background: url(/pub/img/icon-drag.png) no-repeat center;right: 12px;top: 8px;} */
 .drag-list .input-clear{width: 100%;}
 .drag-list .input-clear input{width: 100%;}

@@ -235,9 +235,11 @@ const dragList = function () {
         if (event.clientY - offset > 0) {
         //   targetItem.style.borderBottom = 'solid 2px #000';
           targetItem.style.borderTop = '';
+          targetItem.getAttribute = 'disabled';
         } else {
         //   targetItem.style.borderTop = 'solid 2px #000';
           targetItem.style.borderBottom = '';
+          targetItem.removeAttribute = 'disabled';
         }
       }
     }
