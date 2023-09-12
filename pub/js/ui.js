@@ -142,20 +142,58 @@ const accordion = function () {
 }
 
 const sideMenu = function () {
-    const arrow = document.querySelectorAll(".menu-wrap");
+    const arrow = document.querySelectorAll(".arr-btn");
     for (var i = 0; i < arrow.length; i++) {
-        arrow[i].addEventListener("click", (e)=>{   
-            const arrowPoint = e.target.parentElement;
-            arrowPoint.classList.toggle("show-menu");
+        arrow[i].addEventListener("click", (e)=>{
+            const accMenu = e.target.closest('li');
+            if (accMenu.classList.contains('acc')) {
+                const arrowPoint = e.target.parentElement;
+                arrowPoint.classList.toggle("show-menu");
+            }
         });
     }
 
-  let sidebar = document.querySelector("nav");
-  let sidebarBtn = document.querySelector(".bx-menu");
-  console.log(sidebarBtn);
-  sidebarBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("close");
-  });
+    let sidebar = document.querySelector("nav");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+    });
+
+
+    let menuTrigger = document.querySelectorAll(".nav-menu > li > a");
+
+    menuTrigger.forEach((triggerLi) => {
+        triggerLi.addEventListener("click", () => {
+            if (triggerLi.classList.contains("on")) {
+                triggerLi.classList.remove("on");
+            } else {
+                const menuTriggerOpen = document.querySelectorAll(".on");
+                menuTriggerOpen.forEach((openMenu) => {
+                    openMenu.classList.remove("on");
+                });
+                triggerLi.classList.add("on");
+            }
+        });
+    });
+
+
+    let subMenu = document.querySelectorAll(".sub-menu > li");
+
+    subMenu.forEach((sub) => {
+        sub.addEventListener("click", () => {
+            if (sub.classList.contains("on-sub")) {
+                sub.classList.remove("on-sub");
+            } else {
+                const subMenuOpen = document.querySelectorAll(".on-sub");
+                subMenuOpen.forEach((subOpen) => {
+                    subOpen.classList.remove("on-sub");
+                });
+                sub.classList.add("on-sub");
+            }
+        });
+    });
+
 
 }
 

@@ -248,32 +248,38 @@ nav.close .sub-menu{display: none;}
   align-items: center;
   gap: 2rem;
 }
-nav .bx-menu{width: 48px;height:48px}
+nav .bx-menu{width: 48px;height:48px;transition: all 0.4s ease;}
 nav .bx-menu img{margin:auto}
 nav.close .bx-menu{transform: rotate(180deg);}
 nav .menu-bottom{position: absolute;bottom:28px;display: flex;align-items: center;gap:16px}
-.nav-menu li{ width: 100%; transition:all 0.5s ease;}
+.nav-menu li{width: 100%;transition:all 0.5s ease;position: relative;}
 .nav-menu li a{ display: flex; align-items: center; gap:16px; transition: all 0.5s ease;}
 .nav-menu li.acc .sub-menu{display: none;transition: all 0.5s ease;}
 .nav-menu li.acc.show-menu .sub-menu{display: block;}
-.nav-menu li.acc .menu-wrap{position: relative;}
-.nav-menu li.acc .menu-wrap::after{content:'';width:20px;height:20px;display: block;background: url(/pub/img/arr-menu.png) no-repeat;position: absolute;top:50%;right:0;transform: translateY(-50%);transition: all 0.3s ease;z-index: -1;}
-nav.close .nav-menu li.acc .menu-wrap::after{opacity: 0;}
-.nav-menu li.acc.show-menu .menu-wrap::after{transform: translateY(-50%) rotate(180deg);}
+.nav-menu li.acc .arr-btn{position: absolute;right: -24px;top: 0;z-index: 10;width: 56px;height: 56px;}
+.nav-menu li.acc .arr-btn::after{content:'';width: 56px;height: 56px;display: block;background: url(/pub/img/arr-menu.png) no-repeat center;position: absolute;right:0;transition: all 0.3s ease;top: 0;}
+nav.close .nav-menu li.acc .arr-btn::after{opacity: 0;}
+.nav-menu li.acc.show-menu .arr-btn::after{transform: rotate(180deg);}
 nav.close .nav-menu li a{height:48px}
 
-.nav-menu .menu{ width:48px; height:48px; background-position: center; background-repeat: no-repeat; flex: none; transition:all 0.5s ease; display: block;}
+.nav-menu .menu{width: 56px;height: 56px;background-position: center;background-repeat: no-repeat;flex: none;display: block;}
 .nav-menu .menu.report{background-image: url(/pub/img/report.png);}
+.nav-menu .on .menu.report{background-image: url(/pub/img/report-tab.png);}
 .nav-menu .menu.dashboard{background-image: url(/pub/img/dashboard.png);}
+.nav-menu .on .menu.dashboard{background-image: url(/pub/img/dashboard-tab.png);}
 .nav-menu .menu.data{background-image: url(/pub/img/data.png);}
+.nav-menu .on .menu.data{background-image: url(/pub/img/data-tab.png);}
 .nav-menu .menu.community{background-image: url(/pub/img/community.png);}
+.nav-menu .on .menu.community{background-image: url(/pub/img/community-tab.png);}
 .nav-menu .menu.mypage{background-image: url(/pub/img/mypage.png);}
+.nav-menu .on .menu.mypage{background-image: url(/pub/img/mypage-tab.png);}
+.nav-menu .on .link-name{font-weight: 700;color: #fff;}
 
 nav .link-name{ color: #C6E9FC; font-weight: 500; opacity: 1; flex: none; transition: all 0.7s ease; display: block; }
 nav .sub-menu{color: #C6E9FC;font-size: 14px;font-weight: 500;margin-left: 64px;}
 nav .sub-menu li{height:40px;line-height: 40px;padding:0 16px}
-
 nav .sub-menu li span{flex:none}
+nav .sub-menu li.on-sub{border-radius: 8px;background: rgba(9, 9, 9, 0.15);color: #FDD030;}
 
 .noti {
   position: absolute;
