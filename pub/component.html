@@ -46,29 +46,29 @@
                 <h3>checkbox</h3>
                 <div class="box">
                     <h4>세로형</h4>
-                    <div class="item-gap">
+                    <div class="form-wrap">
                         <input type="checkbox" id="chk" class="checkbox" checked>
                         <label for="chk">체크박스 기본</label>
                     </div>
-                    <div class="item-gap">
+                    <div class="form-wrap">
                         <input type="checkbox" id="chk2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
                         <label for="chk2" class="text-gray-400">체크박스 disabled</label>
                     </div>
-                    <div class="item-gap">
+                    <div class="form-wrap">
                         <input type="checkbox" id="chk3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
                         <label for="chk3" class="text-gray-600">체크박스 disabled check</label>
                     </div>
                     <h4>가로형</h4>
                     <div class="flex gap-4">
-                        <div class="item-gap">
+                        <div class="form-wrap">
                             <input type="checkbox" id="check" class="checkbox" checked>
                             <label for="check">체크박스 기본</label>
                         </div>
-                        <div class="item-gap">
+                        <div class="form-wrap">
                             <input type="checkbox" id="check2" class="checkbox bg-disabled outline-none before:pointer-events-none" disabled>
                             <label for="check2" class="text-gray-400">체크박스 disabled</label>
                         </div>
-                        <div class="item-gap">
+                        <div class="form-wrap">
                             <input type="checkbox" id="check3" class="relative h-5 w-5 appearance-none rounded outline-none before:pointer-events-none checked:bg-checkbox-d checked:bg-center hover:cursor-pointer" disabled checked>
                             <label for="check3" class="text-gray-600">체크박스 disabled check</label>
                         </div>
@@ -78,48 +78,48 @@
                 <h3>radio</h3>
                 <div class="box">
                     <h4>세로형</h4>
-                    <div class="item-gap">
+                    <div class="form-wrap">
                         <input type="radio" id="radio" name="radiogroup" class="radio" checked>
                         <label for="radio">라디오 기본</label>
                     </div>
-                    <div class="item-gap">
+                    <div class="form-wrap">
                         <input type="radio" id="radio2" name="radiogroup" class="radio">
                         <label for="radio2">라디오 기본</label>
                     </div>
-                    <div class="item-gap">
+                    <div class="form-wrap">
                         <input type="checkbox" id="radio3" name="radiogroup" class="radio bg-disabled before:pointer-events-none" disabled>
                         <label for="radio3" class="text-gray-400">체크박스 disabled</label>
                     </div>
-                    <div class="item-gap">
+                    <div class="form-wrap">
                         <input type="checkbox" id="radio4" name="radiogroup"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
                         <label for="radio4" class="text-gray-600">체크박스 disabled check</label>
                     </div>
                     <h4>가로형</h4>
                     <div class="flex gap-4">
-                        <div class="item-gap">
+                        <div class="form-wrap">
                             <input type="radio" id="rdo" name="radiogroup2" class="radio" checked>
                             <label for="rdo" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">라디오 기본</label>
                         </div>
-                        <div class="item-gap">
+                        <div class="form-wrap">
                             <input type="radio" id="rdo2" name="radiogroup2" class="radio">
                             <label for="rdo2" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">라디오 기본</label>
                         </div>
-                        <div class="item-gap">
+                        <div class="form-wrap">
                             <input type="checkbox" id="rdo3" name="radiogroup2" class="radio bg-disabled before:pointer-events-none" disabled>
                             <label for="rdo3" class="flex gap-2 items-center text-16 text-gray-400 cursor-pointer">체크박스 disabled</label>
                         </div>
-                        <div class="item-gap">
+                        <div class="form-wrap">
                             <input type="checkbox" id="rdo4" name="radiogroup2"  class="radio checked:border-disabled checked:bg-disabled" disabled checked>
                             <label for="rdo4" class="flex gap-2 items-center text-16 text-gray-600 cursor-pointer">체크박스 disabled check</label>
                         </div>
                     </div>
                     <h4>동의형</h4>
                     <div class="flex gap-4">
-                        <div class="item-gap">
+                        <div class="form-wrap">
                             <input type="radio" id="radioAgree" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none" checked>
                             <label for="radioAgree" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">동의</label>
                         </div>
-                        <div class="item-gap">
+                        <div class="form-wrap">
                             <input type="radio" id="radioAgree2" name="agree" class="radio bg-radio-check bg-center checked:bg-radio-check-on checked:before:content-none">
                             <label for="radioAgree2" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">미동의</label>
                         </div>
@@ -224,8 +224,8 @@
                         </div>
                         <div class="flex-1">
                             <h4>size auto</h4>
-                            <div selectbox class="after:z-[-1]">
-                                <select select-sizing class="h-10 text-md px-3 pr-9 block appearance-none">
+                            <div selectbox>
+                                <select select-sizing>
                                     <option>최신순</option>
                                     <option>좋아요 순</option>
                                     <option>많은 댓글 순</option>

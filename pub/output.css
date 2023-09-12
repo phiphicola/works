@@ -1989,7 +1989,7 @@ nav::before {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-.bg-gray-box {
+.bg-box-gray {
   --tw-bg-opacity: 1;
   background-color: rgb(244 247 250 / var(--tw-bg-opacity));
 }

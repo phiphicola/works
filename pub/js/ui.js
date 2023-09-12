@@ -1,10 +1,12 @@
 window.onload = function() {
     select();
     tabs();
-    opnePop();  
+    openPop();  
     accordion();  
     sideMenu();
     onOffToggle(); 
+    dragList();
+    clearInput();
 }
 
 
@@ -102,10 +104,10 @@ const tabs = function () {
     });
 };
 
-const opnePop = function () {
-    const opnePop = document.querySelectorAll("[data-pop]");
+const openPop = function () {
+    const openPop = document.querySelectorAll("[data-pop]");
 
-    opnePop.forEach(function (trigger) {
+    openPop.forEach(function (trigger) {
     trigger.addEventListener("click", function (event) {
         event.preventDefault();
         const pops = document.getElementById(trigger.dataset.pop);
@@ -140,7 +142,14 @@ const accordion = function () {
         });
     });
 }
-
+const clearInput = function () {
+    const btnClear = document.querySelectorAll('.btnClear');
+        btnClear.forEach(function(btn){
+            btn.addEventListener('click', function(){
+                btn.parentNode.querySelector('input').value = "";
+            })
+        })
+}
 const sideMenu = function () {
     const arrow = document.querySelectorAll(".arr-btn");
     for (var i = 0; i < arrow.length; i++) {
@@ -194,6 +203,61 @@ const sideMenu = function () {
         });
     });
 
+
+}
+
+const dragList = function () {
+    
+    const dragDrop = document.getElementById('dragList');
+    let draggedItem = null;
+
+    // Add event listeners for drag and drop events
+    dragDrop.addEventListener('dragstart', handleDragStart);
+    dragDrop.addEventListener('dragover', handleDragOver);
+    dragDrop.addEventListener('drop', handleDrop);
+
+    // Drag start event handler
+    function handleDragStart(event) {
+      draggedItem = event.target;
+      event.dataTransfer.effectAllowed = 'move';
+      event.dataTransfer.setData('text/html', draggedItem.innerHTML);
+      event.target.style.opacity = '0.5';
+    }
+
+    // Drag over event handler
+    function handleDragOver(event) {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+      const targetItem = event.target;
+      if (targetItem !== draggedItem && targetItem.classList.contains('drag-item')) {
+        const boundingRect = targetItem.getBoundingClientRect();
+        const offset = boundingRect.y + (boundingRect.height / 2);
+        if (event.clientY - offset > 0) {
+        //   targetItem.style.borderBottom = 'solid 2px #000';
+          targetItem.style.borderTop = '';
+        } else {
+        //   targetItem.style.borderTop = 'solid 2px #000';
+          targetItem.style.borderBottom = '';
+        }
+      }
+    }
+
+    // Drop event handler
+    function handleDrop(event) {
+      event.preventDefault();
+      const targetItem = event.target;
+      if (targetItem !== draggedItem && targetItem.classList.contains('drag-item')) {
+        if (event.clientY > targetItem.getBoundingClientRect().top + (targetItem.offsetHeight / 2)) {
+          targetItem.parentNode.insertBefore(draggedItem, targetItem.nextSibling);
+        } else {
+          targetItem.parentNode.insertBefore(draggedItem, targetItem);
+        }
+      }
+      targetItem.style.borderTop = '';
+      targetItem.style.borderBottom = '';
+      draggedItem.style.opacity = '';
+      draggedItem = null;
+    }
 
 }
 

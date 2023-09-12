@@ -204,7 +204,7 @@
         @apply w-full border-t-2 border-gray-700 whitespace-nowrap
     }
     .table-data th{
-        @apply bg-gray-box
+        @apply bg-box-gray
     }
     .table-data th,
     .table-data td{
