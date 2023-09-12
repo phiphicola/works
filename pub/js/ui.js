@@ -1,10 +1,10 @@
 window.onload = function() {
     select();
     tabs();
-    openPop();  
-    accordion();  
+    openPop();
+    accordion();
     sideMenu();
-    onOffToggle(); 
+    onOffToggle();
     dragList();
     clearInput();
 }
@@ -21,7 +21,7 @@ const onOffToggle = function () {
 }
 
 const select = function () {
-    
+
     const parent = document.querySelectorAll('[selectbox]');
     parent.forEach(function(select) {
         const selectBox = select.querySelector('select');
@@ -31,11 +31,11 @@ const select = function () {
 
         selectBox.addEventListener('blur', function(e) {
             select.classList.remove('focus');
-        });     
+        });
     });
-   
+
     const resizingSelect = document.querySelectorAll("[select-sizing]");
-    
+
     resizingSelect.forEach(function (evt) {
         const helperElement = document.querySelector("[helper-element]");
         evt.addEventListener("change", function(e){
@@ -72,7 +72,7 @@ let getSiblings = function (e) {
 const tabs = function () {
 	const tabsContainer = document.querySelector("[tab-list]");
     const tabTogglers = document.querySelectorAll("[tab-list] li span");
-    
+
     tabTogglers.forEach(function(toggler) {
     toggler.addEventListener("click", function(e) {
         e.preventDefault();
@@ -207,69 +207,70 @@ const sideMenu = function () {
 }
 
 const dragList = function () {
-    
-    const dragDrop = document.getElementById('dragList');
-    let draggedItem = null;
 
-    // Add event listeners for drag and drop events
-    dragDrop.addEventListener('dragstart', handleDragStart);
-    dragDrop.addEventListener('dragover', handleDragOver);
-    dragDrop.addEventListener('drop', handleDrop);
+    const dropzoneSource = document.querySelector(".source");
+    const dropzone = document.querySelector(".target");
+    const dropzones = [...document.querySelectorAll(".dropzone")];
+    const draggables = [...document.querySelectorAll(".draggable")];
 
-    // Drag start event handler
-    function handleDragStart(event) {
-      draggedItem = event.target;
-      event.dataTransfer.effectAllowed = 'move';
-      event.dataTransfer.setData('text/html', draggedItem.innerHTML);
-      event.target.style.opacity = '0.5';
+    function getDragAfterElement(container, y) {
+      const draggableElements = [
+        ...container.querySelectorAll(".draggable:not(.is-dragging)")
+      ];
+
+      return draggableElements.reduce(
+        (closest, child) => {
+          const box = child.getBoundingClientRect();
+          const offset = y - box.top - box.height / 2;
+
+          if (offset < 0 && offset > closest.offset) {
+            return {
+              offset,
+              element: child
+            };
+          } else {
+            return closest;
+          }
+        },
+        { offset: Number.NEGATIVE_INFINITY }
+      ).element;
     }
 
-    // Drag over event handler
-    function handleDragOver(event) {
-      event.preventDefault();
-      event.dataTransfer.dropEffect = 'move';
-      const targetItem = event.target;
-      if (targetItem !== draggedItem && targetItem.classList.contains('drag-item')) {
-        const boundingRect = targetItem.getBoundingClientRect();
-        const offset = boundingRect.y + (boundingRect.height / 2);
-        if (event.clientY - offset > 0) {
-        //   targetItem.style.borderBottom = 'solid 2px #000';
-          targetItem.style.borderTop = '';
+    draggables.forEach((draggable) => {
+      draggable.addEventListener("dragstart", (e) => {
+        draggable.classList.add("is-dragging");
+      });
+
+      draggable.addEventListener("dragend", (e) => {
+        draggable.classList.remove("is-dragging");
+      });
+    });
+
+    dropzones.forEach((zone) => {
+      zone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        const afterElement = getDragAfterElement(zone, e.clientY);
+        const draggable = document.querySelector(".is-dragging");
+        if (afterElement === null) {
+          zone.appendChild(draggable);
         } else {
-        //   targetItem.style.borderTop = 'solid 2px #000';
-          targetItem.style.borderBottom = '';
+          zone.insertBefore(draggable, afterElement);
         }
-      }
-    }
+      });
+    });
 
-    // Drop event handler
-    function handleDrop(event) {
-      event.preventDefault();
-      const targetItem = event.target;
-      if (targetItem !== draggedItem && targetItem.classList.contains('drag-item')) {
-        if (event.clientY > targetItem.getBoundingClientRect().top + (targetItem.offsetHeight / 2)) {
-          targetItem.parentNode.insertBefore(draggedItem, targetItem.nextSibling);
-        } else {
-          targetItem.parentNode.insertBefore(draggedItem, targetItem);
-        }
-      }
-      targetItem.style.borderTop = '';
-      targetItem.style.borderBottom = '';
-      draggedItem.style.opacity = '';
-      draggedItem = null;
-    }
 
 }
 
 // 퍼블 include
 function includeHTML(){
-    let z, elmnt, file, xhttp; 
+    let z, elmnt, file, xhttp;
     z = document.getElementsByTagName("*");
-    
+
     for (let i = 0; i < z.length; i++) {
       elmnt = z[i];
       file = elmnt.getAttribute("data-include");
-      
+
       if (file) {
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -279,7 +280,7 @@ function includeHTML(){
             includeHTML();
           }
         }
- 
+
         xhttp.open("GET", file, true);
         xhttp.send();
         return;
