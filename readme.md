@@ -1,0 +1,1 @@
+npx tailwindcss -i ./pub/index.css -o ./pub/output.css --watch
