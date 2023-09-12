@@ -11,11 +11,12 @@ window.onload = function() {
 
 
 const onOffToggle = function () {
-    const toggleBody = document.querySelectorAll('.toggle-body');
+    const toggleBody = document.querySelectorAll('.switch-body');
     toggleBody.forEach(function(toggle) {
-        const toggleBtn = toggle.querySelector('.open-extend');
+        const toggleBtn = toggle.querySelector('.toggle-switch');
         toggleBtn.addEventListener('click', function(e) {
             toggle.classList.toggle('open');
+            toggleBtn.classList.toggle('on');
         });
     });
 }
@@ -143,7 +144,7 @@ const accordion = function () {
     });
 }
 const clearInput = function () {
-    const btnClear = document.querySelectorAll('.btnClear');
+    const btnClear = document.querySelectorAll('.btn-clear');
         btnClear.forEach(function(btn){
             btn.addEventListener('click', function(){
                 btn.parentNode.querySelector('input').value = "";
