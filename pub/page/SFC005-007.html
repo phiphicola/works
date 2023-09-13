@@ -11,68 +11,178 @@
     </head>
     <body>
         <div class="body-wrap">
-            <nav data-include="/pub/include/nav.html"></nav>
+            <nav data-include="/pub/include/nav.html" class="close"></nav>
 
             <!-- contents -->
             <div class="cont-body">
                 <header>
                     <div class="header-inner">
-                        <h1>
-                            <span class="text-28 font-bold">커뮤니티</span>
-                        </h1>
+                        <h1><span>커뮤니티</span></h1>
 
-                        <div class="user-items">
+                        <div class="user-items relative">
                             <span class="user-name"><span>김우리</span> 님</span>
-                            <button class="relative">                                
-                                <img src="/pub/img/icon-logout.svg" alt="">
-                            </button>
+                            <button class="relative"><img src="/pub/img/icon-logout.svg" alt=""></button>
+                            <div class="layer-wrap">
+                                <button class="relative" data-pop="myAlarm">
+                                    <span class="noti">99+</span>
+                                    <img src="/pub/img/icon-alarm.svg" alt="">
+                                </button>
+                                <div id="myAlarm" class="layer-tooltip">
+                                    <div class="layer-body">
+                                        <div class="layer-tit">
+                                            <h1>알림</h1>
+                                            <span class="tit-color">3</span>
+                                        </div>
+                                        <div class="layer-cont">
+                                            <div class="layer-box">
+                                                <div class="alarm-view">
+                                                    <div class="top">
+                                                        <span class="alarm-part">공지사항</span>
+                                                        <span class="date">2023-07-14 09:59</span>
+                                                    </div>
+                                                    <p class="alarm-tit line-clamp-1">새 공지가 있습니다.</p>
+                                                    <div class="alarm-sub line-clamp-1">새로운 공지사항이 있습니다.</div>
+                                                </div>
+                                            </div>
+                                            <div class="layer-box">
+                                                <div class="alarm-view">
+                                                    <div class="top">
+                                                        <span class="alarm-part">커뮤니티</span>
+                                                        <span class="date">2023-07-14 09:59</span>
+                                                    </div>
+                                                    <p class="alarm-tit line-clamp-1">내가 작성한 Q&A에 새 답변이 달렸습니다.</p>
+                                                    <div class="alarm-sub line-clamp-1">답변이 달린 글제목</div>
+                                                </div>
+                                            </div>
+                                            <div class="layer-box">
+                                                <div class="alarm-view">
+                                                    <div class="top">
+                                                        <span class="alarm-part">커뮤니티</span>
+                                                        <span class="date">2023-07-14 09:59</span>
+                                                    </div>
+                                                    <p class="alarm-tit line-clamp-1">내가 작성한 Q&A에 새 답변이 달렸습니다.</p>
+                                                    <div class="alarm-sub line-clamp-1">답변이 달린 글제목</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button class="btn-xlarge w-full text-gray-700 bg-white">알림 전체 보기</button>
+                                        </div>
+                                        <button class="pops-close pops-exit"></button>
+                                    </div>
+                                </div>
+                            </div>
                             <button class="relative">
-                                <span class="absolute left-3 top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">99+</span>
-                                <img src="/pub/img/icon-alarm.svg" alt="">
-                            </button>
-                            <button class="relative">
-                                <span class="absolute left-3 top-[-3px] min-w-4 h-4 px-1 rounded-full text-[10px] leading-4 text-white font-bold text-center bg-primary-err">3</span>                               
+                                <span class="noti">3</span>
                                 <img src="/pub/img/icon-market.svg" alt="">
-                            </button>  
-                            <button class="relative">
-                                <img src="/pub/img/icon-user.png" alt="사용자 이미지">
-                            </button>   
+                            </button>
+                            <div class="layer-wrap">
+                                <button class="relative" data-pop="myReport">
+                                    <img src="/pub/img/icon-user.png" alt="사용자 이미지">
+                                </button>
+                                <div id="myReport" class="layer-tooltip">
+                                    <div class="layer-body">
+                                        <div class="layer-tit">
+                                            <h1>내 자원 사용 현황</h1>
+                                        </div>
+                                        <div class="layer-cont">
+                                            <p class="sub-text">자원이 부족합니다. 데이터를 정리하거나 마이페이지에서 추가자원을 신청해주세요.</p>
+                                            <div class="layer-box">
+                                                <h2>DB용량</h2>
+                                                <div class="cont-detail">
+                                                    <dl>
+                                                        <dt>권한</dt>
+                                                        <dd>일반 사용자</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>사용률</dt>
+                                                        <dd>78%</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="progress-bar">
+                                                    <progress class="progress" value="78" min="0" max="100"></progress>
+                                                    <div class="progress-mb">
+                                                        <span>78MB / 100MB</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layer-box">
+                                                <h2>분석 리소스</h2>
+                                                <div class="cont-detail">
+                                                    <dl>
+                                                        <dt>권한</dt>
+                                                        <dd>일반 사용자</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>CPU</dt>
+                                                        <dd>1 Core</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>MEM</dt>
+                                                        <dd>16GB</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>DISK</dt>
+                                                        <dd>92%</dd>
+                                                    </dl>
+                                                    <div class="progress-bar">
+                                                        <progress class="progress" value="78" min="0" max="100"></progress>
+                                                        <div class="progress-mb">
+                                                            <span>78MB / 100MB</span>
+                                                        </div>
+                                                    </div>
+                                                    <dl>
+                                                        <dt>GPU</dt>
+                                                        <dd>1 EA</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button class="btn-xlarge w-full text-gray-700 bg-white">자세히 보기</button>
+                                        </div>
+                                        <button class="pops-close pops-exit"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </header>
 
                 
-                <div class="sub-cont">
-                    <div class="flex flex-col flex-1">
+                <div class="sub-side">
+                    <div class="flex-box">
                         <!-- 검색 -->
                         <div class="form-wrap">
                             <div class="search-input">
-                                <input type="text" class="w-full h-10 py-2 px-5 rounded-lg text-md placeholder:text-gray-300 bg-gray-50" placeholder="검색어를 입력해 주세요.">                           
-                                <button type="button" class="absolute top-1/2 right-5 translate-y-[-50%]">
+                                <input type="text" placeholder="검색어를 입력해 주세요.">                           
+                                <button type="button" class="search-btn">
                                     <img src="/pub/img/icon-search.svg" alt="검색">
                                 </button>
                             </div> 
-                            <button type="button" data-pop="pop-detail" class="btn-medium gap-1.5 border border-gray-line flex-none">
-                                <img src="/pub/img/icon-filter.svg" alt="">
-                                <span class="text-14 font-medium">필터</span>
-                            </button>
-                            <button type="button" class="btn-medium bg-primary-blue flex-none">
-                                <img src="/pub/img/icon-plus.svg" alt="">
-                                <span class="text-14 text-white font-medium ml-1.5 tracking-4">글쓰기</span>
-                            </button>                         
+                            <div class="btn-wrap">
+                                <button type="button" data-pop="pop-detail" class="btn large line-gray">
+                                    <img src="/pub/img/icon-filter.svg" alt="">
+                                    <span class="flex-none">필터</span>
+                                </button>
+                                <button type="button" class="btn large blue">
+                                    <img src="/pub/img/icon-plus.svg" alt="">
+                                    <span class="flex-none">글쓰기</span>
+                                </button>
+                            </div>                        
                         </div>
                         
                         <!-- // 검색 -->
-                        <div class="mt-8 border-b border-primary-dark">
-                            <ul tab-list class="flex items-center">
+                        <div class="tab-wrap">
+                            <ul tab-list>
                                 <li class="tab-line on"><span data-tab="#tab-1">전체</span></li>
                                 <li class="tab-line"><span data-tab="#tab-2">TIP</span></li>
                                 <li class="tab-line"><span data-tab="#tab-3">Q&A</span></li>
                                 <li class="tab-line"><span data-tab="#tab-4">자유글</span></li>
                             </ul>                            
                         </div>
-                        <div class="mt-8 flex justify-end ml-auto">
-                            <div selectbox class="after:z-[-1]">
+                        <div class="flex-right">
+                            <div selectbox class="clear">
                                 <select select-sizing class="h-10 text-md px-3 pr-9 block appearance-none cursor-pointer bg-transparent">
                                     <option>최신순</option>
                                     <option>좋아요 순</option>
@@ -82,88 +192,88 @@
                                 <span helper-element aria-hidden="true"></span>
                             </div>
                         </div>
-                        <div tab-contents class="mt-5">                            
+                        <div tab-contents>                            
                             <div id="tab-1">
-                                <ul class="flex flex-col gap-4">
-                                    <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
-                                        <a href="#" class="block group">
-                                            <div class="flex items-center">
-                                                <span class="flex-none px-3 py-1 text-14 font-bold text-[#37A884] bg-[#37A884]/10 rounded-3xl">Q&A</span>
-                                                <div class="flex items-center group-hover:text-primary-woori ml-2">
-                                                    <span class="text-18 font-bold line-clamp-1">우리은행 직원 칭찬 방법, 은행 칭찬 온라인 접수 방법 </span>
+                                <ul class="list-box">
+                                    <li>
+                                        <a href="#">
+                                            <div class="flex-center">
+                                                <span class="label purple">Q&A</span>
+                                                <div class="list-box-tit">
+                                                    <span class="line-clamp-1">우리은행 직원 칭찬 방법, 은행 칭찬 온라인 접수 방법 </span>
                                                 </div>
                                             </div>
-                                            <div class="h-15 text-14 text-gray-600 line-clamp-3 my-3">더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
+                                            <div class="list-box-cont line-clamp-2">더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
                                         </a>
-                                        <div class="flex items-center gap-4 mt-5 text-14">
-                                            <span class="font-medium tracking-4">2023.07.13</span>
+                                        <div class="user-info">
+                                            <span>2023.07.13</span>
                                             <span>홍길동</span>
-                                            <span>댓글 <span class="font-medium tracking-4">2</span></span>
+                                            <span>댓글 <span class="font-medium">2</span></span>
                                             <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
-                                    <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
-                                        <a href="#" class="block group">
-                                            <div class="flex items-center">
-                                                <span class="flex-none px-3 py-1 text-14 font-bold text-primary-blue bg-primary-blue/10 rounded-3xl">자유글</span>
-                                                <div class="flex items-center group-hover:text-primary-woori ml-2">
-                                                    <span class="text-18 font-bold line-clamp-1">테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.</span>
+                                    <li>
+                                        <a href="#">
+                                            <div class="flex-center">
+                                                <span class="label blue">자유글</span>
+                                                <div class="list-box-tit">
+                                                    <span class="line-clamp-1">테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.</span>
                                                 </div>
                                             </div>
-                                            <div class="h-15 text-14 text-gray-600 line-clamp-3 my-3">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
+                                            <div class="list-box-cont line-clamp-2">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
                                         </a>
-                                        <div class="flex items-center gap-4 mt-5 text-14">
-                                            <span class="font-medium tracking-4">2023.07.13</span>
+                                        <div class="user-info">
+                                            <span>2023.07.13</span>
                                             <span>홍길동</span>
-                                            <span>댓글 <span class="font-medium tracking-4">2</span></span>
+                                            <span>댓글 <span class="font-medium">2</span></span>
                                             <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
-                                    <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
-                                        <a href="#" class="block group">
-                                            <div class="flex items-center">
-                                                <span class="flex-none px-3 py-1 text-14 font-bold text-[#8350C6] bg-[#8350C6]/10 rounded-3xl">TIP</span>
-                                                <div class="flex items-center group-hover:text-primary-woori ml-2">
-                                                    <span class="text-18 font-bold line-clamp-1">우리은행 직원 칭찬 방법, 은행 칭찬 온라인 접수 방법</span>
+                                    <li>
+                                        <a href="#">
+                                            <div class="flex-center">
+                                                <span class="label green">TIP</span>
+                                                <div class="list-box-tit">
+                                                    <span class="line-clamp-1">우리은행 직원 칭찬 방법, 은행 칭찬 온라인 접수 방법</span>
                                                 </div>
                                             </div>
-                                            <div class="h-15 text-14 text-gray-600 line-clamp-3 my-3">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
+                                            <div class="list-box-cont line-clamp-2">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
                                         </a>
-                                        <div class="flex items-center gap-4 mt-5 text-14">
-                                            <span class="font-medium tracking-4">2023.07.13</span>
+                                        <div class="user-info">
+                                            <span>2023.07.13</span>
                                             <span>홍길동</span>
-                                            <span>댓글 <span class="font-medium tracking-4">2</span></span>
+                                            <span>댓글 <span class="font-medium">2</span></span>
                                             <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
-                                    <li class="p-8 rounded-2xl border border-gray-line hover:shadow-card-w hover:border-white duration-300 ease-in-out">
-                                        <a href="#" class="block group">
-                                            <div class="flex items-center">
-                                                <span class="flex-none px-3 py-1 text-14 font-bold text-primary-blue bg-primary-blue/10 rounded-3xl">자유글</span>
-                                                <div class="flex items-center group-hover:text-primary-woori ml-2">
-                                                    <span class="text-18 font-bold line-clamp-1">테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.</span>
+                                    <li>
+                                        <a href="#">
+                                            <div class="flex-center">
+                                                <span class="label blue">자유글</span>
+                                                <div class="list-box-tit">
+                                                    <span class="line-clamp-1">테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.테라데이타 BTEQ 메뉴얼 입니다. 제목이 많이 길어집니다. 제목이 많이 길어집니다.</span>
                                                 </div>
                                             </div>
-                                            <div class="h-15 text-14 text-gray-600 line-clamp-3 my-3">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
+                                            <div class="list-box-cont line-clamp-2">우리은행 영업점은 1~2년마다 직원이 바뀌는 경우가 많아서 은행 여신업무를 보거나 온라인으로 문의를 할 때 좋은 직원을 만나는 것도 운이 작용하곤 합니다. 또한 같은 은행에, 같은 지역 내에 있더라도 영업점마다 분위기가 달라서 나에게 좋았던 지점을 찾고, 안 맞는 지점을 피하면 금융업무가 더 수월해질 것입니다. 은행을 정기적으로 이용하면서 '이건 좀 아니다.' 싶은 담당자도 많이 보았지만, 때로는 업무를 성심성의껏 처리해 주고 좀 더 혜택을 챙겨주는 담당자들도 있었습니다. 더 나아가서 몰랐던 부분까지 알려주고 사람대 사람으로서 진심이 느껴지는 서비스를 제공해주는 직원분에게는 보답을 하고 싶은 생각이 들 때가 있습니다.</div>
                                         </a>
-                                        <div class="flex items-center gap-4 mt-5 text-14">
-                                            <span class="font-medium tracking-4">2023.07.13</span>
+                                        <div class="user-info">
+                                            <span>2023.07.13</span>
                                             <span>홍길동</span>
-                                            <span>댓글 <span class="font-medium tracking-4">2</span></span>
+                                            <span>댓글 <span class="font-medium">2</span></span>
                                             <span class="font-medium">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </div>
                                     </li>
                                 </ul>
 
-                                <ul class="pagination mt-8 mb-6 flex items-center justify-center gap-1">
+                                <ul class="pagination">
                                     <li><a href="#"><img src="/pub/img/arr-start.svg" alt=""></a></li>
                                     <li><a href="#"><img src="/pub/img/arr-prev.svg" alt=""></a></li>
-                                    <li class="ml-4"><a href="#" class="page-btn font-bold text-white bg-primary-blue hover:bg-primary-blue">1</a></li>
+                                    <li class="num-first"><a href="#" class="page-btn on">1</a></li>
                                     <li><a href="#" class="page-btn">2</a></li>
                                     <li><a href="#" class="page-btn">3</a></li>
                                     <li><a href="#" class="page-btn">4</a></li>
-                                    <li><a href="#" class="page-btn">5</a></li>
-                                    <li class="ml-4"><a href="#"><img src="/pub/img/arr-next.svg" alt=""></a></li>
+                                    <li class="num-last"><a href="#" class="page-btn">5</a></li>
+                                    <li><a href="#"><img src="/pub/img/arr-next.svg" alt=""></a></li>
                                     <li><a href="#"><img src="/pub/img/arr-end.svg" alt=""></a></li>
                                 </ul>
                             </div>
@@ -175,21 +285,21 @@
 
 
                     <!-- 커뮤니티 -->
-                    <div class="w-[420px] flex-none">
-                        <div class="flex flex-col gap-15">
+                    <div class="side-cont">
+                        <div class="flex-col-box">
                             <!-- 활동 순위 -->
                             <div>
-                                <div class="flex items-center justify-between mb-6">
+                                <div class="header-group">
                                     <h4 class=tit-medium>활동 순위</h4>
-                                    <div>
-                                        <span class="text-[#5A6E7C]">내 활동 점수</span>
-                                        <span class="text-15 font-bold text-primary-blue">965점 / 300위</span>
+                                    <div class="right-group">
+                                        <span class="hd-score-txt">내 활동 점수</span>
+                                        <span class="hd-score">965점 / 300위</span>
                                     </div>
                                 </div>
-                                <ul class="mt-6">
-                                    <li class="py-3.5 flex items-center justify-between">
-                                        <div class="flex items-center">
-                                            <span class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#E3F4FD]">
+                                <ul class="list-style rank">
+                                    <li>
+                                        <div class="rank-list">
+                                            <span class="rank-icon top">
                                                 <img src="/pub/img/icon-top.png" alt="">
                                             </span>
                                             <span class="ranker">김광현</span>
@@ -199,8 +309,8 @@
                                             <span>1,680</span> 점
                                         </div>
                                     </li>
-                                    <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
-                                        <div class="flex items-center">
+                                    <li>
+                                        <div class="rank-list">
                                             <span class="rank-icon">
                                                 <img src="/pub/img/icon-top2.png" alt="">
                                             </span>
@@ -211,8 +321,8 @@
                                             <span>1,580</span> 점
                                         </div>
                                     </li>
-                                    <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
-                                        <div class="flex items-center">
+                                    <li>
+                                        <div class="rank-list">
                                             <span class="rank-icon">
                                                 <img src="/pub/img/icon-top3.png" alt="">
                                             </span>
@@ -223,8 +333,8 @@
                                             <span>1,170</span> 점
                                         </div>
                                     </li>
-                                    <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
-                                        <div class="flex items-center">
+                                    <li>
+                                        <div class="rank-list">
                                             <span class="rank-icon">
                                                 <img src="/pub/img/icon-top4.png" alt="">
                                             </span>
@@ -235,8 +345,8 @@
                                             <span>988</span> 점
                                         </div>
                                     </li>
-                                    <li class="py-3.5 flex items-center justify-between border-t border-gray-line">
-                                        <div class="flex items-center">
+                                    <li>
+                                        <div class="rank-list">
                                             <span class="rank-icon">
                                                 <img src="/pub/img/icon-top5.png" alt="">
                                             </span>
@@ -253,34 +363,36 @@
 
                             <!-- TIP -->
                             <div>
-                                <h4 class="text-20 mb-6 font-bold leading-none">인기글</h4>
-                                <ul>
-                                    <li class="py-6">
-                                        <a href="#" class="flex items-center justify-between">
-                                            <span class="font-medium line-clamp-1">우리아이 여름방학, 로블록스와 함께 창의력 쑥쑥!</span>
+                                <div class="header-group">
+                                    <h4 class="tit-medium">인기글</h4>
+                                </div>                                
+                                <ul class="list-style">
+                                    <li>
+                                        <a href="#" class="list-item">
+                                            <div class="side"><span class="font-medium line-clamp-1">우리아이 여름방학, 로블록스와 함께 창의력 쑥쑥!</span></div>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 1,261</span>
                                         </a>                                        
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center justify-between">
-                                            <span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법 파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
+                                        <a href="#" class="list-item">
+                                            <div class="side"><span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법 파이썬을 환경세팅없이 쉽게 사용하는 방법</span></div>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 1,108</span>
                                         </a>  
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center justify-between">
-                                            <span class="font-medium line-clamp-1">무더운 올여름, 시WON~하계 쏜다!</span>
+                                        <a href="#" class="list-item">
+                                            <div class="side"><span class="font-medium line-clamp-1">무더운 올여름, 시WON~하계 쏜다!</span></div>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 608</span>
                                         </a>  
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center justify-between">
-                                            <span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법</span>
+                                        <a href="#" class="list-item">
+                                            <div class="side"><span class="font-medium line-clamp-1">파이썬을 환경세팅없이 쉽게 사용하는 방법</span></div>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 308</span>
                                         </a>  
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center justify-between">
+                                        <a href="#" class="list-item">
                                             <span class="font-medium line-clamp-1">청소년을 위한 우리미래드림바우처I</span>
                                             <span class="font-medium flex-none">&#x1F44D;&#x1F3FB; 108</span>
                                         </a>  

@@ -21,7 +21,7 @@
                             <img src="/pub/img/logo.png" alt="우리은행 로고" class="logo">
                             <span>분석DW 사용자포탈</span>
                         </h1>
-                        <div class="user-items relative">
+                        <div class="user-items">
                             <span class="user-name"><span>김우리</span> 님</span>
                             <button class="relative"><img src="/pub/img/icon-logout.svg" alt=""></button>
                             <div class="layer-wrap">
@@ -70,7 +70,7 @@
                                         <div class="btn-wrap">
                                             <button class="btn-xlarge w-full text-gray-700 bg-white">알림 전체 보기</button>
                                         </div>
-                                        <button class="pops-close pops-exit"><img src="/pub/img/icon-close-w.svg" alt=""></button>
+                                        <button class="pops-close pops-exit"></button>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                                         <div class="btn-wrap">
                                             <button class="btn-xlarge w-full text-gray-700 bg-white">자세히 보기</button>
                                         </div>
-                                        <button class="pops-close pops-exit"><img src="/pub/img/icon-close-w.svg" alt=""></button>
+                                        <button class="pops-close pops-exit"></button>
                                     </div>
                                 </div>
                             </div>
@@ -151,14 +151,14 @@
                     </div>
                     <div class="info-bar">
                         <img src="/pub/img/icon-caution.svg" alt="">
-                        <span class="text">연습용이 아닌 은행 데이터를 활용한 분석을 하시려면 <button type="button" class="link-text">여기</button>를 눌러 이용 권한을 신청해주세요.</span>
+                        <span class="text">연습용이 아닌 은행 데이터를 활용한 분석을 하시려면 <button type="button" class="link-text" data-pop="apply">여기</button>를 눌러 이용 권한을 신청해주세요.</span>
                     </div>
                 </header>
 
 
                 <!-- contents -->
                 <div class="main-text">
-                    <strong class="text-primary-woori">김우리님,</strong> 어떤 데이터가 필요하신가요?
+                    <strong class="font-em-blue">김우리님,</strong> 어떤 데이터가 필요하신가요?
                 </div>
                 <!-- 검색 -->
                 <div class="search-center">
@@ -181,7 +181,7 @@
                                             <h4 class=tit-medium>실시간 트렌드</h4>
                                             <p class="date">2023/08/14 ~ 08/21</p>
                                         </div>
-                                        <ul tab-list class="small-type flex items-center gap-4">
+                                        <ul tab-list class="small-type">
                                             <li class="on"><span data-tab="#tab-1">전체</span></li>
                                             <li><span data-tab="#tab-2">월별</span></li>
                                             <li><span data-tab="#tab-3">분기별</span></li>
@@ -214,7 +214,7 @@
 
                         <!-- 부서 별 많이 찾는 -->
                         <div class="section first">
-                            <h3 class="part-tit"><span class="text-primary-woori">#디지털전략부</span>에서 즐겨찾는</h3>
+                            <h3 class="part-tit"><span class="font-em-blue">#디지털전략부</span>에서 즐겨찾는</h3>
                             <div class="box-gray">
                                 <!-- 상품금리 데이터 -->
                                 <div class="swiper main-swiper">
@@ -237,9 +237,8 @@
                                                         <p class="tit line-clamp-1">금리기본원장</p>
                                                         <div class="sub-txt line-clamp-3">우리은행에서 사용되어지는 금리의 기본내용을 관리한다. 금리코드, 금리명, 적용일자, 구성내용 등</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -247,27 +246,24 @@
                                                         <p class="tit line-clamp-1">펀드별기준가격정보</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
                                                         <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">계좌수익성월실적</p>
-                                                        <div class="sub-txt line-clamp-3">수익성 계좌별월중실적 정보로 계좌의 사업부, 고객정보, 평잔, 말잔, 수익, 비용, 수수료, 기타부대비용, 예상손실, 직접비, 간접비, 위험조정이익의 정보를 생성한다.</div>
+                                                        <p class="tit line-clamp-1">정책금리목록</p>
+                                                        <div class="sub-txt line-clamp-3">여신의 정책금리에 대한 변경내역 정보의 목록을 관리한다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn market">장바구니 담기</button>
+                                                        <button type="button" class="data-btn market" disabled>장바구니 담기</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">계좌별손익정보</p>
-                                                        <div class="sub-txt line-clamp-3">계좌별로 계정과목, 점코드, 손익총계, 미수/미지급이자, 선수/선급비용, 불보정이자 등을 관리한다</div>
+                                                        <p class="tit line-clamp-1">외화고시금리명세</p>
+                                                        <div class="sub-txt line-clamp-3">LIBID/LIBOR/외화대출/외화예금금리등에 대한 통화별, 기간별 금리를 관리한다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
                                                         <button type="button" class="data-btn complete">조회 권한 보유</button>
                                                     </div>
@@ -281,9 +277,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -291,9 +286,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -301,9 +295,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -311,9 +304,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -340,42 +332,38 @@
                                             <div class="inner">
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 첫번째 글입니다.</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">계좌수익성월실적</p>
+                                                        <div class="sub-txt line-clamp-3">수익성 계좌별월중실적 정보로 계좌의 사업부, 고객정보, 평잔, 말잔, 수익, 비용, 수수료, 기타부대비용, 예상손실, 직접비, 간접비, 위험조정이익의 정보를 생성한다.장바구니 담기</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn market">장바구니 담기</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">관리회계과목코드목록</p>
+                                                        <div class="sub-txt line-clamp-3">계정계과목코드로 관리회계과목코드를 정의하여 관리회계 상품 및 조직 실적 구축에 필요한 정보이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">계좌별손익정보</p>
+                                                        <div class="sub-txt line-clamp-3">계좌별로 계정과목, 점코드, 손익총계, 미수/미지급이자, 선수/선급비용, 불보정이자 등을 관리한다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">계좌별수수료정보</p>
+                                                        <div class="sub-txt line-clamp-3">계좌별로 점코드, 계좌번호, 수수료계정, 수수료금액을 관리한다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -388,12 +376,7 @@
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="w-10 h-10 rounded-full border border-primary-blue group-hover:border-white">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="m-auto text-primary-blue group-hover:text-white">
-                                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m5 6.5 2-5M15 6.5l-2-5M6 10.5v4M14 10.5v4M10 10.5v4"/>
-                                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M1.864 13.955c.545 2.183.818 3.274 1.632 3.91.814.635 1.939.635 4.189.635h4.63c2.25 0 3.375 0 4.189-.635.814-.636 1.086-1.727 1.632-3.91.858-3.432 1.287-5.147.386-6.301-.9-1.154-2.67-1.154-6.207-1.154h-4.63c-3.538 0-5.306 0-6.207 1.154-.53.677-.6 1.548-.394 2.846"/>
-                                                            </svg>
-                                                        </button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -401,9 +384,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -411,9 +393,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -421,9 +402,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -435,9 +415,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -445,9 +424,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -455,9 +433,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -465,9 +442,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -494,42 +470,38 @@
                                             <div class="inner">
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 첫번째 글입니다.</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">당발송금원장</p>
+                                                        <div class="sub-txt line-clamp-3">당발송금의 취결에 따른 기본입력사항과 통할점접수 및 발송여부 상태등을 관리하는 원장이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn complete">조회 권한 보유</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">외환펌뱅킹입출금계좌명세</p>
+                                                        <div class="sub-txt line-clamp-3">뱅킹 업체중 외환 펌뱅킹시 필요한 정보를 등록한 원장이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">머니그램해외송금명세</p>
+                                                        <div class="sub-txt line-clamp-3">MONEYGRAM 송금거래에 대한 해외계약 사전 처리명세를 관리하는 엔티티 유형으로 정의한다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">당발환율예약송금명세</p>
+                                                        <div class="sub-txt line-clamp-3">특정환율을 예약하고 그 환율에 도달하면 자동으로 송금이 나가도록 정보등록한 원장이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -541,9 +513,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -551,9 +522,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -561,9 +531,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -571,9 +540,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -585,9 +553,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -595,9 +562,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -605,9 +571,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -615,9 +580,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -632,12 +596,12 @@
 
                         <!-- #모두가 관심있는 -->
                         <div class="section">
-                            <h3 class="part-tit"><span class="text-primary-woori">#모두</span>가 관심있는</h3>
+                            <h3 class="part-tit"><span class="font-em-blue">#모두</span>가 관심있는</h3>
                             <div class="box-gray">
                                 <!-- 상품 금리 데이터 -->
                                 <div class="swiper main-swiper">
                                     <div class="slide-wrap">
-                                        <h4 class=tit-medium>상품 금리 데이터</h4>
+                                        <h4 class=tit-medium>고객실적기본 데이터</h4>
                                         <div class="slide-btn">
                                             <div class="button-prev">
                                                 <img src="/pub/img/arr-left.png" alt="">
@@ -652,42 +616,38 @@
                                             <div class="inner">
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 첫번째 글입니다.</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">급여이체고객명세</p>
+                                                        <div class="sub-txt line-clamp-3">여이체를 받고있는 고객의 급여이체관련 계좌 정보를 관리한느 데이터영역으로 정의한다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn complete">조회 권한 보유</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">올인마진손익실적</p>
+                                                        <div class="sub-txt line-clamp-3">올인마진대상 고객에 대한 매월 손익정보를 관리하는 데이터영역으로 정의한다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">WON컨시어지고객실적</p>
+                                                        <div class="sub-txt line-clamp-3">WON컨시어지고객의 특정월 실적 정보를 관리한다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">고객수수료면제특인횟수한도명세</p>
+                                                        <div class="sub-txt line-clamp-3">고객의 수수료면제특인회수에 대한 등록특인횟수의 한도 횟수 정보를 관리하는 데이터영역으로 정의한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -699,9 +659,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -709,9 +668,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -719,9 +677,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -729,9 +686,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -743,9 +699,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -753,9 +708,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -763,9 +717,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -773,9 +726,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -787,7 +739,7 @@
                                 <!-- 상품 수수료 데이터 -->
                                 <div class="swiper main-swiper">
                                     <div class="slide-wrap">
-                                        <h4 class=tit-medium>상품 수수료 데이터</h4>
+                                        <h4 class=tit-medium>방카슈랑스 데이터</h4>
                                         <div class="slide-btn">
                                             <div class="button-prev">
                                                 <img src="/pub/img/arr-left.png" alt="">
@@ -802,42 +754,38 @@
                                             <div class="inner">
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 첫번째 글입니다.</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">방카슈랑스일실적</p>
+                                                        <div class="sub-txt line-clamp-3">방카슈랑스 일실적 정보를 관리하는 엔티티이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">방카슈랑스공시이율정보</p>
+                                                        <div class="sub-txt line-clamp-3">방카상품에 대한 공시이율변경시 변경사항을 관리하는 엔티티이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn market" disabled>장바구니 담기</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">방카슈랑스손보계약보험료납입및환급원장</p>
+                                                        <div class="sub-txt line-clamp-3">손보의 보험료납입. 변경에 따른 추징, 환급을 관리한다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">방카슈랑스직업코드목록</p>
+                                                        <div class="sub-txt line-clamp-3">방카슈랑스의 직업코드를 관리하는 엔티티이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn market">장바구니 담기</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -849,9 +797,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -859,9 +806,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -869,9 +815,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -879,9 +824,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -893,9 +837,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -903,9 +846,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -913,9 +855,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -923,9 +864,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -934,10 +874,10 @@
                                 </div>
                                 <!-- //상품 수수료 데이터 -->
 
-                                <!-- 상품 수수료 데이터 -->
+                                <!-- 국외점포 데이터 -->
                                 <div class="swiper main-swiper">
                                     <div class="slide-wrap">
-                                        <h4 class=tit-medium>상품 수수료 데이터</h4>
+                                        <h4 class=tit-medium>국외점포 데이터</h4>
                                         <div class="slide-btn">
                                             <div class="button-prev">
                                                 <img src="/pub/img/arr-left.png" alt="">
@@ -952,42 +892,38 @@
                                             <div class="inner">
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 첫번째 글입니다.</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">국외지점BS명세</p>
+                                                        <div class="sub-txt line-clamp-3">국외지점별 계정별 B/S 원장을 관리한다 (월말 최종일자로만 SET)</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">국외예금자보호고객정보원장</p>
+                                                        <div class="sub-txt line-clamp-3">국외예금자보호고객정보원장을 관리하는 엔티티이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">국외점포신용등급명세</p>
+                                                        <div class="sub-txt line-clamp-3">국외점포신용등급명세는 국외점포로 부터 입수하는 국외점포신용등ㅇ급명세를 관리하는 엔티티이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">바로바로해외송금소다라계좌정보</p>
+                                                        <div class="sub-txt line-clamp-3">방카슈랑스의 직업코드를 관리하는 엔티티이다</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn complete">조회 권한 보유</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -999,9 +935,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1009,9 +944,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1019,9 +953,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1029,9 +962,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1043,9 +975,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1053,9 +984,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1063,9 +993,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1073,16 +1002,15 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- //상품 수수료 데이터 -->
+                                <!-- //국외점포 데이터 -->
                             </div>
                         </div>
                         <!-- //#모두가 관심있는 -->
@@ -1090,11 +1018,11 @@
 
                         <!-- #연습하기 좋은 -->
                         <div class="section">
-                            <h3 class="part-tit"><span class="text-primary-woori">#연습하기</span>좋은</h3>
+                            <h3 class="part-tit"><span class="font-em-blue">#연습하기</span>좋은</h3>
                             <div class="box-gray">
                                 <!-- 상품 금리 데이터 -->
                                 <div class="swiper main-swiper">
-                                    <div class="slide-wrap">
+                                    <!-- <div class="slide-wrap">
                                         <h4 class=tit-medium>상품 금리 데이터</h4>
                                         <div class="slide-btn">
                                             <div class="button-prev">
@@ -1104,48 +1032,44 @@
                                                 <img src="/pub/img/arr-right.png" alt="">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="inner">
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 첫번째 글입니다.</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">타이타닉 생존자예측</p>
+                                                        <div class="sub-txt line-clamp-3">타이타닉 탑승자 데이터를 전처리하여 생존자를 예측하는 샘플데이터</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn complete">조회 권한 보유</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">미세먼지농도예측</p>
+                                                        <div class="sub-txt line-clamp-3">미세먼지 농도를 예측하기 위한 대기질 정보 데이터</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn complete">조회 권한 보유</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">익일주식시장예측</p>
+                                                        <div class="sub-txt line-clamp-3">익일 주식동향 예측을 위한 거래정보 데이터</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn complete">조회 권한 보유</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
                                                     <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
+                                                        <p class="tit line-clamp-1">상권추천데이터</p>
+                                                        <div class="sub-txt line-clamp-3">상권 추천을 위한 지도데이터, 카드사매출정보, 인구현황 공공데이터</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn complete">조회 권한 보유</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1157,9 +1081,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1167,9 +1090,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1177,9 +1099,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1187,9 +1108,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1201,9 +1121,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 1</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1211,9 +1130,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장 2</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1221,9 +1139,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장3</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                                 <div class="slide-card">
@@ -1231,9 +1148,8 @@
                                                         <p class="tit line-clamp-1">수수료 원장4</p>
                                                         <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
                                                     </a>
-                                                    <!-- 수정예정 -->
                                                     <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
+                                                        <button type="button" class="data-btn check">신청 확인 중</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1242,165 +1158,15 @@
                                 </div>
                                 <!-- //상품 금리 데이터 -->
 
-
-                                <!-- 상품 수수료 데이터 -->
-                                <div class="swiper main-swiper">
-                                    <div class="slide-wrap">
-                                        <h4 class=tit-medium>상품 수수료 데이터</h4>
-                                        <div class="slide-btn">
-                                            <div class="button-prev">
-                                                <img src="/pub/img/arr-left.png" alt="">
-                                            </div>
-                                            <div class="button-next">
-                                                <img src="/pub/img/arr-right.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="inner">
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 첫번째 글입니다.</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="inner">
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 1</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 2</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장3</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장4</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="inner">
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 1</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장 2</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장3</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                                <div class="slide-card">
-                                                    <a href="#" class="block">
-                                                        <p class="tit line-clamp-1">수수료 원장4</p>
-                                                        <div class="sub-txt line-clamp-3">수수료명 계정과목 코드 등 수수료에 대한 기본적인 정보를 관리한다.</div>
-                                                    </a>
-                                                    <!-- 수정예정 -->
-                                                    <div class="data-btn-cont">
-                                                        <button type="button" class="data-btn apply">조회 권한 신청</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //상품 수수료 데이터 -->
                             </div>
                         </div>
                         <!-- //#연습하기 좋은 -->
                     </div>
-
+                    
                     <!-- 커뮤니티 -->
                     <div class="side-cont">
-                        <h3 class="tit-large mb-40">커뮤니티</h3>
-                        <div class="flex-col-box gap-60">
+                        <h3 class="tit-large">커뮤니티</h3>
+                        <div class="flex-col-box">
                             <!-- Q&A -->
                             <div>
                                 <h4 class=tit-medium>Q&A</h4>
@@ -1516,7 +1282,7 @@
                                 </ul>
                             </div>
                             <!-- //TIP -->
-
+                            
                             <!-- 활동 점수 Top 5 -->
                             <div>
                                 <h4 class=tit-medium>활동 점수 Top 5</h4>
@@ -1590,8 +1356,8 @@
                     <!-- //커뮤니티 -->
                 </div>
                 <div class="fixed-btn">
-                    <button type="button" data-pop="apply">
-                        <span>분석 환경 접속 권한 신청</span>
+                    <button type="button">
+                        <span>분석 연습하기</span>
                         <img src="/pub/img/arr-right-w.png" alt="">
                     </button>
                 </div>
@@ -1600,359 +1366,354 @@
             <!-- // contents -->
         </div>
 
-
-
-
         <!-- 관심 카테고리 설정 -->
         <div id="category" class="layer-popup">
             <div class="pops-exit layer-dim"></div>
             <div class="popup-body">
                 <h1>관심 카테고리 설정</h1>
                 <div class="pop-content">
-                    <div class="inner-cont">
-                        <div class="switch-body open">
-                            <div class="header-group">
-                                <h2 class="tit-large">#내가 관심있는</h2>
-                                <div class="right-group">
-                                    <div selectbox class="clear">
-                                        <select select-sizing>
-                                            <option value="1">인기순</option>
-                                            <option value="2">데이터 한글명 순</option>
-                                            <option value="3">데이터 영문명 순</option>
-                                        </select>
-                                        <span helper-element aria-hidden="true"></span>
+                    <div class="flex-col scr-box">
+                        <div class="inner-cont">
+                            <div class="switch-body open">
+                                <div class="header-group">
+                                    <h2 class="tit-large">#내가 관심있는</h2>
+                                    <div class="right-group">
+                                        <div selectbox class="clear">
+                                            <select select-sizing>
+                                                <option value="1">인기순</option>
+                                                <option value="2">데이터 한글명 순</option>
+                                                <option value="3">데이터 영문명 순</option>
+                                            </select>
+                                            <span helper-element aria-hidden="true"></span>
+                                        </div>
+                                        <button type="button" class="toggle-switch on"></button>
                                     </div>
-                                    <button type="button" class="toggle-switch on"></button>
+                                </div>
+                                <div class="body-group">
+                                    <p class="comm-txt">
+                                        원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
+                                        카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
+                                    </p>
+                                    <ul class="drag-list dropzone source">
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list1" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list1">
+                                                    <option value="홍길동팀장" selected>홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list2" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장" selected>김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list3" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list3">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장" selected>오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list4" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list4">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list5" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list5">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-
-                            <div class="body-group">
-                                <p class="comm-txt">
-                                    원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
-                                    카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
-                                </p>
-                                <ul class="drag-list dropzone source">
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="list1" id="input2" name="list" placeholder="결제자 이름">
-                                            <datalist id="list1">
-                                                <option value="홍길동팀장" selected>홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
+                            <div class="switch-body">
+                                <div class="header-group">
+                                    <h2 class="tit-large">#디지털사업부에서 즐겨찾는</h2>
+                                    <div class="right-group">
+                                        <div selectbox class="clear">
+                                            <select select-sizing>
+                                                <option value="1">인기순</option>
+                                                <option value="2">데이터 한글명 순</option>
+                                                <option value="3">데이터 영문명 순</option>
+                                            </select>
+                                            <span helper-element aria-hidden="true"></span>
                                         </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="list2" id="input2" name="list" placeholder="결제자 이름">
-                                            <datalist id="list2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장" selected>김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="list3" id="input2" name="list" placeholder="결제자 이름">
-                                            <datalist id="list3">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장" selected>오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="list4" id="input2" name="list" placeholder="결제자 이름">
-                                            <datalist id="list4">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="list5" id="input2" name="list" placeholder="결제자 이름">
-                                            <datalist id="list5">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="switch-body">
-                            <div class="header-group">
-                                <h2 class="tit-large">#디지털사업부에서 즐겨찾는</h2>
-                                <div class="right-group">
-                                    <div selectbox class="clear">
-                                        <select select-sizing>
-                                            <option value="1">인기순</option>
-                                            <option value="2">데이터 한글명 순</option>
-                                            <option value="3">데이터 영문명 순</option>
-                                        </select>
-                                        <span helper-element aria-hidden="true"></span>
+                                        <button type="button" class="toggle-switch"></button>
                                     </div>
-                                    <button type="button" class="toggle-switch"></button>
+                                </div>
+                                <div class="body-group">
+                                    <p class="comm-txt">
+                                        원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
+                                        카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
+                                    </p>
+                                    <ul class="drag-list dropzone source">
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장" selected>홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장" selected>김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장" selected>오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-
-                            <div class="body-group">
-                                <p class="comm-txt">
-                                    원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
-                                    카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
-                                </p>
-                                <ul class="drag-list dropzone source">
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장" selected>홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
+                            <div class="switch-body">
+                                <div class="header-group">
+                                    <h2 class="tit-large">#모두가 관심있는</h2>
+                                    <div class="right-group">
+                                        <div selectbox class="clear">
+                                            <select select-sizing>
+                                                <option value="1">인기순</option>
+                                                <option value="2">데이터 한글명 순</option>
+                                                <option value="3">데이터 영문명 순</option>
+                                            </select>
+                                            <span helper-element aria-hidden="true"></span>
                                         </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장" selected>김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장" selected>오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="switch-body">
-                            <div class="header-group">
-                                <h2 class="tit-large">#모두가 관심있는</h2>
-                                <div class="right-group">
-                                    <div selectbox class="clear">
-                                        <select select-sizing>
-                                            <option value="1">인기순</option>
-                                            <option value="2">데이터 한글명 순</option>
-                                            <option value="3">데이터 영문명 순</option>
-                                        </select>
-                                        <span helper-element aria-hidden="true"></span>
+                                        <button type="button" class="toggle-switch"></button>
                                     </div>
-                                    <button type="button" class="toggle-switch"></button>
+                                </div>
+                                <div class="body-group">
+                                    <p class="comm-txt">
+                                        원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
+                                        카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
+                                    </p>
+                                    <ul class="drag-list dropzone source">
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장" selected>홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장" selected>김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장" selected>오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-
-                            <div class="body-group">
-                                <p class="comm-txt">
-                                    원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
-                                    카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
-                                </p>
-                                <ul class="drag-list dropzone source">
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장" selected>홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
+                            <div class="switch-body">
+                                <div class="header-group">
+                                    <h2 class="tit-large">#연습하기 좋은</h2>
+                                    <div class="right-group">
+                                        <div selectbox class="clear">
+                                            <select select-sizing>
+                                                <option value="1">인기순</option>
+                                                <option value="2">데이터 한글명 순</option>
+                                                <option value="3">데이터 영문명 순</option>
+                                            </select>
+                                            <span helper-element aria-hidden="true"></span>
                                         </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장" selected>김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장" selected>오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="switch-body">
-                            <div class="header-group">
-                                <h2 class="tit-large">#연습하기 좋은</h2>
-                                <div class="right-group">
-                                    <div selectbox class="clear">
-                                        <select select-sizing>
-                                            <option value="1">인기순</option>
-                                            <option value="2">데이터 한글명 순</option>
-                                            <option value="3">데이터 영문명 순</option>
-                                        </select>
-                                        <span helper-element aria-hidden="true"></span>
+                                        <button type="button" class="toggle-switch"></button>
                                     </div>
-                                    <button type="button" class="toggle-switch"></button>
                                 </div>
-                            </div>
-
-                            <div class="body-group">
-                                <p class="comm-txt">
-                                    원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
-                                    카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
-                                </p>
-                                <ul class="drag-list dropzone source">
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장" selected>홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장" selected>김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장" selected>오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                    <li class="draggable" draggable="true">
-                                        <div class="input-clear">
-                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                            <datalist id="name2">
-                                                <option value="홍길동팀장">홍길동팀장</option>
-                                                <option value="김길통 팀장">김길통 팀장</option>
-                                                <option value="오길동 부장">오길동 부장</option>
-                                            </datalist>
-                                            <button class="btn-clear"></button>
-                                        </div>
-                                        <button class="drag-btn"></button>
-                                    </li>
-                                </ul>
+                                <div class="body-group">
+                                    <p class="comm-txt">
+                                        원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
+                                        카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
+                                    </p>
+                                    <ul class="drag-list dropzone source">
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장" selected>홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장" selected>김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장" selected>오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="btn-wrap">
-                        <button type="button" class="btn-xlarge blue">
+                        <button type="button" class="btn xlarge blue">
                             <span>관심 카테고리 변경하기</span>
                         </button>
                     </div>
@@ -1967,101 +1728,103 @@
             <div class="popup-body">
                 <h1>분석 환경 접속 권한 신청</h1>
                 <div class="pop-content">
-                    <div class="inner-cont">
-                        <div class="box-gray">
-                            <ul class="list-bar">
-                                <li>분석용 PC 신청을 먼저 완료하신 후 신청해주세요. 상세 신청 방법은 <button type="button" class="link-text">여기</button>를 참고해주세요</li>
-                                <li>장기간 미접속 또는 소속 부서 변경 시 접속 권한이 차단될 수 있습니다. 이때 권한을 재신청하지 않으면 데이터 조회 권한을 포함한 모든 권한이 회수됩니다.</li>
-                                <li>개인 데이터는 영구 보관되지 않으며 보관 목적으로 사용할 수 없습니다.</li>
-                                <li>자주 사용하는 데이터 조회 권한은 자동 부여됩니다.</li>
-                            </ul>
-                        </div>
-                        <div class="section">
-                            <h2 class="tit-large">신청 사유</h2>
-                            <p class="comm-txt">사용 목적은 업무와 관련하여 10자 이상 명확히 작성해주세요.</p>
-                            <textarea name="" id="" cols="30" rows="1" placeholder="신청 사유를 입력해주세요.(200 bytes)"></textarea>
-                        </div>
-                        <div class="section">
-                            <h2 class="tit-large">분석용 PC 지급 여부</h2>
-                            <div class="form-set">
+                    <div class="flex-col scr-box">
+                        <div class="inner-cont">
+                            <div class="box-gray">
+                                <ul class="list-bar">
+                                    <li>분석용 PC 신청을 먼저 완료하신 후 신청해주세요. 상세 신청 방법은 <button type="button" class="link-text">여기</button>를 참고해주세요</li>
+                                    <li>장기간 미접속 또는 소속 부서 변경 시 접속 권한이 차단될 수 있습니다. 이때 권한을 재신청하지 않으면 데이터 조회 권한을 포함한 모든 권한이 회수됩니다.</li>
+                                    <li>개인 데이터는 영구 보관되지 않으며 보관 목적으로 사용할 수 없습니다.</li>
+                                    <li>자주 사용하는 데이터 조회 권한은 자동 부여됩니다.</li>
+                                </ul>
+                            </div>
+                            <div class="section">
+                                <h2 class="tit-large">신청 사유</h2>
+                                <p class="comm-txt">사용 목적은 업무와 관련하여 10자 이상 명확히 작성해주세요.</p>
+                                <textarea name="" id="" cols="30" rows="1" placeholder="신청 사유를 입력해주세요.(200 bytes)"></textarea>
+                            </div>
+                            <div class="section">
+                                <h2 class="tit-large">분석용 PC 지급 여부</h2>
+                                <div class="form-set">
+                                    <div class="form-wrap">
+                                        <input type="radio" id="rdo" name="radiogroup2" class="radio" checked>
+                                        <label for="rdo">완료</label>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <input type="radio" id="rdo2" name="radiogroup2" class="radio">
+                                        <label for="rdo2">미완료</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <h2 class="tit-large">보안서약서</h2>
+                                <div class="terms-box scr-box">
+                                    <ol class="list-num">
+                                        <li>나는 우리SQL(UB계정)을 사용하여 알게 된 개인(신용)정보 및 은행 업무에 관한 중요 정보에 대하여 업무 목적 이외의 용도로 사용하지 않는다.</li>
+                                        <li>나는 전자금융감독규정 제13조(전산자료 보호대책), 제28조(거래통제) 의거 사고위험도가 높은 비정상 접근(타 시스템 운영 Schema, 미승인 솔루션 사용 등 보안정책 위반)을 시도하지 않는다.</li>
+                                        <li>나는 ADW 접근 관리 업무 매뉴얼을 준수하며, 우리 SQL을 제외한 타 솔루션을 사용하지 않는다.</li>
+                                        <li>나는 전자금융감독규정 제26조(직무의 분리)에 의거 권한 범위를 준수하며, 전자금융감독규정시행세칙에 따른 운영시스템 접속/사용 통제 규준을 준수한다.</li>
+                                        <li>나는 은행의 전산시스템을 이용하여 작성, 전송되는 모든 자료는 은행의 중요한 재산임을 인식하여 상기 사항을 숙지하고 이를 성실히 준수할 것을 서약한다.</li>
+                                    </ol>
+                                </div>
                                 <div class="form-wrap">
-                                    <input type="radio" id="rdo" name="radiogroup2" class="radio" checked>
-                                    <label for="rdo" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">완료</label>
-                                </div>
-                                <div class="form-wrap">
-                                    <input type="radio" id="rdo2" name="radiogroup2" class="radio">
-                                    <label for="rdo2" class="flex gap-2 items-center text-16 text-gray-700 cursor-pointer">미완료</label>
+                                    <input type="checkbox" id="chk" class="checkbox" checked>
+                                    <label for="chk">보안서약 내용을 모두 확인하였으며 이에 동의합니다.</label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="section">
-                            <h2 class="tit-large">보안서약서</h2>
-                            <div class="terms-box">
-                                <ol>
-                                    <li>1. 나는 우리SQL(UB계정)을 사용하여 알게 된 개인(신용)정보 및 은행 업무에 관한 중요 정보에 대하여 업무 목적 이외의 용도로 사용하지 않는다.</li>
-                                    <li>2. 나는 전자금융감독규정 제13조(전산자료 보호대책), 제28조(거래통제) 의거 사고위험도가 높은 비정상 접근(타 시스템 운영 Schema, 미승인 솔루션 사용 등 보안정책 위반)을 시도하지 않는다.</li>
-                                    <li>3. 나는 ADW 접근 관리 업무 매뉴얼을 준수하며, 우리 SQL을 제외한 타 솔루션을 사용하지 않는다.</li>
-                                    <li>4. 나는 전자금융감독규정 제26조(직무의 분리)에 의거 권한 범위를 준수하며, 전자금융감독규정시행세칙에 따른 운영시스템 접속/사용 통제 규준을 준수한다.</li>
-                                    <li>5. 나는 은행의 전산시스템을 이용하여 작성, 전송되는 모든 자료는 은행의 중요한 재산임을 인식하여 상기 사항을 숙지하고 이를 성실히 준수할 것을 서약한다.</li>
-                                </ol>
-                            </div>
-                            <div class="form-wrap">
-                                <input type="checkbox" id="chk" class="checkbox" checked>
-                                <label for="chk">보안서약 내용을 모두 확인하였으며 이에 동의합니다.</label>
-                            </div>
-                        </div>
-                        <div class="section">
-                            <h2 class="tit-large">결재선</h2>
-                            <div class="data-input">
-                                <div class="input-group">
-                                    <label for="input">1차 팀장</label>
-                                    <div class="auto-form">
-                                        <input class="input" autocomplete="off" list="name" id="input" name="name" placeholder="결제자 이름">
-                                        <datalist id="name">
-                                            <option value="홍길동팀장">홍길동팀장</option>
-                                            <option value="김길통 팀장">김길통 팀장</option>
-                                            <option value="오길동 부장">오길동 부장</option>
-                                        </datalist>
+                            <div class="section">
+                                <h2 class="tit-large">결재선</h2>
+                                <div class="data-input">
+                                    <div class="input-group">
+                                        <label for="input">1차 팀장</label>
+                                        <div class="auto-form">
+                                            <input class="input" autocomplete="off" list="name" id="input" name="name" placeholder="결제자 이름">
+                                            <datalist id="name">
+                                                <option value="홍길동팀장">홍길동팀장</option>
+                                                <option value="김길통 팀장">김길통 팀장</option>
+                                                <option value="오길동 부장">오길동 부장</option>
+                                            </datalist>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="input-group">
-                                    <label for="input2">2차 감사통할자</label>
-                                    <div class="auto-form">
-                                        <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
-                                        <datalist id="name2">
-                                            <option value="홍길동팀장">홍길동팀장</option>
-                                            <option value="김길통 팀장">김길통 팀장</option>
-                                            <option value="오길동 부장">오길동 부장</option>
-                                        </datalist>
+                                    <div class="input-group">
+                                        <label for="input2">2차 감사통할자</label>
+                                        <div class="auto-form">
+                                            <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                            <datalist id="name2">
+                                                <option value="홍길동팀장">홍길동팀장</option>
+                                                <option value="김길통 팀장">김길통 팀장</option>
+                                                <option value="오길동 부장">오길동 부장</option>
+                                            </datalist>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="input-group">
-                                    <label for="input3">3차 부장</label>
-                                    <div class="auto-form">
-                                        <input class="input" autocomplete="off" list="name3" id="input3" name="name3" placeholder="결제자 이름">
-                                        <datalist id="name3">
-                                            <option value="홍길동팀장">홍길동팀장</option>
-                                            <option value="김길통 팀장">김길통 팀장</option>
-                                            <option value="오길동 부장">오길동 부장</option>
-                                        </datalist>
+                                    <div class="input-group">
+                                        <label for="input3">3차 부장</label>
+                                        <div class="auto-form">
+                                            <input class="input" autocomplete="off" list="name3" id="input3" name="name3" placeholder="결제자 이름">
+                                            <datalist id="name3">
+                                                <option value="홍길동팀장">홍길동팀장</option>
+                                                <option value="김길통 팀장">김길통 팀장</option>
+                                                <option value="오길동 부장">오길동 부장</option>
+                                            </datalist>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="input-group">
-                                    <label for="input4">4차 BA</label>
-                                    <div class="auto-form">
-                                        <input class="input" autocomplete="off" list="name4" id="input4" name="name4" placeholder="결제자 이름">
-                                        <datalist id="name4">
-                                            <option value="홍길동팀장">홍길동팀장</option>
-                                            <option value="김길통 팀장">김길통 팀장</option>
-                                            <option value="오길동 부장">오길동 부장</option>
-                                        </datalist>
+                                    <div class="input-group">
+                                        <label for="input4">4차 BA</label>
+                                        <div class="auto-form">
+                                            <input class="input" autocomplete="off" list="name4" id="input4" name="name4" placeholder="결제자 이름">
+                                            <datalist id="name4">
+                                                <option value="홍길동팀장">홍길동팀장</option>
+                                                <option value="김길통 팀장">김길통 팀장</option>
+                                                <option value="오길동 부장">오길동 부장</option>
+                                            </datalist>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="btn-wrap">
-                        <button type="button" class="btn-xlarge blue">
+                        <button type="button" class="btn xlarge blue">
                             <span>분석 환경 접속 권한 신청하기</span>
                         </button>
                     </div>
@@ -2079,6 +1842,6 @@
             loop: true,
             });
         </script>
-        <script src="/pub/js/datalist.min.js"></script>
+        <!-- <script src="/pub/js/datalist.min.js"></script> -->
     </body>
 </html>
