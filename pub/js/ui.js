@@ -5,6 +5,7 @@ window.onload = function() {
     accordion();
     sideMenu();
     onOffToggle();
+    openToggle();
     dragList();
     clearInput();
 }
@@ -17,6 +18,17 @@ const onOffToggle = function () {
         toggleBtn.addEventListener('click', function(e) {
             toggle.classList.toggle('open');
             toggleBtn.classList.toggle('on');
+        });
+    });
+}
+
+const openToggle = function () {
+    const toggleBody = document.querySelectorAll('.toggle-body');
+    toggleBody.forEach(function(toggle) {
+        const btnOpen = toggle.querySelector('.open-extend');
+        btnOpen.addEventListener('click', function(e) {
+            toggle.classList.toggle('open');
+            btnOpen.classList.toggle('on');
         });
     });
 }
@@ -43,7 +55,7 @@ const select = function () {
             helperElement.innerHTML = e.target.querySelector(
                 "option:checked"
             ).innerText;
-            resize(helperElement.offsetWidth);
+            resize(helperElement.offsetWidth);            
         });
     });
     function resize(width) {

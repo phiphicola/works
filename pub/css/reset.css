@@ -97,8 +97,16 @@ input + label { font-size:16px; line-height:16px; color:#5B6168; cursor:pointer}
 @font-face { font-family: "NotoSansKR"; font-weight: 500; font-display: swap; src: url("/pub/font/RobotoMono-Medium.woff") format('woff'); unicode-range:U+0041-005A, U+0061-007A, U+0030-0039; } 
 @font-face { font-family: "NotoSansKR"; font-weight: 400; font-display: swap; src: url("/pub/font/RobotoMono-Regular.woff") format('woff'); unicode-range:U+0041-005A, U+0061-007A, U+0030-0039; } 
 
+[selectbox] { position: relative; display: flex; }  
+[selectbox]::after { position: absolute; right: 12px; top: 50%; height: 16px; width: 16px; transform: translateY(-50%); content:''; background:url('../img/icon-onoff.svg') no-repeat center; } 
+[selectbox].focus::after { transform:translateY(-50%) rotate(180deg)}
+[selectbox] select { display: block; height: 40px; width: 100%; cursor: pointer; appearance: none; border-radius: 8px; border-width: 1px; border-color: var(--border-line); padding-left: 16px; padding-right: 32px; font-size: 14px; color: rgb(9 9 9 / var(--tw-text-opacity)); outline: 0; } 
+[selectbox].clear select { border:none; height: auto; background: transparent; } 
+[selectbox].clear::after,
+[selectbox].rounded::after { z-index: 1; } 
+[selectbox].rounded select { border-radius: 20px; background-color: #EFF1F2; border:none; } 
 
-[select-sizing] { width:var(--select-size) } 
+select[select-sizing] { width:var(--select-size) } 
 [helper-element] { position:absolute; top:0; left:-9999px } 
 [selectbox] { position: relative; display: flex; } 
 
@@ -121,14 +129,6 @@ input + label { font-size:16px; line-height:16px; color:#5B6168; cursor:pointer}
 .input.small { height: 32px; } 
 .input:placeholder { color:#BCC1C5 } 
 
-[selectbox] { position: relative; display: flex; }  
-[selectbox]::after { position: absolute; right: 12px; top: 50%; height: 16px; width: 16px; transform: translateY(-50%); content:''; background:url('../img/icon-onoff.svg') no-repeat center; } 
-[selectbox].focus::after { transform:translateY(-50%) rotate(180deg)}
-[selectbox] select { display: block; height: 40px; width: 100%; cursor: pointer; appearance: none; border-radius: 8px; border-width: 1px; border-color: var(--border-line); padding-left: 16px; padding-right: 32px; font-size: 14px; color: rgb(9 9 9 / var(--tw-text-opacity)); outline: 0; } 
-[selectbox].clear select { border:none; height: auto; background: transparent; } 
-[selectbox].clear::after,
-[selectbox].rounded::after { z-index: 1; } 
-[selectbox].rounded select { border-radius: 20px; background-color: #EFF1F2; border:none; } 
 
 .visible { visibility: visible; } 
 .invisible { visibility: hidden; } 

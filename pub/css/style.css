@@ -103,7 +103,7 @@ nav .sub-menu li.on-sub { border-radius: 8px; background: rgba(9, 9, 9, 0.15); c
 
 .input-clear { position: relative; display: inline-block; } 
 .input-clear input {padding-right: 30px; }
-.input-clear .btn-clear { position: absolute; top: 5px; right: 46px; width: 30px; height: 30px; background: url(../img/btn-del.png) center center no-repeat; background-size: 50%; border: none; outline: none; cursor: pointer; } 
+.input-clear .btn-clear {position: absolute;top: 5px;right: 46px;width: 30px;height: 30px;background: #fff url(../img/btn-del.png) center center no-repeat;background-size: 50%;border: none;outline: none;cursor: pointer;} 
 
 /* tab */
 .tab-wrap { margin: 32px 0 0; border-bottom:1px solid var(--dark) } 
