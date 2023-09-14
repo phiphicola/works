@@ -8,6 +8,7 @@ window.onload = function() {
     openToggle();
     dragList();
     clearInput();
+    tooltip();
 }
 
 
@@ -28,7 +29,14 @@ const openToggle = function () {
         const btnOpen = toggle.querySelector('.open-extend');
         btnOpen.addEventListener('click', function(e) {
             toggle.classList.toggle('open');
-            btnOpen.classList.toggle('on');
+        });
+    });
+
+    const dropList = document.querySelectorAll('.dropbox');
+    dropList.forEach(function(open) {
+        const triggerBtn = open.querySelector('.trigger');
+        triggerBtn.addEventListener('click', function(e) {
+            open.classList.toggle('open');
         });
     });
 }
@@ -273,6 +281,19 @@ const dragList = function () {
     });
 
 
+}
+
+const tooltip = function () {
+    const tooltip = document.querySelectorAll('.tooltip');
+    tooltip.forEach(function(tooltip) {
+        const tooltipBtn = tooltip.querySelector('.tooltip > button');
+        tooltipBtn.addEventListener('mouseover', function(e) {
+            tooltip.classList.add('open');
+        });
+        tooltipBtn.addEventListener('mouseleave', function(e) {
+            tooltip.classList.remove('open');
+        });
+    });
 }
 
 // 퍼블 include

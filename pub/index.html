@@ -4,7 +4,7 @@
     <title>우리은행</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/pub/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <style>
       body{margin:10px 20px;font-size: 14px;}
       h1{ font-size: 30px; font-weight: 600; color: #0067AC;}
@@ -23,14 +23,14 @@
       }
       table tbody tr:hover{background-color: #e4f0ff;}
       table tbody tr td.num{text-align: center;}
-      .progress{margin-bottom: 14px; }
-      .progress .pro{display: flex; align-items: center; gap: 8px;}
-      .progress .text{margin-right: 10px; background: rgba(58, 141, 253, 0.10); border-radius: 20px; color:#3A8DFD; font-weight: 600; padding: 4px 12px; font-size: 14px;}
-      .progress .text.type{color:#37A884;margin-left: 30px;background: rgba(55, 168, 132, 0.10);;}
-      .progress .end{color: #EA1917; }
-      .progress .total,
-      .progress .percent,
-      .progress .end{font-size: 18px;}
+      .index-progress{margin-bottom: 14px;}
+      .index-progress .pro{display: flex; align-items: center; gap: 8px;}
+      .index-progress .text{margin-right: 10px; background: rgba(58, 141, 253, 0.10); border-radius: 20px; color:#3A8DFD; font-weight: 600; padding: 4px 12px; font-size: 14px;}
+      .index-progress .text.type{color:#37A884;margin-left: 30px;background: rgba(55, 168, 132, 0.10);;}
+      .index-progress .end{color: #EA1917; }
+      .index-progress .total,
+      .index-progress .percent,
+      .index-progress .end{font-size: 18px;}
     </style>
 </head>
 <body>
@@ -38,7 +38,7 @@
     <h1>WOORI BANK</h1>
     <a href="component.html" target="_blank" class="guide">COMPONENT</a>
   </div>
-  <div class="progress">
+  <div class="index-progress">
     <div class="pro">
         <span class="text">페이지</span><span class="total"></span>/<strong class="end"></strong>
         <span class="text type">진행률</span> <strong class="percent"></strong>
@@ -48,13 +48,13 @@
     <table>
       <colgroup>
         <col style="width: 2%;" />
-        <col style="width: 10%;" />
+        <col style="width: 11%;" />
         <col style="width: 16%;" />
         <col style="width: 13%;" />
         <col style="width: 13%;" />
         <col style="width: 7%;" />
         <col style="width: 4%;" />
-        <col style="width: 3%;" />
+        <col style="width: 4%;" />
         <col style="width: 16%" />
         <col style="width: 16%" />
       </colgroup>
@@ -81,8 +81,8 @@
           <td></td>
           <td>SFC001-001</td>
           <td>페이지</td>
-          <td></td>
-          <td><a href="/pub/page/SFC001-001.html" target="_blank">/pub/page/SFC001-001.html</a></td>
+          <td>완료</td>
+          <td><a href="page/SFC001-001.html" target="_blank">page/SFC001-001.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -93,8 +93,8 @@
           <td></td>
           <td>SFC001-001-1P</td>
           <td>팝업</td>
-          <td></td>
-          <td><a href="/pub/page/SFC001-001-1P.html" target="_blank"></a></td>
+          <td>완료</td>
+          <td><a href="page/SFC001-001-1P.html" target="_blank">page/SFC001-001-1P.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -105,8 +105,8 @@
           <td></td>
           <td>SFC001-001-2P</td>
           <td>팝업</td>
-          <td></td>
-          <td><a href="/pub/page/SFC001-001-1P.html" target="_blank"></a></td>
+          <td>진행중</td>
+          <td><a href="page/SFC001-001-2P.html" target="_blank">page/SFC001-001-2P.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -118,7 +118,7 @@
           <td>SFC002-001</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC002-001.html" target="_blank"></a></td>
+          <td><a href="page/SFC002-001.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr class="div">
@@ -129,8 +129,8 @@
           <td></td>
           <td>SFC003-001</td>
           <td>페이지</td>
-          <td></td>
-          <td><a href="/pub/page/SFC003-001.html" target="_blank">/pub/page/SFC003-001.html</a></td>
+          <td>완료</td>
+          <td><a href="page/SFC003-001.html" target="_blank">page/SFC003-001.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -142,7 +142,7 @@
           <td>SFC003-001-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC003-001-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC003-001-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -154,7 +154,7 @@
           <td>SFC003-003</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC003-003.html" target="_blank"></a></td>
+          <td><a href="page/SFC003-003.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -166,7 +166,7 @@
           <td>SFC003-003-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC003-003-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC003-003-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -178,7 +178,7 @@
           <td>SFC003-004</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC003-004.html" target="_blank"></a></td>
+          <td><a href="page/SFC003-004.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -190,7 +190,7 @@
           <td>SFC003-005</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC003-005.html" target="_blank"></a></td>
+          <td><a href="page/SFC003-005.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -202,7 +202,7 @@
           <td>SFC003-006</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC003-006.html" target="_blank"></a></td>
+          <td><a href="page/SFC003-006.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -214,7 +214,7 @@
           <td>SFC003-007</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC003-007.html" target="_blank"></a></td>
+          <td><a href="page/SFC003-007.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr class="div">
@@ -225,8 +225,8 @@
           <td></td>
           <td>SFC004-001</td>
           <td>페이지</td>
-          <td></td>
-          <td><a href="/pub/page/SFC004-001.html" target="_blank"></a></td>
+          <td>완료</td>
+          <td><a href="page/SFC004-001.html" target="_blank">page/SFC004-001.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -238,7 +238,7 @@
           <td>SFC004-001-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC004-001-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC004-001-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -250,7 +250,7 @@
           <td>SFC004-003</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC004-003.html" target="_blank"></a></td>
+          <td><a href="page/SFC004-003.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -261,8 +261,8 @@
           <td></td>
           <td>SFC004-003-1P</td>
           <td>팝업</td>
-          <td></td>
-          <td><a href="/pub/page/SFC004-003-1P.html" target="_blank"></a></td>
+          <td>완료</td>
+          <td><a href="page/SFC004-003-1P.html" target="_blank">page/SFC004-003-1P.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -274,7 +274,7 @@
           <td>SFC004-004</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC004-004.html" target="_blank"></a></td>
+          <td><a href="page/SFC004-004.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -285,8 +285,8 @@
           <td></td>
           <td>SFC004-005</td>
           <td>페이지</td>
-          <td></td>
-          <td><a href="/pub/page/SFC004-005.html" target="_blank"></a></td>
+          <td>완료</td>
+          <td><a href="page/SFC004-005.html" target="_blank">page/SFC004-005.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -297,9 +297,9 @@
           <td></td>
           <td>SFC004-006</td>
           <td>페이지</td>
-          <td></td>
-          <td><a href="/pub/page/SFC004-006.html" target="_blank"></a></td>
-          <td></td>
+          <td>완료</td>
+          <td><a href="page/SFC004-006.html" target="_blank"></a></td>
+          <td>SFC004-005에 포함</td>
         </tr>
         <tr>
           <td class="num"></td>
@@ -310,7 +310,7 @@
           <td>SFC004-006-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC004-006-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC004-006-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -322,7 +322,7 @@
           <td>SFC004-007</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC004-007.html" target="_blank"></a></td>
+          <td><a href="page/SFC004-007.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -334,7 +334,7 @@
           <td>SFC004-008</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC004-008.html" target="_blank"></a></td>
+          <td><a href="page/SFC004-008.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr class="div">
@@ -346,7 +346,7 @@
           <td>SFC005-007</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC005-007.html" target="_blank">/pub/page/SFC005-007.html</a></td>
+          <td><a href="page/SFC005-007.html" target="_blank">page/SFC005-007.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -358,7 +358,7 @@
           <td>SFC005-007-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC005-007-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC005-007-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -370,7 +370,7 @@
           <td>SFC005-008</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC005-008.html" target="_blank"></a></td>
+          <td><a href="page/SFC005-008.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -382,7 +382,7 @@
           <td>SFC005-009</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC005-009.html" target="_blank"></a></td>
+          <td><a href="page/SFC005-009.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -394,7 +394,7 @@
           <td>SFC005-010</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC005-010.html" target="_blank">/pub/page/SFC005-010.html</a></td>
+          <td><a href="page/SFC005-010.html" target="_blank">page/SFC005-010.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -406,7 +406,7 @@
           <td>SFC005-011</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC005-011.html" target="_blank"></a></td>
+          <td><a href="page/SFC005-011.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -418,7 +418,7 @@
           <td>SFC005-012</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC005-012.html" target="_blank"></a></td>
+          <td><a href="page/SFC005-012.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -430,7 +430,7 @@
           <td>SFC005-013</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC005-013.html" target="_blank"></a></td>
+          <td><a href="page/SFC005-013.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -442,7 +442,7 @@
           <td>SFC005-014</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC005-014.html" target="_blank"></a></td>
+          <td><a href="page/SFC005-014.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr class="div">
@@ -454,7 +454,7 @@
           <td>SFC006-001</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-001.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-001.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -466,7 +466,7 @@
           <td>SFC006-001-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-001-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-001-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -478,7 +478,7 @@
           <td>SFC006-001-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-001-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-001-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -490,7 +490,7 @@
           <td>SFC006-001-3P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-001-3P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-001-3P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -502,7 +502,7 @@
           <td>SFC006-002</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-002.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-002.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -514,7 +514,7 @@
           <td>SFC006-003</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-003.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-003.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -526,7 +526,7 @@
           <td>SFC006-004</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-004.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-004.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -538,7 +538,7 @@
           <td>SFC006-005</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-005.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-005.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -550,7 +550,7 @@
           <td>SFC006-005-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-005-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-005-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -562,7 +562,7 @@
           <td>SFC006-005-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-005-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-005-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -574,7 +574,7 @@
           <td>SFC006-006</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-006.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-006.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -586,7 +586,7 @@
           <td>SFC006-006-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-006-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-006-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -598,7 +598,7 @@
           <td>SFC006-006-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-006-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-006-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -610,7 +610,7 @@
           <td>SFC006-007</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-007.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-007.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -622,7 +622,7 @@
           <td>SFC006-007-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-007-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-007-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -634,7 +634,7 @@
           <td>SFC006-007-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-007-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-007-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -646,7 +646,7 @@
           <td>SFC006-008</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-008.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-008.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -658,7 +658,7 @@
           <td>SFC006-008-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-008-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-008-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -670,7 +670,7 @@
           <td>SFC006-008-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-008-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-008-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -682,7 +682,7 @@
           <td>SFC006-008-3P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-008-3P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-008-3P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -694,7 +694,7 @@
           <td>SFC006-008-4P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-008-4P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-008-4P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -706,7 +706,7 @@
           <td>SFC006-009</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-009.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-009.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -718,7 +718,7 @@
           <td>SFC006-010</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-010.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-010.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -730,7 +730,7 @@
           <td>SFC006-011</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-011.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-011.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -742,7 +742,7 @@
           <td>SFC006-012</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-012.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-012.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -754,7 +754,7 @@
           <td>SFC006-012-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-012-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-012-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -766,7 +766,7 @@
           <td>SFC006-012-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-012-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-012-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -778,7 +778,7 @@
           <td>SFC006-012-3P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-012-3P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-012-3P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -790,7 +790,7 @@
           <td>SFC006-012-4P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-012-4P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-012-4P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -802,7 +802,7 @@
           <td>SFC006-013</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-013.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-013.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -814,7 +814,7 @@
           <td>SFC006-013-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-013-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-013-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -826,7 +826,7 @@
           <td>SFC006-013-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-013-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-013-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -838,7 +838,7 @@
           <td>SFC006-013-3P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-013-3P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-013-3P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -850,7 +850,7 @@
           <td>SFC006-013-4P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC006-013-4P.html" target="_blank"></a></td>
+          <td><a href="page/SFC006-013-4P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr class="div">
@@ -862,7 +862,7 @@
           <td>SFC007-001</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC007-001.html" target="_blank"></a></td>
+          <td><a href="page/SFC007-001.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -873,8 +873,8 @@
           <td></td>
           <td>SFC007-001-1P</td>
           <td>팝업</td>
-          <td></td>
-          <td><a href="/pub/page/SFC007-001-1P.html" target="_blank"></a></td>
+          <td>완료</td>
+          <td><a href="page/SFC007-001-1P.html" target="_blank">page/SFC007-001-1P.html</a></td>
           <td></td>
         </tr>
         <tr>
@@ -886,7 +886,7 @@
           <td>SFC007-001-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC007-001-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC007-001-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -898,7 +898,7 @@
           <td>SFC007-001-3P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC007-001-3P.html" target="_blank"></a></td>
+          <td><a href="page/SFC007-001-3P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -910,7 +910,7 @@
           <td>SFC007-001-4P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC007-001-4P.html" target="_blank"></a></td>
+          <td><a href="page/SFC007-001-4P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr class="div">
@@ -922,7 +922,7 @@
           <td>SFC008-001</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC008-001.html" target="_blank"></a></td>
+          <td><a href="page/SFC008-001.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -934,7 +934,7 @@
           <td>SFC008-001-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC008-001-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC008-001-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -946,7 +946,7 @@
           <td>SFC008-001-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC008-001-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC008-001-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr class="div">
@@ -958,7 +958,7 @@
           <td>SFC009-001</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC009-001.html" target="_blank"></a></td>
+          <td><a href="page/SFC009-001.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -970,7 +970,7 @@
           <td>SFC009-001-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC009-001-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC009-001-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr class="div">
@@ -982,7 +982,7 @@
           <td>SFC010-001</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC010-001.html" target="_blank"></a></td>
+          <td><a href="page/SFC010-001.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -994,7 +994,7 @@
           <td>SFC010-001-1P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC010-001-1P.html" target="_blank"></a></td>
+          <td><a href="page/SFC010-001-1P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -1006,7 +1006,7 @@
           <td>SFC010-001-2P</td>
           <td>팝업</td>
           <td></td>
-          <td><a href="/pub/page/SFC010-001-2P.html" target="_blank"></a></td>
+          <td><a href="page/SFC010-001-2P.html" target="_blank"></a></td>
           <td></td>
         </tr>
         <tr>
@@ -1018,7 +1018,7 @@
           <td>SFC010-002</td>
           <td>페이지</td>
           <td></td>
-          <td><a href="/pub/page/SFC010-002.html" target="_blank"></a></td>
+          <td><a href="page/SFC010-002.html" target="_blank"></a></td>
           <td></td>
         </tr>
       </tbody>

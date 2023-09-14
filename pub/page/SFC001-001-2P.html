@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>우리은행</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/pub/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
+        <script type="text/javascript" src="/pub/js/ui.js"></script> 
+        <script src="/pub/js/swiper-bundle.min.js"></script>    
+    </head>
+    <body>
+        <div class="body-wrap">
+            <nav data-include="/pub/include/nav.html" class="close"></nav>
+
+            <!-- contents -->
+            <div class="cont-body">
+
+                <button type="button" data-pop="category" class="btn large blue">
+                    <span>관심 카테고리 설정</span>
+                </button>
+
+            </div>
+            <!-- // contents -->            
+        </div>
+
+
+        <div id="category" class="layer-popup">
+            <div class="pops-exit layer-dim"></div>
+            <div class="popup-body">
+                <h1>관심 카테고리 설정</h1>
+                <div class="pop-content">
+                    <div class="flex-col scr-box">
+                        <div class="inner-cont">
+                            <!-- contents -->
+                            <div class="switch-body open">
+                                <div class="header-group">
+                                    <h2 class="tit-large">#내가 관심있는</h2>
+                                    <div class="right-group">
+                                        <div selectbox class="clear">
+                                            <select select-sizing>
+                                                <option value="1">인기순</option>
+                                                <option value="2">데이터 한글명 순</option>
+                                                <option value="3">데이터 영문명 순</option>
+                                            </select>
+                                            <span helper-element aria-hidden="true"></span>
+                                        </div>
+                                        <button type="button" class="toggle-switch on"></button>
+                                    </div>
+                                </div>
+                                <div class="body-group">
+                                    <p class="comm-txt">
+                                        원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
+                                        카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
+                                    </p>
+                                    <ul class="drag-list dropzone source">
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list1" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list1">
+                                                    <option value="홍길동팀장" selected>홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list2" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장" selected>김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list3" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list3">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장" selected>오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list4" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list4">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="list5" id="input2" name="list" placeholder="결제자 이름">
+                                                <datalist id="list5">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="switch-body">
+                                <div class="header-group">
+                                    <h2 class="tit-large">#디지털사업부에서 즐겨찾는</h2>
+                                    <div class="right-group">
+                                        <div selectbox class="clear">
+                                            <select select-sizing>
+                                                <option value="1">인기순</option>
+                                                <option value="2">데이터 한글명 순</option>
+                                                <option value="3">데이터 영문명 순</option>
+                                            </select>
+                                            <span helper-element aria-hidden="true"></span>
+                                        </div>
+                                        <button type="button" class="toggle-switch"></button>
+                                    </div>
+                                </div>
+                                <div class="body-group">
+                                    <p class="comm-txt">
+                                        원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
+                                        카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
+                                    </p>
+                                    <ul class="drag-list dropzone source">
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장" selected>홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장" selected>김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장" selected>오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="switch-body">
+                                <div class="header-group">
+                                    <h2 class="tit-large">#모두가 관심있는</h2>
+                                    <div class="right-group">
+                                        <div selectbox class="clear">
+                                            <select select-sizing>
+                                                <option value="1">인기순</option>
+                                                <option value="2">데이터 한글명 순</option>
+                                                <option value="3">데이터 영문명 순</option>
+                                            </select>
+                                            <span helper-element aria-hidden="true"></span>
+                                        </div>
+                                        <button type="button" class="toggle-switch"></button>
+                                    </div>
+                                </div>
+                                <div class="body-group">
+                                    <p class="comm-txt">
+                                        원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
+                                        카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
+                                    </p>
+                                    <ul class="drag-list dropzone source">
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장" selected>홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장" selected>김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장" selected>오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="switch-body">
+                                <div class="header-group">
+                                    <h2 class="tit-large">#연습하기 좋은</h2>
+                                    <div class="right-group">
+                                        <div selectbox class="clear">
+                                            <select select-sizing>
+                                                <option value="1">인기순</option>
+                                                <option value="2">데이터 한글명 순</option>
+                                                <option value="3">데이터 영문명 순</option>
+                                            </select>
+                                            <span helper-element aria-hidden="true"></span>
+                                        </div>
+                                        <button type="button" class="toggle-switch"></button>
+                                    </div>
+                                </div>
+                                <div class="body-group">
+                                    <p class="comm-txt">
+                                        원하는 데이터 카테고리를 선택하여 메인화면에 노출할 수 있습니다. (최대 5개)<br />
+                                        카테고리명을 검색해서 관심있는 데이터 카테고리를 추가해주세요.
+                                    </p>
+                                    <ul class="drag-list dropzone source">
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장" selected>홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장" selected>김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장" selected>오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                        <li class="draggable" draggable="true">
+                                            <div class="input-clear">
+                                                <input class="input" autocomplete="off" list="name2" id="input2" name="name2" placeholder="결제자 이름">
+                                                <datalist id="name2">
+                                                    <option value="홍길동팀장">홍길동팀장</option>
+                                                    <option value="김길통 팀장">김길통 팀장</option>
+                                                    <option value="오길동 부장">오길동 부장</option>
+                                                </datalist>
+                                                <button class="btn-clear"></button>
+                                            </div>
+                                            <button class="drag-btn"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // contents -->
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn xlarge blue">
+                            <span>관심 카테고리 변경하기</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="pops-close pops-exit"></button>
+            </div>
+        </div>
+    </body>
+</html>

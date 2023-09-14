@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>우리은행</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/pub/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="/pub/css/swiper-bundle.min.css"/>
+        <script type="text/javascript" src="/pub/js/ui.js"></script> 
+        <script src="/pub/js/swiper-bundle.min.js"></script>    
+    </head>
+    <body>
+        <div class="body-wrap">
+            <nav data-include="/pub/include/nav.html" class="close"></nav>
+
+            <!-- contents -->
+            <div class="cont-body">
+                <button type="button" data-pop="pop-filter" class="btn large blue">
+                    <span>필터</span>
+                </button>
+
+            </div>
+            <!-- // contents -->            
+        </div>
+
+
+        <div id="pop-filter" class="layer-popup">
+            <div class="pops-exit layer-dim"></div>
+            <div class="popup-body pop-small">
+                <h1>필터</h1>
+                <div class="pop-content">
+                    <div class="flex-col scr-box">
+                        <div class="inner-cont">
+                            <!-- contents -->
+                            <div selectbox>
+                                <select>
+                                    <option value="1">분류 선택</option>
+                                    <option value="2">분류 선택2</option>
+                                    <option value="3">분류 선택3</option>
+                                </select>
+                            </div>
+                            <!-- //contents -->
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn xlarge blue">
+                            <span>필터 적용하기</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="pops-close pops-exit"></button>
+            </div>
+        </div>
+
+    </body>
+</html>
